@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Services;
 
 public class UIRegister : MonoBehaviour
 {
@@ -19,6 +20,11 @@ public class UIRegister : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+    }
+
+    public void OnClickRegister()
+    {
         if (string.IsNullOrEmpty(this.username.text))
         {
             MessageBox.Show("请输入账号");
@@ -29,7 +35,7 @@ public class UIRegister : MonoBehaviour
             MessageBox.Show("请输入密码");
             return;
         }
-        if (string.IsNullOrEmpty (this.passwordConfirm.text))
+        if (string.IsNullOrEmpty(this.passwordConfirm.text))
         {
             MessageBox.Show("请确认密码");
             return;
@@ -39,5 +45,6 @@ public class UIRegister : MonoBehaviour
             MessageBox.Show("两次输入的密码不一致");
             return;
         }
+        UserService.Instance.SendRegister(this.username.text, this.password.text);
     }
 }
