@@ -10,17 +10,24 @@ public class UIRegister : MonoBehaviour
     public InputField password;
     public InputField passwordConfirm;
     public Button buttonRegister;
+    public Toggle aggreToS;
+    public Toggle rememberUsername;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        UserService.Instance.OnRegister = this.OnRegister;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+    }
 
+    void OnRegister(SkillBridge.Message.Result result, string msg)
+    {
+        MessageBox.Show(string.Format("结果：{0}, msg：{1}", result, msg));
     }
 
     public void OnClickRegister()
@@ -43,6 +50,11 @@ public class UIRegister : MonoBehaviour
         if (this.password.text != this.passwordConfirm.text)
         {
             MessageBox.Show("两次输入的密码不一致");
+            return;
+        }
+        if (!this.aggreToS.isOn) 
+        {
+            MessageBox.Show("请阅读并同意用户协议");
             return;
         }
         UserService.Instance.SendRegister(this.username.text, this.password.text);

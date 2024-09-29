@@ -145,7 +145,7 @@ message FirstTestRequest {
 
 message UserLoginRequest {
 	string user = 1;
-	string passward = 2;
+	string password = 2;
 }
 
 message UserLoginResponse {
@@ -158,7 +158,7 @@ message UserLoginResponse {
 message UserRegisterRequest
 {
 	string user = 1;
-	string passward = 2;
+	string password = 2;
 }
 
 message UserRegisterResponse {
