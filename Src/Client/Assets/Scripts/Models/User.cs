@@ -9,12 +9,10 @@ namespace Models
     {
         SkillBridge.Message.NUserInfo userInfo;
 
-
         public SkillBridge.Message.NUserInfo Info
         {
             get { return userInfo; }
         }
-
 
         public void SetupUserInfo(SkillBridge.Message.NUserInfo info)
         {
@@ -22,6 +20,5 @@ namespace Models
         }
 
         public SkillBridge.Message.NCharacterInfo CurrentCharacter { get; set; }
-
     }
 }

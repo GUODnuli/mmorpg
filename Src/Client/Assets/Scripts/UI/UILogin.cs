@@ -1,8 +1,9 @@
-using Services;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Services;
+using SkillBridge.Message;
 
 public class UILogin : MonoBehaviour
 {
@@ -15,13 +16,25 @@ public class UILogin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        UserService.Instance.OnLogin = OnLogin;
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    void OnLogin(Result result, string msg)
+    {
+        if (result == Result.Success)
+        {
+            SceneManager.Instance.LoadScene("CharSelect");
+        }
+        else
+        {
+            MessageBox.Show(msg, "´íÎó", MessageBoxType.Error);
+        }
     }
 
     public void OnClickLogin()
