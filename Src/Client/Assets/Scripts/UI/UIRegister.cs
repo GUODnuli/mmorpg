@@ -52,7 +52,7 @@ public class UIRegister : MonoBehaviour
             MessageBox.Show("两次输入的密码不一致");
             return;
         }
-        if (!this.aggreToS.isOn) 
+        if (!this.aggreToS.isOn)
         {
             MessageBox.Show("请阅读并同意用户协议");
             return;
