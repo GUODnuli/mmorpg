@@ -7,6 +7,7 @@ using Network;
 using UnityEngine;
 
 using SkillBridge.Message;
+using Models;
 
 namespace Services
 {
@@ -27,6 +28,8 @@ namespace Services
             MessageDistributer.Instance.Subscribe<UserLoginResponse>(this.OnUserLogin);
             MessageDistributer.Instance.Subscribe<UserCreateCharacterResponse>(this.OnUserCreateCharacter);
             MessageDistributer.Instance.Subscribe<UserGameEnterResponse>(this.OnUserGameEnter);
+            MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnCharacterEnter);
+            
         }
 
         public void Dispose()
@@ -35,6 +38,7 @@ namespace Services
             MessageDistributer.Instance.Unsubscribe<UserLoginResponse>(this.OnUserLogin);
             MessageDistributer.Instance.Unsubscribe<UserCreateCharacterResponse>(this.OnUserCreateCharacter);
             MessageDistributer.Instance.Unsubscribe<UserGameEnterResponse>(this.OnUserGameEnter);
+            MessageDistributer.Instance.Unsubscribe<MapCharacterEnterResponse>(this.OnCharacterEnter);
             NetClient.Instance.OnConnect -= OnGameServerConnect;
             NetClient.Instance.OnDisconnect -= OnGameServerDisconnect;
         }
@@ -205,6 +209,15 @@ namespace Services
             Debug.LogFormat("OnUserGameCharacter: {0} [{1}]", response.Result, response.Errormsg);
 
             this.OnLogin?.Invoke(response.Result, response.Errormsg);
+        }
+
+        void OnCharacterEnter(object sender, MapCharacterEnterResponse response)
+        {
+            Debug.LogFormat("OnCharacterEnter: {0}", response.mapId);
+            NCharacterInfo info = response.Characters[0];
+            User.Instance.CurrentCharacter = info;
+
+            SceneManager.Instance.LoadScene(DataManager.Instance.Maps[response.mapId].Resource);
         }
     }
 }
