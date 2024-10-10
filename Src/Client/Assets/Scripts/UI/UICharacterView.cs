@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SkillBridge.Message;
+using System.Linq;
 
 public class UICharacterView : MonoBehaviour
 {
     public GameObject[] characters;
-    private int currentCharacter = 0;
-    private int oldCharacter = 0;
-    public int CurrentCharacter
+    private Dictionary<string, GameObject> characterDict;
+    private CharacterClass currentCharacter = CharacterClass.None;
+    private CharacterClass oldCharacter = CharacterClass.None;
+    public CharacterClass CurrentCharacter
     {
         get
         {
@@ -17,13 +20,17 @@ public class UICharacterView : MonoBehaviour
         {
             oldCharacter = currentCharacter;
             currentCharacter = value;
-            this.UpdateCurrentCharacter();      
+            this.UpdateCurrentCharacter();
         }
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+        characterDict = new Dictionary<string, GameObject>();
+        foreach (GameObject character in characters)
+        {
+            characterDict[character.name] = character;
+        }
     }
 
     // Update is called once per frame
@@ -34,10 +41,10 @@ public class UICharacterView : MonoBehaviour
 
     void UpdateCurrentCharacter ()
     {
-        if (currentCharacter < characters.Length)
+        if (currentCharacter != oldCharacter)
         {
-            characters[oldCharacter].SetActive(false);
-            characters[currentCharacter].SetActive(true);
+            characters.FirstOrDefault(character => character.name == oldCharacter.ToString()).SetActive(false);
+            characters.FirstOrDefault(character => character.name == currentCharacter.ToString()).SetActive(true);
         }
     }
 }

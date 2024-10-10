@@ -91,7 +91,7 @@ public class UICharacterSelect : MonoBehaviour
     {
         this.charClass = (CharacterClass)charClass;
 
-        characterView.CurrentCharacter = charClass - 1;
+        characterView.CurrentCharacter = this.charClass;
 
         HideAllImages();
         titles[charClass - 1].gameObject.SetActive(true);
@@ -129,7 +129,7 @@ public class UICharacterSelect : MonoBehaviour
         var cha = User.Instance.Info.Player.Characters[index];
         Debug.LogFormat("Select Char:[{0}]{1}[{2}]", cha.Id, cha.Name, cha.Class);
         User.Instance.CurrentCharacter = cha;
-        characterView.CurrentCharacter = index;
+        characterView.CurrentCharacter = cha.Class;
 
         SetHighlight(index);
 
@@ -186,4 +186,6 @@ public class UICharacterSelect : MonoBehaviour
             }
         }
     }
+
+    
 }

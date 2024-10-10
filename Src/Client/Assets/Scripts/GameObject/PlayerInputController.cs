@@ -65,7 +65,7 @@ public class PlayerInputController : MonoBehaviour
             if (state != CharacterState.Move)
             {
                 state = CharacterState.Move;
-                this.character.MoveBack();
+                this.character.MoveForward();
                 this.SendEntityEvent(EntityEvent.MoveFwd);
             }
             this.rb.velocity = this.rb.velocity.y * Vector3.up + GameObjectTool.LogicToWorld(character.direction) * (this.character.speed + 9.81f) / 100f;
@@ -100,7 +100,7 @@ public class PlayerInputController : MonoBehaviour
         {
             this.transform.Rotate(0, h * rotateSpeed, 0);
             Vector3 dir = GameObjectTool.LogicToWorld(character.direction);
-            Quaternion rot = new Quaternion();
+            Quaternion rot = new();
             rot.SetFromToRotation(dir, this.transform.forward);
 
             if (rot.eulerAngles.y > this.turnAngle && rot.eulerAngles.y < (360 - this.turnAngle))
