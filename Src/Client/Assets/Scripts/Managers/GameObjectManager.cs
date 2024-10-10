@@ -28,7 +28,7 @@ public class GameObjectManager : MonoBehaviour
         
     }
 
-    private void OnCharacterEnter(Character cha)
+    void OnCharacterEnter(Character cha)
     {
         CreateCharacterObject(cha);
     }
@@ -65,8 +65,22 @@ public class GameObjectManager : MonoBehaviour
                 ec.entity = character;
                 ec.isPlayer = character.IsPlayer;
             }
-            
-            PlayerInputController pc = go.Get
+
+            PlayerInputController pc = go.GetComponent<PlayerInputController>();
+            if (pc != null)
+            {
+                if (character.Info.Id == Models.User.Instance.CurrentCharacter.Id)
+                {
+                    MainPlayerCamera.Instance.player = go;
+                    pc.enabled = true;
+                    pc.character = character;
+                    pc.entityController = ec;
+                }
+                else
+                {
+                    pc.enabled = false;
+                }
+            }
         }
     }
 }

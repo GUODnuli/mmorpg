@@ -90,7 +90,7 @@ public class PlayerInputController : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
             this.SendEntityEvent(EntityEvent.Jump);
         }

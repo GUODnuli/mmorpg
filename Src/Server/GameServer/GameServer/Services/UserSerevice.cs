@@ -114,8 +114,8 @@ namespace GameServer.Services
                     TID = (int)request.Class,
                     MapID = 1,
                     MapPosX = 5000,
-                    MapPosY = 4000,
-                    MapPosZ = 820,
+                    MapPosY = 856,
+                    MapPosZ = 2588,
                 };
                 DBService.Instance.Entities.Characters.Add(addCharacter);
                 sender.Session.User.Player.Characters.Add(addCharacter);
