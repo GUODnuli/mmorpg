@@ -106,12 +106,12 @@ public class UICharacterSelect : MonoBehaviour
     {
         if (result == Result.Success)
         {
-            MessageBox.Show(message, "成功");
+            MessageBox.Show(message, "创建成功！");
             InitCharacterSelect(true);
         }
         else
         {
-            MessageBox.Show(message, "错误", MessageBoxType.Error);
+            MessageBox.Show(message, "创建失败！", MessageBoxType.Error);
         }
     }
 

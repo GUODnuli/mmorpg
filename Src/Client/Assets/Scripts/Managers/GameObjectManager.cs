@@ -28,7 +28,7 @@ public class GameObjectManager : MonoBehaviour
         
     }
 
-    void OnCharacterEnter(Character cha)
+    private void OnCharacterEnter(Character cha)
     {
         CreateCharacterObject(cha);
     }
@@ -65,7 +65,7 @@ public class GameObjectManager : MonoBehaviour
                 ec.entity = character;
                 ec.isPlayer = character.IsPlayer;
             }
-
+            
             PlayerInputController pc = go.GetComponent<PlayerInputController>();
             if (pc != null)
             {

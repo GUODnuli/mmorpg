@@ -68,7 +68,7 @@ public class PlayerInputController : MonoBehaviour
                 this.character.MoveForward();
                 this.SendEntityEvent(EntityEvent.MoveFwd);
             }
-            this.rb.velocity = this.rb.velocity.y * Vector3.up + GameObjectTool.LogicToWorld(character.direction) * (this.character.speed + 9.81f) / 100f;
+            this.rb.velocity = GameObjectTool.LogicToWorld(character.direction) * (this.character.speed + 9.81f) / 100f;
         }
         else if (v < -0.01) {
             if (state != CharacterState.Move)
@@ -77,7 +77,7 @@ public class PlayerInputController : MonoBehaviour
                 this.character.MoveBack();
                 this.SendEntityEvent(EntityEvent.MoveBack);
             }
-            this.rb.velocity = this.rb.velocity.y * Vector3.up + GameObjectTool.LogicToWorld(character.direction) * (this.character.speed + 9.81f) / 100f;
+            this.rb.velocity = GameObjectTool.LogicToWorld(character.direction) * (this.character.speed + 9.81f) / 100f;
         }
         else
         {

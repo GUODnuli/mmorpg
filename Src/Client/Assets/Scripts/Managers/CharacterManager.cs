@@ -42,7 +42,7 @@ namespace Services
         {
             Debug.LogFormat("AddCharacter: Character Id: {0}, Character Name: {1}, Map Id: {2}, Entity Name: {3}", cha.Id, cha.Name, cha.mapId, cha.Entity.String());
             Character character = new Character(cha);
-            this.Characters[cha.Id] = character;
+            this.Characters[cha.Id] = character;    
 
             OnCharacterEnter?.Invoke(character);
         }

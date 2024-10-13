@@ -43,7 +43,10 @@ public class UICharacterView : MonoBehaviour
     {
         if (currentCharacter != oldCharacter)
         {
-            characters.FirstOrDefault(character => character.name == oldCharacter.ToString()).SetActive(false);
+            if (oldCharacter != CharacterClass.None)
+            {
+                characters.FirstOrDefault(character => character.name == oldCharacter.ToString()).SetActive(false);
+            }
             characters.FirstOrDefault(character => character.name == currentCharacter.ToString()).SetActive(true);
         }
     }

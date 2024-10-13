@@ -116,10 +116,24 @@ namespace GameServer.Services
                     MapPosX = 5000,
                     MapPosY = 4000,
                     MapPosZ = 820,
+                    //Player = sender.Session.User.Player,
+                    //ID = sender.Session.User.Player.ID,
                 };
-                DBService.Instance.Entities.Characters.Add(addCharacter);
+                addCharacter = DBService.Instance.Entities.Characters.Add(addCharacter);
+         
                 sender.Session.User.Player.Characters.Add(addCharacter);
+
                 DBService.Instance.Entities.SaveChanges();
+
+                foreach (var character in sender.Session.User.Player.Characters)
+                {
+                    NCharacterInfo nCharacterInfo = new NCharacterInfo
+                    {
+                        Name = character.Name,
+                        Class = (CharacterClass)character.Class
+                    };
+                    message.Response.createChar.Characters.Add(nCharacterInfo);
+                }
                 message.Response.createChar.Result = Result.Success;
                 message.Response.createChar.Errormsg = "创建成功！";
             }
@@ -127,7 +141,7 @@ namespace GameServer.Services
             {
                 Log.ErrorFormat("保存新角色失败: {0}", ex.Message);
                 message.Response.createChar.Result = Result.Failed;
-                message.Response.createChar.Errormsg = "保存失败！";
+                message.Response.createChar.Errormsg = "创建失败！";
             }
 
             byte[] data = PackageHandler.PackMessage(message);
