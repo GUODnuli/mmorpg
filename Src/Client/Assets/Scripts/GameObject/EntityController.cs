@@ -57,6 +57,11 @@ public class EntityController : MonoBehaviour
         {
             Debug.LogFormat("{0} OnDestroy: Entity ID: {1}, Entity Pos: {2}, Entity Dir: {3}, Entity Speed: {4}", this.name, entity.entityId, entity.position, entity.direction, entity.speed);
         }
+
+        if (UIWorldElementManager.Instance != null)
+        {
+            UIWorldElementManager.Instance.RemoveCharacterNameBar(this.transform);
+        }
     }
 
     // Update is called once per frame

@@ -6,6 +6,7 @@ using UnityEngine;
 
 using SkillBridge.Message;
 using System.Security.Cryptography;
+using Managers;
 
 namespace Entities
 {

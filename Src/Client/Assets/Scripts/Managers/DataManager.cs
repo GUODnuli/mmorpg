@@ -10,8 +10,10 @@ using Common.Data;
 
 using Newtonsoft.Json;
 
-public class DataManager : Singleton<DataManager>
+namespace Managers
 {
+    public class DataManager : Singleton<DataManager>
+    {
     public string DataPath;
     public Dictionary<int, MapDefine> Maps = null;
     public Dictionary<int, CharacterDefine> Characters = null;
@@ -65,7 +67,7 @@ public class DataManager : Singleton<DataManager>
         //yield return null;
     }
 
-#if UNITY_EDITOR
+    #if UNITY_EDITOR
     public void SaveTeleporters()
     {
         string json = JsonConvert.SerializeObject(this.Teleporters, Formatting.Indented);
@@ -78,5 +80,6 @@ public class DataManager : Singleton<DataManager>
         File.WriteAllText(this.DataPath + "SpawnPointDefine.txt", json);
     }
 
-#endif
+    #endif
+    }
 }

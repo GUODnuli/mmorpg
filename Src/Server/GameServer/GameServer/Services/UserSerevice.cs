@@ -34,7 +34,7 @@ namespace GameServer.Services
             NetMessage message = new NetMessage();
             message.Response = new NetMessageResponse();
             message.Response.userLogin = new UserLoginResponse();
-
+            
             TUser user = DBService.Instance.Entities.Users.Where(u => u.Username == request.User).FirstOrDefault();
             if (user == null)
             {
@@ -116,11 +116,11 @@ namespace GameServer.Services
                     MapPosX = 5000,
                     MapPosY = 4000,
                     MapPosZ = 820,
-                    //Player = sender.Session.User.Player,
+                    //Player = sender.Session.User.Player, 
                     //ID = sender.Session.User.Player.ID,
                 };
                 addCharacter = DBService.Instance.Entities.Characters.Add(addCharacter);
-         
+        
                 sender.Session.User.Player.Characters.Add(addCharacter);
 
                 DBService.Instance.Entities.SaveChanges();

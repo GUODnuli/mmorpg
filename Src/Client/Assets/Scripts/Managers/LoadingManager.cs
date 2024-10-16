@@ -8,53 +8,56 @@ using SkillBridge.Message;
 using ProtoBuf;
 using Services;
 
-public class LoadingManager : MonoBehaviour {
+namespace Managers
+{
+    public class LoadingManager : MonoBehaviour {
 
-    public GameObject UITips;
-    public GameObject UILoading;
-    public GameObject UILogin;
+        public GameObject UITips;
+        public GameObject UILoading;
+        public GameObject UILogin;
 
-    public Slider progressBar;
-    public Text progressText;
-    public Text progressNumber;
+        public Slider progressBar;
+        public Text progressText;
+        public Text progressNumber;
 
-    // Use this for initialization
-    IEnumerator Start()
-    {
-        log4net.Config.XmlConfigurator.ConfigureAndWatch(new System.IO.FileInfo("log4net.xml"));
-        UnityLogger.Init();
-        Common.Log.Init("Unity");
-        Common.Log.Info("LoadingManager start");
-
-        UITips.SetActive(true);
-        UILoading.SetActive(false);
-        UILogin.SetActive(false);
-        yield return new WaitForSeconds(2f);
-        UILoading.SetActive(true);
-        yield return new WaitForSeconds(1f);
-        UITips.SetActive(false);
-
-        yield return DataManager.Instance.LoadData();
-
-        //Init basic services
-        MapService.Instance.Init();
-        UserService.Instance.Init();
-
-        // Fake Loading Simulate
-        for (float i = 50; i < 100;)
+        // Use this for initialization
+        IEnumerator Start()
         {
-            i += Random.Range(0.1f, 1.5f);
-            progressBar.value = i;
-            yield return new WaitForEndOfFrame();
+            log4net.Config.XmlConfigurator.ConfigureAndWatch(new System.IO.FileInfo("log4net.xml"));
+            UnityLogger.Init();
+            Common.Log.Init("Unity");
+            Common.Log.Info("LoadingManager start");
+
+            UITips.SetActive(true);
+            UILoading.SetActive(false);
+            UILogin.SetActive(false);
+            yield return new WaitForSeconds(2f);
+            UILoading.SetActive(true);
+            yield return new WaitForSeconds(1f);
+            UITips.SetActive(false);
+
+            yield return DataManager.Instance.LoadData();
+
+            //Init basic services
+            MapService.Instance.Init();
+            UserService.Instance.Init();
+
+            // Fake Loading Simulate
+            for (float i = 50; i < 100;)
+            {
+                i += Random.Range(0.1f, 1.5f);
+                progressBar.value = i;
+                yield return new WaitForEndOfFrame();
+            }
+
+            UILoading.SetActive(false);
+            UILogin.SetActive(true);
+            yield return null;
         }
 
-        UILoading.SetActive(false);
-        UILogin.SetActive(true);
-        yield return null;
-    }
+        // Update is called once per frame
+        void Update () {
 
-    // Update is called once per frame
-    void Update () {
-
+        }
     }
 }

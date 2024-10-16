@@ -9,6 +9,7 @@ using UnityEngine;
 using SkillBridge.Message;
 using Models;
 using Common.Data;
+using Managers;
 
 namespace Services
 {
@@ -56,6 +57,7 @@ namespace Services
         private void OnMapCharacterLeave(object sender, MapCharacterLeaveResponse response)
         {
             // Not thing to do.
+
         }
 
         private void EnterMap(int mapId)
@@ -63,6 +65,7 @@ namespace Services
             if (DataManager.Instance.Maps.ContainsKey(mapId))
             {
                 MapDefine map = DataManager.Instance.Maps[mapId];
+                User.Instance.CurrentMap = map;
                 SceneManager.Instance.LoadScene(map.Resource);
             }
             else

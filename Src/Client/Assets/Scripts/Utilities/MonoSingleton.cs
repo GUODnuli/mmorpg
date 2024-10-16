@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 
-
 public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
 {
     public bool global = true;
@@ -18,7 +17,7 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
 
     }
 
-    void Start()
+    void Awake()
     {
         if (global) DontDestroyOnLoad(this.gameObject);
         this.OnStart();
