@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using SkillBridge.Message;
 using GameServer.Entities;
 
-namespace GameServer.Services
+namespace GameServer.Managers
 {
     class CharacterManager : Singleton<CharacterManager>
     {
@@ -36,12 +36,15 @@ namespace GameServer.Services
         public Character AddCharacter(TCharacter tCharacter)
         {
             Character character = new Character(CharacterType.Player, tCharacter);
+            EntityManager.Instance.AddEntity(tCharacter.MapID, tCharacter);
             this.Characters[tCharacter.ID] = character;
             return character;
         }
 
         public void RemoveCharacter(int characterId) 
         {
+            var cha = this.Characters[characterId];
+            EntityManager.Instance.RemoveEntity(cha.Data.MapID, cha);
             this.Characters.Remove(characterId);
         }
     }

@@ -8,6 +8,7 @@ using Network;
 using SkillBridge.Message;
 using GameServer.Entities;
 using System.Diagnostics;
+using GameServer.Managers;
 
 namespace GameServer.Services
 {
@@ -20,6 +21,7 @@ namespace GameServer.Services
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<UserRegisterRequest>(this.OnRegister);
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<UserCreateCharacterRequest>(this.OnCreateCharacter);
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<UserGameEnterRequest>(this.OnGameEnter);
+            MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<UserGameLeaveRequest>(this.OnGameLeave);
         }
 
         public void Init()
@@ -116,13 +118,9 @@ namespace GameServer.Services
                     MapPosX = 5000,
                     MapPosY = 4000,
                     MapPosZ = 820,
-                    //Player = sender.Session.User.Player, 
-                    //ID = sender.Session.User.Player.ID,
                 };
                 addCharacter = DBService.Instance.Entities.Characters.Add(addCharacter);
-        
                 sender.Session.User.Player.Characters.Add(addCharacter);
-
                 DBService.Instance.Entities.SaveChanges();
 
                 foreach (var character in sender.Session.User.Player.Characters)
@@ -164,6 +162,31 @@ namespace GameServer.Services
             sender.SendData(data, 0, data.Length);
             sender.Session.Character = character;
             MapManager.Instance[dbchar.MapID].CharacterEnter(sender, character);
+        }
+
+        void OnGameLeave(NetConnection<NetSession> sender, UserGameLeaveRequest request)
+        {
+            NetMessage message = new NetMessage();
+            message.Response = new NetMessageResponse();
+            message.Response.gameLeave = new UserGameLeaveResponse();
+            try
+            {
+                Character character = sender.Session.Character;
+                Log.InfoFormat("UserGameLeaveRequest: characterID: {0}, CharacterName: {1}, MapID: {2}", character.Id, character.Info.Name, character.Info.mapId);
+                CharacterManager.Instance.RemoveCharacter(character.Id);
+                MapManager.Instance[character.Info.mapId].CharacterLeave(character.Info);
+
+                message.Response.gameLeave.Result = Result.Success;
+                message.Response.gameLeave.Errormsg = "离开游戏成功！";
+            }
+            catch (Exception e)
+            {
+                message.Response.gameLeave.Result = Result.Failed;
+                message.Response.gameLeave.Errormsg = string.Format("离开游戏失败！失败原因：{0}", e);
+            }
+
+            byte[] data = PackageHandler.PackMessage(message);
+            sender.SendData(data, 0, data.Length);
         }
     }
 }

@@ -5,6 +5,7 @@ using Models;
 using Services;
 using SkillBridge.Message;
 using Managers;
+using System;
 
 public class UICharacterSelect : MonoBehaviour
 {
@@ -69,13 +70,10 @@ public class UICharacterSelect : MonoBehaviour
 
     public void InitCharacterCreate()
     {
+        characterView.CurrentCharacter = CharacterClass.Warrior;
+        this.currentSelectedIndex = -1;
         panelCreate.SetActive(true);
         panelSelect.SetActive(false);
-    }
-
-    private void Update()
-    {
-        
     }
 
     public void OnClickCreate()
@@ -114,6 +112,9 @@ public class UICharacterSelect : MonoBehaviour
         {
             MessageBox.Show(message, "´´½¨Ê§°Ü£¡", MessageBoxType.Error);
         }
+        panelCreate.SetActive(false);
+        panelSelect.SetActive(true);
+        SetHighlight(0);
     }
 
     public void OnSelectCharacter(int index)
@@ -128,7 +129,7 @@ public class UICharacterSelect : MonoBehaviour
         }
 
         var cha = User.Instance.Info.Player.Characters[index];
-        Debug.LogFormat("Select Char:[{0}]{1}[{2}]", cha.Id, cha.Name, cha.Class);
+        Debug.LogFormat("Select Char: Character ID: {0}, Character Name: {1}, Character Class: {2}", cha.Id, cha.Name, cha.Class);
         User.Instance.CurrentCharacter = cha;
         characterView.CurrentCharacter = cha.Class;
 

@@ -54,12 +54,6 @@ namespace Services
 
         }
 
-        private void OnMapCharacterLeave(object sender, MapCharacterLeaveResponse response)
-        {
-            // Not thing to do.
-
-        }
-
         private void EnterMap(int mapId)
         {
             if (DataManager.Instance.Maps.ContainsKey(mapId))
@@ -71,6 +65,19 @@ namespace Services
             else
             {
                 Debug.LogErrorFormat("EnterMap: Map {0} not exited.", mapId);
+            }
+        }
+
+        private void OnMapCharacterLeave(object sender, MapCharacterLeaveResponse response)
+        {
+            Debug.LogFormat("OnCharacterLeave: Character ID: {0}", response.characterId);
+            if (User.Instance.CurrentCharacter.Id != response.characterId)
+            {
+                CharacterManager.Instance.RemoveCharacter(response.characterId);
+            }
+            else
+            {
+                CharacterManager.Instance.Clear();
             }
         }
     }

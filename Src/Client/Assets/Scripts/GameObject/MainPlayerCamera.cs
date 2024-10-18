@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Models;
 
 public class MainPlayerCamera : MonoSingleton<MainPlayerCamera>
 {
-    public new Camera camera;
+    public Camera camera;
     public Transform viewPoint;
 
     public GameObject player;
@@ -25,7 +26,7 @@ public class MainPlayerCamera : MonoSingleton<MainPlayerCamera>
     {
         if (player == null)
         {
-            return;
+            player = User.Instance.CurrentCharacterObject;
         }
 
         this.transform.position = player.transform.position;

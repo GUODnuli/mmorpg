@@ -33,13 +33,7 @@ public class UICharacterView : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void UpdateCurrentCharacter ()
+    void UpdateCurrentCharacter()
     {
         if (currentCharacter != oldCharacter)
         {

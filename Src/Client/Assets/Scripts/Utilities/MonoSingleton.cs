@@ -17,7 +17,7 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
 
     }
 
-    void Awake()
+    void Start()
     {
         if (global) DontDestroyOnLoad(this.gameObject);
         this.OnStart();

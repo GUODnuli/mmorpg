@@ -8,7 +8,7 @@ using GameServer.Models;
 using Common;
 using GameServer.Managers;
 
-namespace GameServer.Services
+namespace GameServer.Managers
 {
     class MapManager : Singleton<MapManager>
     {

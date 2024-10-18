@@ -8,31 +8,38 @@ using Models;
 
 namespace Managers
 {
-    public class GameObjectManager : MonoBehaviour
+    public class GameObjectManager : MonoSingleton<GameObjectManager>  
     {
         Dictionary<int, GameObject> Characters = new Dictionary<int, GameObject>();
 
         // Use this for initialization
-        private void Start()
+        protected override void OnStart()
         {
             StartCoroutine(InitGameObjects());
-            CharacterManager.Instance.OnCharacterEnter = OnCharacterEnter;
+            CharacterManager.Instance.OnCharacterEnter += OnCharacterEnter;
+            CharacterManager.Instance.OnCharacterLeave += OnCharacterLeave;
         }
 
         private void OnDestroy()
         {
-            CharacterManager.Instance.OnCharacterEnter = null;
+            CharacterManager.Instance.OnCharacterEnter -= OnCharacterEnter;
+            CharacterManager.Instance.OnCharacterLeave -= OnCharacterLeave;
         }
 
         // Updata is called once per frame
-        private void Update()
-        {
+        //private void Update()
+        //{
 
+        //}
+
+        private void OnCharacterEnter(Character character)
+        {
+            CreateCharacterObject(character);
         }
 
-        private void OnCharacterEnter(Character cha)
+        private void OnCharacterLeave(Character character)
         {
-            CreateCharacterObject(cha);
+            DestroyCharacterObject(character);
         }
 
         IEnumerator InitGameObjects()
@@ -46,7 +53,7 @@ namespace Managers
 
         private void CreateCharacterObject(Character character)
         {
-            if (!Characters.ContainsKey(character.Info.Id) || Characters[character.Info.Id] == null)
+            if (!Characters.ContainsKey(character.entityId) || Characters[character.entityId] == null)
             {
                 Object obj = Resloader.Load<Object>(character.Define.Resource);
                 if (obj == null)
@@ -54,38 +61,55 @@ namespace Managers
                     Debug.LogErrorFormat("Character: [{0}], Resource: [{1}] not existed.", character.Define.TID, character.Define.Resource);
                     return;
                 }
-                GameObject go = (GameObject)Instantiate(obj);
-                go.name = "Character_" + character.Info.Id + "_" + character.Info.Name;
-
-                go.transform.position = GameObjectTool.LogicToWorld(character.position);
-                go.transform.forward = GameObjectTool.LogicToWorld(character.direction);
-                Characters[character.Info.Id] = go;
-
-                EntityController ec = go.GetComponent<EntityController>();
-                if (ec != null)
-                {
-                    ec.entity = character;
-                    ec.isPlayer = character.IsPlayer;
-                }
-
-                PlayerInputController pc = go.GetComponent<PlayerInputController>();
-                if (pc != null)
-                {
-                    if (character.Info.Id == Models.User.Instance.CurrentCharacter.Id)
-                    {
-                        User.Instance.CurrentCharacterObject = go;
-                        MainPlayerCamera.Instance.player = go;
-                        pc.enabled = true;
-                        pc.character = character;
-                        pc.entityController = ec;
-                    }
-                    else
-                    {
-                        pc.enabled = false;
-                    }
-                }
+                GameObject go = (GameObject)Instantiate(obj, this.transform);
+                go.name = "Character_" + character.entityId + "_" + character.Info.Name;
+                Characters[character.entityId] = go;
 
                 UIWorldElementManager.Instance.AddCharacterNameBar(go.transform, character);
+            }
+            this.InitGameObject(Characters[character.entityId], character);
+        }
+
+        private void DestroyCharacterObject(Character character)
+        {
+            if (!Characters.ContainsKey(character.entityId))
+            {
+                return;
+            }
+
+            if (Characters[character.entityId] != null)
+            {
+                Destroy(Characters[character.entityId]);
+                this.Characters.Remove(character.entityId);
+            }
+        }
+
+        private void InitGameObject(GameObject go, Character character)
+        {
+            go.transform.position = GameObjectTool.LogicToWorld(character.position);
+            go.transform.forward = GameObjectTool.LogicToWorld(character.direction);
+            EntityController ec = go.GetComponent<EntityController>();
+            if (ec != null)
+            {
+                ec.entity = character;
+                ec.isPlayer = character.IsPlayer;
+            }
+
+            PlayerInputController pc = go.GetComponent<PlayerInputController>();
+            if (pc != null)
+            {
+                if (character.Info.Id == Models.User.Instance.CurrentCharacter.Id)
+                {
+                    User.Instance.CurrentCharacterObject = go;
+                    MainPlayerCamera.Instance.player = go;
+                    pc.enabled = true;
+                    pc.character = character;
+                    pc.entityController = ec;
+                }
+                else
+                {
+                    pc.enabled = false;
+                }
             }
         }
     }
