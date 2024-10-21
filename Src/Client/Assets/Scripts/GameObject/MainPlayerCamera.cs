@@ -10,23 +10,15 @@ public class MainPlayerCamera : MonoSingleton<MainPlayerCamera>
 
     public GameObject player;
 
-    // Use this for initialization
-    private void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    private void Update()
-    {
-        
-    }
-
     private void LateUpdate()
     {
         if (player == null)
         {
             player = User.Instance.CurrentCharacterObject;
+        }
+        if (player == null)
+        {
+            return;
         }
 
         this.transform.position = player.transform.position;

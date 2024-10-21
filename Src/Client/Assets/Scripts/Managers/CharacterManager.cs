@@ -50,10 +50,7 @@ namespace Managers
             Character character = new Character(cha);
             this.Characters[cha.Id] = character;
             EntityManager.Instance.AddEntity(character);
-            if (OnCharacterEnter != null)
-            {
-                OnCharacterEnter?.Invoke(character);
-            }
+            OnCharacterEnter?.Invoke(character);
         }
 
         public void RemoveCharacter(int characterId)
@@ -62,10 +59,7 @@ namespace Managers
             if (this.Characters.ContainsKey(characterId))
             {
                 EntityManager.Instance.RemoveEntity(this.Characters[characterId].Info.Entity);
-                if (OnCharacterLeave != null)
-                {
-                    OnCharacterLeave(this.Characters[characterId]);
-                }
+                OnCharacterLeave?.Invoke(this.Characters[characterId]);
                 this.Characters.Remove(characterId);
             }
         }

@@ -15,7 +15,7 @@ namespace Services
 {
     class MapService : Singleton<MapService>, IDisposable
     {
-        public int CurrentMapId { get; private set; }
+        public int CurrentMapId { get; set; }
 
         public MapService()
         {

@@ -8,13 +8,19 @@ using Models;
 
 namespace Managers
 {
-    public class GameObjectManager : MonoSingleton<GameObjectManager>  
+    public class GameObjectManager : MonoSingleton<GameObjectManager>
     {
         Dictionary<int, GameObject> Characters = new Dictionary<int, GameObject>();
 
         // Use this for initialization
+        void Awake()
+        {
+            Debug.Log("GameObjectManager Awake: " + this.GetInstanceID());
+        }
+
         protected override void OnStart()
         {
+            Debug.Log("GameObjectManager OnStart: " + this.GetInstanceID());
             StartCoroutine(InitGameObjects());
             CharacterManager.Instance.OnCharacterEnter += OnCharacterEnter;
             CharacterManager.Instance.OnCharacterLeave += OnCharacterLeave;
@@ -22,6 +28,7 @@ namespace Managers
 
         private void OnDestroy()
         {
+            Debug.Log("GameObjectManager OnDestroy: " + this.GetInstanceID());
             CharacterManager.Instance.OnCharacterEnter -= OnCharacterEnter;
             CharacterManager.Instance.OnCharacterLeave -= OnCharacterLeave;
         }
