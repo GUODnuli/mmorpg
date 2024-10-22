@@ -16,7 +16,7 @@ namespace Entities
         public int speed;
 
         private NEntity entityData;
-        private NEntity EntityData
+        public NEntity EntityData
         {
             get
             {

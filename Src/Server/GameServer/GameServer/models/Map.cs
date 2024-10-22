@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SkillBridge.Message;
 
 using Common;
 using Common.Data;
-
 using Network;
 using GameServer.Managers;
+using SkillBridge.Message;
 using GameServer.Entities;
+using GameServer.Services;
 
 namespace GameServer.Models
 {
@@ -113,6 +113,23 @@ namespace GameServer.Models
 
             byte[] data = PackageHandler.PackMessage(message);
             conn.SendData(data, 0, data.Length);
+        }
+
+        internal void UpdateEntity(NEntitySync entitySync)
+        {
+            foreach (var kv in this.MapCharacters)
+            {
+                if (kv.Value.character.entityId == entitySync.Id)
+                {
+                    kv.Value.character.Position = entitySync.Entity.Position;
+                    kv.Value.character.Direction = entitySync.Entity.Direction;
+                    kv.Value.character.Speed = entitySync.Entity.Speed;
+                }
+                else
+                {
+                    MapService.Instance.SendEntityUpdate(kv.Value.connection, entitySync);
+                }
+            }
         }
     }
 }

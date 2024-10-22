@@ -33,12 +33,6 @@ namespace Managers
             CharacterManager.Instance.OnCharacterLeave -= OnCharacterLeave;
         }
 
-        // Updata is called once per frame
-        //private void Update()
-        //{
-
-        //}
-
         private void OnCharacterEnter(Character character)
         {
             CreateCharacterObject(character);

@@ -21,12 +21,14 @@ namespace Services
         {
             MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnMapCharacterEnter);
             MessageDistributer.Instance.Subscribe<MapCharacterLeaveResponse>(this.OnMapCharacterLeave);
+            MessageDistributer.Instance.Subscribe<MapEntitySyncResponse>(this.OnMapEntitySync);
         }
 
         public void Dispose()
         {
             MessageDistributer.Instance.Unsubscribe<MapCharacterEnterResponse>(this.OnMapCharacterEnter);
             MessageDistributer.Instance.Unsubscribe<MapCharacterLeaveResponse>(this.OnMapCharacterLeave);
+            MessageDistributer.Instance.Unsubscribe<MapEntitySyncResponse>(this.OnMapEntitySync);
         }
 
         public void Init()
@@ -79,6 +81,35 @@ namespace Services
             {
                 CharacterManager.Instance.Clear();
             }
+        }
+
+        public void SendMapEntitySync(EntityEvent entityEvent, NEntity nEntity)
+        {
+            Debug.LogFormat("MapEntityUpdateRequest: Entity ID: {0}, Entity Pos: {1}, Entity Dir: {2}, Entity Speed: {3}", nEntity.Id, nEntity.Position.String(), nEntity.Direction.ToString(), nEntity.Speed.ToString());
+            NetMessage message = new NetMessage();
+            message.Request = new NetMessageRequest();
+            message.Request.mapEntitySync = new MapEntitySyncRequest();
+            message.Request.mapEntitySync.entitySync = new NEntitySync
+            {
+                Id = nEntity.Id,
+                Event = entityEvent,
+                Entity = nEntity,
+            };
+            NetClient.Instance.SendMessage(message);
+        }
+
+        private void OnMapEntitySync(object sender, MapEntitySyncResponse response)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendFormat("MapEntityUpdateResponse: Entitys: {0}", response.entitySyncs.Count);
+            sb.AppendLine();
+            foreach (var v in response.entitySyncs)
+            {
+                EntityManager.Instance.OnEntitySync(v);
+                sb.AppendFormat("Entity ID: {0}, Entity Event: {1}, Entity: {2}", v.Id, v.Event, v.Entity.String());
+                sb.AppendLine();
+            }
+            Debug.Log(sb.ToString());
         }
     }
 }
