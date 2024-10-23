@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SkillBridge.Message;
 using GameServer.Entities;
+using System.Diagnostics;
 
 namespace GameServer.Managers
 {
@@ -37,7 +38,8 @@ namespace GameServer.Managers
         {
             Character character = new Character(CharacterType.Player, tCharacter);
             EntityManager.Instance.AddEntity(tCharacter.MapID, character);
-            this.Characters[tCharacter.ID] = character;
+            character.Info.Id = character.Id;
+            this.Characters[character.Id] = character;
             return character;
         }
 

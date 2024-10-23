@@ -99,7 +99,7 @@ namespace Managers
             PlayerInputController pc = go.GetComponent<PlayerInputController>();
             if (pc != null)
             {
-                if (character.Info.Id == Models.User.Instance.CurrentCharacter.Id)
+                if (character.Info.Id == Models.User.Instance.CurrentCharacter.Entity.Id)
                 {
                     User.Instance.CurrentCharacterObject = go;
                     MainPlayerCamera.Instance.player = go;

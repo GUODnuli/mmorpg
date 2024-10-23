@@ -231,6 +231,7 @@ namespace Services
         {
             MapService.Instance.CurrentMapId = 0;
             CharacterManager.Instance.Clear();
+            User.Instance.CurrentCharacter = null;
             Debug.LogFormat("OnUserGameLeave: {0}, [{1}]", response.Result, response.Errormsg);
         }
     }

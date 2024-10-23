@@ -26,9 +26,9 @@ public class UIMiniMap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerTransform == null && User.Instance.CurrentCharacterObject != null)
+        if (playerTransform == null)
         {
-            this.playerTransform = User.Instance.CurrentCharacterObject.transform;
+            this.playerTransform = MiniMapManager.Instance.PlayerTransform;
         }
 
         if (miniMapBoundBox == null || playerTransform == null)

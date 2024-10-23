@@ -8,16 +8,16 @@ namespace Managers
 {
     public class MiniMapManager : MonoSingleton<MiniMapManager>
     {
-        // Start is called before the first frame update
-        void Start()
+        public Transform PlayerTransform
         {
-        
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-        
+            get
+            {
+                if (User.Instance.CurrentCharacterObject == null)
+                {
+                    return null;
+                }
+                return User.Instance.CurrentCharacterObject.transform;
+            }
         }
 
         public Sprite LoadCurrentMiniMap()

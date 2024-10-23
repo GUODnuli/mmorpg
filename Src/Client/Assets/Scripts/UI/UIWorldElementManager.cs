@@ -17,7 +17,7 @@ public class UIWorldElementManager : MonoSingleton<UIWorldElementManager>
         this.elements[owner] = goNameBar;
     }
 
-    public void RemoveCharacterNameBar(Transform owner)
+    public void RemoveCharacterNameBar(Transform owner) 
     {
         if (this.elements.ContainsKey(owner))
         {

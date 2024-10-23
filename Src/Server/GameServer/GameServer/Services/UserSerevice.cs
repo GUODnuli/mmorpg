@@ -55,7 +55,7 @@ namespace GameServer.Services
                 message.Response.userLogin.Result = Result.Success;
                 message.Response.userLogin.Errormsg = "登陆成功！";
                 message.Response.userLogin.Userinfo = new NUserInfo();
-                message.Response.userLogin.Userinfo.Id = 1;
+                message.Response.userLogin.Userinfo.Id = (int)user.ID;
                 message.Response.userLogin.Userinfo.Player = new NPlayerInfo();
                 message.Response.userLogin.Userinfo.Player.Id = user.Player.ID;
                 foreach(var c in user.Player.Characters)
@@ -64,6 +64,8 @@ namespace GameServer.Services
                     info.Id = c.ID;
                     info.Name = c.Name;
                     info.Class = (CharacterClass)c.Class;
+                    info.Tid = c.ID;
+                    info.Type = CharacterType.Player;
                     message.Response.userLogin.Userinfo.Player.Characters.Add(info);
                 }
             }
@@ -127,8 +129,11 @@ namespace GameServer.Services
                 {
                     NCharacterInfo nCharacterInfo = new NCharacterInfo
                     {
+                        Id = 0,
                         Name = character.Name,
-                        Class = (CharacterClass)character.Class
+                        Class = (CharacterClass)character.Class,
+                        Tid = character.ID,
+                        Type = CharacterType.Player,
                     };
                     message.Response.createChar.Characters.Add(nCharacterInfo);
                 }
@@ -174,7 +179,7 @@ namespace GameServer.Services
                 Character character = sender.Session.Character;
                 Log.InfoFormat("UserGameLeaveRequest: characterID: {0}, CharacterName: {1}, MapID: {2}", character.Id, character.Info.Name, character.Info.mapId);
                 CharacterManager.Instance.RemoveCharacter(character.Id);
-                MapManager.Instance[character.Info.mapId].CharacterLeave(character.Info);
+                MapManager.Instance[character.Info.mapId].CharacterLeave(character);
 
                 message.Response.gameLeave.Result = Result.Success;
                 message.Response.gameLeave.Errormsg = "离开游戏成功！";

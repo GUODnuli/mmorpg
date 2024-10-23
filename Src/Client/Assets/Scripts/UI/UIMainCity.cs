@@ -33,7 +33,6 @@ public class UIMainCity : MonoBehaviour
     public void BackToCharacterSelect()
     {
         SceneManager.Instance.LoadScene("CharSelect");
-        MapService.Instance.CurrentMapId = 0;
         UserService.Instance.SendGameLeave();
     }
 }
