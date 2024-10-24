@@ -130,7 +130,7 @@ public class UICharacterSelect : MonoBehaviour
 
         var cha = User.Instance.Info.Player.Characters[index];
         Debug.LogFormat("Select Char: Character ID: {0}, Character Name: {1}, Character Class: {2}", cha.Id, cha.Name, cha.Class);
-        User.Instance.CurrentCharacter = cha;
+        //User.Instance.CurrentCharacter = cha;
         characterView.CurrentCharacter = cha.Class;
 
         SetHighlight(index);
