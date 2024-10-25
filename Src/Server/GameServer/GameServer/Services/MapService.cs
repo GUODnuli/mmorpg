@@ -9,6 +9,7 @@ using Network;
 using GameServer.Managers;
 using GameServer.Entities;
 using SkillBridge.Message;
+using Common.Data;
 
 
 namespace GameServer.Services
@@ -19,6 +20,7 @@ namespace GameServer.Services
         {
             //MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<MapCharacterEnterRequest>(this.OnMapCharacterEnter);
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<MapEntitySyncRequest>(this.OnMapEntitySync);
+            MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<MapTeleportRequest>(this.OnMapTeleport);
         }
 
         public void Init()
@@ -49,6 +51,35 @@ namespace GameServer.Services
             message.Response.mapEntitySync.entitySyncs.Add(nEntitySync);
             byte[] data = PackageHandler.PackMessage(message);
             conn.SendData(data, 0, data.Length);
+        }
+
+        internal void OnMapTeleport(NetConnection<NetSession> sender, MapTeleportRequest request)
+        {
+            if (!DataManager.Instance.Teleporters.ContainsKey(request.teleporterId))
+            {
+                Log.WarningFormat("Source Teleporter ID [{0}] not existed.", request.teleporterId);
+                return;
+            }
+
+            Character character = sender.Session.Character;
+            if (!CharacterManager.Instance.Characters.ContainsKey(character.Id))
+            {
+                Log.WarningFormat("The character ID [{0}] not existed.", character.Id);
+                return;
+            }
+
+            TeleporterDefine source = DataManager.Instance.Teleporters[request.teleporterId];
+            if (source.LinkTo == 0 || !DataManager.Instance.Teleporters.ContainsKey(source.LinkTo))
+            {
+                Log.WarningFormat("Source Teleporter ID [{0}] LinkTo ID [{1}] not existed.", request.teleporterId, source.LinkTo);
+            }
+
+            TeleporterDefine target = DataManager.Instance.Teleporters[source.LinkTo];
+
+            MapManager.Instance[source.MapID].CharacterLeave(character);
+            character.Position = target.Position;
+            character.Direction = target.Direction;
+            MapManager.Instance[target.MapID].CharacterEnter(sender, character);
         }
     }
 }
