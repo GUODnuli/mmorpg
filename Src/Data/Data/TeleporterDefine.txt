@@ -36,11 +36,11 @@
     "ID": 7,
     "Name": "副本->主城",
     "LinkTo": 4,
-    "MapID": 4
+    "MapID": 3
   },
   "8": {
     "ID": 8,
     "Name": "副本传入点",
-    "MapID": 4
+    "MapID": 3
   }
 }

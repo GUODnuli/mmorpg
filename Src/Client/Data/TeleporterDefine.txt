@@ -104,19 +104,35 @@
   "7": {
     "ID": 7,
     "Name": "副本->主城",
-    "MapID": 4,
+    "MapID": 3,
     "LinkTo": 4,
     "Descript": null,
-    "Position": null,
-    "Direction": null
+    "Position": {
+      "X": 2019,
+      "Y": 3990,
+      "Z": 337
+    },
+    "Direction": {
+      "X": 0,
+      "Y": -100,
+      "Z": 0
+    }
   },
   "8": {
     "ID": 8,
     "Name": "副本传入点",
-    "MapID": 4,
+    "MapID": 3,
     "LinkTo": 0,
     "Descript": null,
-    "Position": null,
-    "Direction": null
+    "Position": {
+      "X": 2732,
+      "Y": 3994,
+      "Z": 24
+    },
+    "Direction": {
+      "X": 100,
+      "Y": 0,
+      "Z": 0
+    }
   }
 }

@@ -18,9 +18,7 @@ namespace Managers
     public Dictionary<int, MapDefine> Maps = null;
     public Dictionary<int, CharacterDefine> Characters = null;
     public Dictionary<int, TeleporterDefine> Teleporters = null;
-    //public Dictionary<int, Dictionary<int, SpawnPointDefine>> SpawnPoints = null;
     public Dictionary<int, Dictionary<int, SpawnPointDefine>> SpawnPoints = null;
-
 
     public DataManager()
     {

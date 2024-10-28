@@ -18,7 +18,6 @@ namespace GameServer.Services
     {
         public MapService()
         {
-            //MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<MapCharacterEnterRequest>(this.OnMapCharacterEnter);
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<MapEntitySyncRequest>(this.OnMapEntitySync);
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<MapTeleportRequest>(this.OnMapTeleport);
         }
@@ -27,11 +26,6 @@ namespace GameServer.Services
         {
             MapManager.Instance.Init();
         }
-
-        //private void OnMapCharacterEnter(NetConnection<NetSession> sender, MapCharacterEnterRequest message)
-        //{
-        //    throw new NotImplementedException();
-        //}
 
         private void OnMapEntitySync(NetConnection<NetSession> sender, MapEntitySyncRequest request)
         {
