@@ -17,10 +17,9 @@ public class UIMiniMap : MonoBehaviour
     private float realWidth;
     private float realHeight;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        InitMap();
+        MiniMapManager.Instance.miniMap = this;
     }
 
     // Update is called once per frame
@@ -38,25 +37,23 @@ public class UIMiniMap : MonoBehaviour
         float relativePosX = playerTransform.position.x - miniMapBoundBox.bounds.min.x;
         float relativePosY = playerTransform.position.z - miniMapBoundBox.bounds.min.z;
 
-        float pivotX = relativePosX / realWidth;
-        float pivotY = relativePosY / realHeight;
+        float pivotX = relativePosX / this.realWidth;
+        float pivotY = relativePosY / this.realHeight;
 
         this.miniMap.rectTransform.pivot = new Vector2(pivotX, pivotY);
         this.miniMap.rectTransform.localPosition = Vector2.zero;
         this.arrorw.transform.eulerAngles = new Vector3(0, 0, -playerTransform.eulerAngles.y);
     }
 
-    private void InitMap()
+    internal void UpdateMap()
     {
         this.mapName.text = User.Instance.CurrentMap.Name;
-        if (this.miniMap.overrideSprite == null)
-        {
-            this.miniMap.overrideSprite = MiniMapManager.Instance.LoadCurrentMiniMap();
-        }
+        this.miniMap.overrideSprite = MiniMapManager.Instance.LoadCurrentMiniMap();
         this.miniMap.SetNativeSize();
         this.miniMap.transform.localPosition = Vector3.zero;
-
-        realWidth = miniMapBoundBox.bounds.size.x;
-        realHeight = miniMapBoundBox.bounds.size.z;
+        this.miniMapBoundBox = MiniMapManager.Instance.MiniMapBoundingBox;
+        this.playerTransform = null;
+        this.realWidth = this.miniMapBoundBox.bounds.size.x;
+        this.realHeight = this.miniMapBoundBox.bounds.size.z;
     }
 }

@@ -6,22 +6,16 @@ using Models;
 using Services;
 using Managers;
 
-public class UIMainCity : MonoBehaviour
+public class UIMain : MonoSingleton<UIMain>
 {
     public Text avatarName;
     public Text avatarLevel;
     public Image avatarImage;
 
     // Start is called before the first frame update
-    void Start()
+    protected override void OnStart()
     {
         this.UpdateAvatar();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void UpdateAvatar()

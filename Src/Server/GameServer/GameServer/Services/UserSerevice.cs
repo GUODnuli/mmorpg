@@ -178,8 +178,7 @@ namespace GameServer.Services
             {
                 Character character = sender.Session.Character;
                 Log.InfoFormat("UserGameLeaveRequest: characterID: {0}, CharacterName: {1}, MapID: {2}", character.Id, character.Info.Name, character.Info.mapId);
-                CharacterManager.Instance.RemoveCharacter(character.Id);
-                MapManager.Instance[character.Info.mapId].CharacterLeave(character);
+                UserLeaveGame(character);
 
                 message.Response.gameLeave.Result = Result.Success;
                 message.Response.gameLeave.Errormsg = "离开游戏成功！";
@@ -192,6 +191,12 @@ namespace GameServer.Services
 
             byte[] data = PackageHandler.PackMessage(message);
             sender.SendData(data, 0, data.Length);
+        }
+
+        public void UserLeaveGame(Character character)
+        {
+            CharacterManager.Instance.RemoveCharacter(character.Id);
+            MapManager.Instance[character.Info.mapId].CharacterLeave(character);
         }
     }
 }
