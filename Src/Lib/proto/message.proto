@@ -46,17 +46,27 @@ enum ENTITY_EVENT
 	JUMP = 4;
 }
 
-message NUserInfo {
+enum ITEM_TYPE
+{
+	NORMAL = 0;
+	MATERIAL = 1;
+	TASK = 2;
+}
+
+message NUserInfo 
+{
 	int32 id = 1;
 	NPlayerInfo player = 2;
 }
 
-message NPlayerInfo {
+message NPlayerInfo 
+{
 	int32 id = 1;
 	repeated NCharacterInfo characters = 2;
 }
 
-message NCharacterInfo {
+message NCharacterInfo 
+{
 	int32 id = 1;
 	int32 tid = 2;
 	string name = 3;
@@ -65,6 +75,13 @@ message NCharacterInfo {
 	int32 level = 6;
 	int32 mapId = 7;
 	NEntity entity = 8;
+	repeated NItemInfo Items = 10;
+}
+
+message NItemInfo 
+{
+	int32 id = 1;
+	int32 count = 2;
 }
 
 message NVector3
@@ -187,6 +204,7 @@ message UserGameEnterRequest
 message UserGameEnterResponse {
 	RESULT result = 1;
 	string errormsg = 2;
+	NCharacterInfo character = 3;
 }
 
 message UserGameLeaveRequest
