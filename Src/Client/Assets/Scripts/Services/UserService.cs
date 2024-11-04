@@ -210,6 +210,14 @@ namespace Services
         {
             Debug.LogFormat("OnUserGameCharacter: {0} [{1}]", response.Result, response.Errormsg);
 
+            if (response.Result == Result.Success)
+            {
+                if (response.Character != null)
+                {
+                    ItemManager.Instance.Init(response.Character.Items);
+                }
+            }
+
             this.OnLogin?.Invoke(response.Result, response.Errormsg);
         }
 
