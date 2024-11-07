@@ -18,7 +18,7 @@ namespace Managers
 
         public UIManager()
         {
-            //this.UIResources.Add(typeof(UITest)), new UIElement() { Resource = ""}
+            this.UIResources.Add(typeof(UIBag), new UIElement() { Resource = "UI/UIBag", Cache = true});
         }
 
         ~UIManager()

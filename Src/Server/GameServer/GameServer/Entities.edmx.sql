@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 11/04/2024 09:28:09
+-- Date Created: 11/05/2024 16:08:03
 -- Generated from EDMX file: D:\Projects\UnityProjects\My_mmorpg\Src\Server\GameServer\GameServer\Entities.edmx
 -- --------------------------------------------------
 
@@ -23,6 +23,9 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_PlayerCharacter]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Characters] DROP CONSTRAINT [FK_PlayerCharacter];
 GO
+IF OBJECT_ID(N'[dbo].[FK_CharacterItem]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[TCharacterItems] DROP CONSTRAINT [FK_CharacterItem];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
@@ -36,6 +39,9 @@ IF OBJECT_ID(N'[dbo].[Players]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[Characters]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Characters];
+GO
+IF OBJECT_ID(N'[dbo].[TCharacterItems]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[TCharacterItems];
 GO
 
 -- --------------------------------------------------
@@ -68,7 +74,8 @@ CREATE TABLE [dbo].[Characters] (
     [MapPosX] int  NOT NULL,
     [MapPosY] int  NOT NULL,
     [MapPosZ] int  NOT NULL,
-    [Player_ID] int  NOT NULL
+    [Player_ID] int  NOT NULL,
+    [Bag_ID] int  NOT NULL
 );
 GO
 
@@ -78,6 +85,14 @@ CREATE TABLE [dbo].[TCharacterItems] (
     [ItemID] int  NOT NULL,
     [ItemCount] int  NOT NULL,
     [CharacterID] int  NOT NULL
+);
+GO
+
+-- Creating table 'TCharacterBags'
+CREATE TABLE [dbo].[TCharacterBags] (
+    [ID] int IDENTITY(1,1) NOT NULL,
+    [Items] varbinary(max)  NOT NULL,
+    [Unlocked] nvarchar(max)  NOT NULL
 );
 GO
 
@@ -106,6 +121,12 @@ GO
 -- Creating primary key on [ID] in table 'TCharacterItems'
 ALTER TABLE [dbo].[TCharacterItems]
 ADD CONSTRAINT [PK_TCharacterItems]
+    PRIMARY KEY CLUSTERED ([ID] ASC);
+GO
+
+-- Creating primary key on [ID] in table 'TCharacterBags'
+ALTER TABLE [dbo].[TCharacterBags]
+ADD CONSTRAINT [PK_TCharacterBags]
     PRIMARY KEY CLUSTERED ([ID] ASC);
 GO
 
@@ -156,6 +177,21 @@ GO
 CREATE INDEX [IX_FK_CharacterItem]
 ON [dbo].[TCharacterItems]
     ([CharacterID]);
+GO
+
+-- Creating foreign key on [Bag_ID] in table 'Characters'
+ALTER TABLE [dbo].[Characters]
+ADD CONSTRAINT [FK_CharacterBag]
+    FOREIGN KEY ([Bag_ID])
+    REFERENCES [dbo].[TCharacterBags]
+        ([ID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_CharacterBag'
+CREATE INDEX [IX_FK_CharacterBag]
+ON [dbo].[Characters]
+    ([Bag_ID]);
 GO
 
 -- --------------------------------------------------
