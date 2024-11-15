@@ -74,7 +74,7 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Items" Type="varbinary(max)" Nullable="false" />
-    <Property Name="Unlocked" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Unlocked" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="UserPlayer">
     <End Role="User" Type="ExtremeWorldModel.Store.Users" Multiplicity="*" />
@@ -220,7 +220,7 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Items" Type="Binary" Nullable="false" />
-          <Property Name="Unlocked" Type="String" Nullable="false" />
+          <Property Name="Unlocked" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Owner" Relationship="ExtremeWorldModel.CharacterBag" FromRole="TCharacterBag" ToRole="TCharacter" />
         </EntityType>
         <Association Name="CharacterBag">

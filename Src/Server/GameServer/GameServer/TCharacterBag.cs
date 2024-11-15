@@ -16,7 +16,7 @@ namespace GameServer
     {
         public int ID { get; set; }
         public byte[] Items { get; set; }
-        public string Unlocked { get; set; }
+        public int Unlocked { get; set; }
     
         public virtual TCharacter Owner { get; set; }
     }

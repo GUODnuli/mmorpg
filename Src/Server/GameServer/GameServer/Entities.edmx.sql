@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 11/05/2024 16:08:03
--- Generated from EDMX file: D:\Projects\UnityProjects\My_mmorpg\Src\Server\GameServer\GameServer\Entities.edmx
+-- Date Created: 11/14/2024 01:51:01
+-- Generated from EDMX file: E:\UnityProject\myMmorpgclass5\Src\Server\GameServer\GameServer\Entities.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -26,6 +26,9 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_CharacterItem]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[TCharacterItems] DROP CONSTRAINT [FK_CharacterItem];
 GO
+IF OBJECT_ID(N'[dbo].[FK_CharacterBag]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Characters] DROP CONSTRAINT [FK_CharacterBag];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
@@ -42,6 +45,9 @@ IF OBJECT_ID(N'[dbo].[Characters]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[TCharacterItems]', 'U') IS NOT NULL
     DROP TABLE [dbo].[TCharacterItems];
+GO
+IF OBJECT_ID(N'[dbo].[TCharacterBags]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[TCharacterBags];
 GO
 
 -- --------------------------------------------------
@@ -92,7 +98,7 @@ GO
 CREATE TABLE [dbo].[TCharacterBags] (
     [ID] int IDENTITY(1,1) NOT NULL,
     [Items] varbinary(max)  NOT NULL,
-    [Unlocked] nvarchar(max)  NOT NULL
+    [Unlocked] int  NOT NULL
 );
 GO
 
