@@ -120,6 +120,8 @@ namespace GameServer.Services
                     MapPosX = 5000,
                     MapPosY = 4000,
                     MapPosZ = 820,
+                    Gold = 100000,
+                    Equips = new byte[28]
                 };
                 var bag = new TCharacterBag();
                 bag.Owner = addCharacter;
@@ -128,6 +130,20 @@ namespace GameServer.Services
                 TCharacterItem it = new TCharacterItem();
                 addCharacter.Bag = DBService.Instance.Entities.CharacterBags.Add(bag);
                 addCharacter = DBService.Instance.Entities.Characters.Add(addCharacter);
+
+                // 创建角色时添加道具
+                addCharacter.Items.Add(new TCharacterItem()
+                {
+                    Owner = addCharacter,
+                    ItemID = 1,
+                    ItemCount = 20,
+                });
+                addCharacter.Items.Add(new TCharacterItem()
+                {
+                    Owner = addCharacter,
+                    ItemID = 2,
+                    ItemCount = 20,
+                });
                 sender.Session.User.Player.Characters.Add(addCharacter);
                 DBService.Instance.Entities.SaveChanges();
 
@@ -169,11 +185,6 @@ namespace GameServer.Services
             message.Response.gameEnter.Result = Result.Success;
             message.Response.gameEnter.Errormsg = "成功进入游戏世界！";
             message.Response.gameEnter.Character = character.Info;
-
-            // 道具系统测试
-            int itemId = 2;
-            bool hasItem = character.ItemManager.HasItem(itemId);
-            Log.InfoFormat("HasItem:[{0}]{1}", itemId, hasItem);
 
             byte[] data = PackageHandler.PackMessage(message);
             sender.SendData(data, 0, data.Length);

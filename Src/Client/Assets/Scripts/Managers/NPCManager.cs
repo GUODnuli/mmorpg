@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Managers
 {
-    public class NPCManager : MonoSingleton<NPCManager>
+    public class NPCManager : Singleton<NPCManager>
     {
         public delegate bool NpcActionHandler(NPCDefine npcDefine);
         Dictionary<NpcFunction, NpcActionHandler> eventMap = new Dictionary<NpcFunction, NpcActionHandler>();

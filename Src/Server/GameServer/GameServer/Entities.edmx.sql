@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 11/14/2024 01:51:01
+-- Date Created: 03/11/2025 22:40:19
 -- Generated from EDMX file: E:\UnityProject\myMmorpgclass5\Src\Server\GameServer\GameServer\Entities.edmx
 -- --------------------------------------------------
 
@@ -46,8 +46,8 @@ GO
 IF OBJECT_ID(N'[dbo].[TCharacterItems]', 'U') IS NOT NULL
     DROP TABLE [dbo].[TCharacterItems];
 GO
-IF OBJECT_ID(N'[dbo].[TCharacterBags]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[TCharacterBags];
+IF OBJECT_ID(N'[dbo].[CharacterBags]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[CharacterBags];
 GO
 
 -- --------------------------------------------------
@@ -80,6 +80,8 @@ CREATE TABLE [dbo].[Characters] (
     [MapPosX] int  NOT NULL,
     [MapPosY] int  NOT NULL,
     [MapPosZ] int  NOT NULL,
+    [Gold] bigint  NOT NULL,
+    [Equips] binary(28)  NOT NULL,
     [Player_ID] int  NOT NULL,
     [Bag_ID] int  NOT NULL
 );
@@ -94,8 +96,8 @@ CREATE TABLE [dbo].[TCharacterItems] (
 );
 GO
 
--- Creating table 'TCharacterBags'
-CREATE TABLE [dbo].[TCharacterBags] (
+-- Creating table 'CharacterBags'
+CREATE TABLE [dbo].[CharacterBags] (
     [ID] int IDENTITY(1,1) NOT NULL,
     [Items] varbinary(max)  NOT NULL,
     [Unlocked] int  NOT NULL
@@ -130,9 +132,9 @@ ADD CONSTRAINT [PK_TCharacterItems]
     PRIMARY KEY CLUSTERED ([ID] ASC);
 GO
 
--- Creating primary key on [ID] in table 'TCharacterBags'
-ALTER TABLE [dbo].[TCharacterBags]
-ADD CONSTRAINT [PK_TCharacterBags]
+-- Creating primary key on [ID] in table 'CharacterBags'
+ALTER TABLE [dbo].[CharacterBags]
+ADD CONSTRAINT [PK_CharacterBags]
     PRIMARY KEY CLUSTERED ([ID] ASC);
 GO
 
@@ -189,7 +191,7 @@ GO
 ALTER TABLE [dbo].[Characters]
 ADD CONSTRAINT [FK_CharacterBag]
     FOREIGN KEY ([Bag_ID])
-    REFERENCES [dbo].[TCharacterBags]
+    REFERENCES [dbo].[CharacterBags]
         ([ID])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO

@@ -92,7 +92,7 @@ namespace Network
             messageHandlers[type] = (MessageHandler<Tm>)messageHandlers[type] - messageHandler;
         }
 
-        public void RaiseEvent<Tm>(T sender,Tm msg)
+        public void RaiseEvent<Tm>(T sender, Tm msg)
         {
             string key = msg.GetType().Name;
             if (messageHandlers.ContainsKey(key))
@@ -100,7 +100,7 @@ namespace Network
                 MessageHandler<Tm> handler = (MessageHandler<Tm>)messageHandlers[key];
                 if (handler != null)
                 {
-                    //handler(sender, msg);
+                    handler(sender, msg);
                     try
                     {
                         handler(sender, msg);

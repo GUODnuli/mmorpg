@@ -27,7 +27,7 @@ namespace Managers
             {
                 Info.Items = new byte[sizeof(BagItem) * this.Unlocked];
                 Reset();
-            } 
+            }
         }
 
         public void Reset()
@@ -55,6 +55,48 @@ namespace Managers
                 }
                 i++;
             }
+        }
+
+        public void AddItem(int itemId, int count)
+        {
+            ushort remaining = (ushort)count;
+            foreach (ref var slot in Items.AsSpan())
+            {
+                if (slot.ItemId != itemId) continue;
+
+                ushort available = (ushort)(DataManager.Instance.Items[itemId].StackLimit - slot.Count);
+                if (available <= 0) continue;
+
+                ushort add = Math.Min(remaining, available);
+                slot.Count += add;
+                remaining -= add;
+
+                if (remaining == 0) return;
+            }
+
+            foreach (ref var slot in Items.AsSpan())
+            {
+                if (slot.ItemId != 0) continue;
+
+                ushort add = (ushort)Math.Min(remaining, (ushort)DataManager.Instance.Items[itemId].StackLimit);
+                slot.ItemId = (ushort)itemId;
+                slot.Count = add;
+                remaining -= add;
+
+                if (remaining == 0) break;
+            }
+
+
+            // fix me: Handing full inventory
+            if (remaining > 0)
+            {
+                //背包空间不足，无法放入{remaining}个{item.Name};
+            }
+        }
+
+        public void RemoveItem(int itemId, int count)
+        {
+
         }
 
         unsafe void Analyze(byte[] data)

@@ -1,4 +1,6 @@
+using Common.Data;
 using Managers;
+using Models;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -40,8 +42,31 @@ public class UIBag : UIWindow
 
         for (int i = BagManager.Instance.Items.Length; i < slots.Count; i++)
         {
-            slots[i].color = Color.grey;
+            slots[i].color = Color.gray;
         }
         yield return null;
+    }
+
+    public void SetBag()
+    {
+        this.money.text = User.Instance.CurrentCharacter.Gold.ToString();
+    }
+
+    void Clear()
+    {
+        for (int i = 0; i < slots.Count; i++)
+        {
+            if (slots[i].transform.childCount > 0)
+            {
+                Destroy(slots[i].transform.GetChild(0).gameObject);
+            }
+        }
+    }
+
+    public void OnReset()
+    {
+        BagManager.Instance.Reset();
+        this.Clear();
+        StartCoroutine(InitBags());
     }
 }

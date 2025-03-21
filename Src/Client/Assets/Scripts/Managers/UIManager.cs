@@ -18,7 +18,8 @@ namespace Managers
 
         public UIManager()
         {
-            this.UIResources.Add(typeof(UIBag), new UIElement() { Resource = "UI/UIBag", Cache = true});
+            this.UIResources.Add(typeof(UIBag), new UIElement() { Resource = "UI/UIBag", Cache = false});
+            this.UIResources.Add(typeof(UIShop), new UIElement() { Resource = "UI/UIShop", Cache = false });
         }
 
         ~UIManager()
@@ -50,7 +51,8 @@ namespace Managers
                 {
                     return default;
                 }
-                info.Instance = (GameObject)GameObject.Instantiate(prefab);
+                Canvas canvas = GameObject.FindObjectOfType<Canvas>();
+                info.Instance = (GameObject)GameObject.Instantiate(prefab, canvas.transform);
             }
             return info.Instance.GetComponent<T>();
         }
