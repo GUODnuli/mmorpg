@@ -10,35 +10,30 @@ option cc_enable_arenas = true;
 //  Basic Defines
 //
 ////////////////////////////////////////////////////////////////
-enum RESULT
-{
+enum RESULT {
 	SUCCESS = 0;
 	FAILED = 1;
 }
 
-enum CHARACTER_TYPE
-{
+enum CHARACTER_TYPE {
 	Player = 0;
 	NPC = 1;
 	Monster = 2;
 }
 
-enum CHARACTER_CLASS
-{
+enum CHARACTER_CLASS {
 	NONE = 0;
 	WARRIOR = 1;
 	WIZARD = 2;
 	ARCHER = 3;
 }
 
-enum CHARACTER_STATE
-{
+enum CHARACTER_STATE {
 	IDLE = 0;
 	MOVE = 1;
 }
 
-enum ENTITY_EVENT
-{
+enum ENTITY_EVENT {
 	NONE = 0;
 	IDLE = 1;
 	MOVE_FWD = 2;
@@ -46,16 +41,14 @@ enum ENTITY_EVENT
 	JUMP = 4;
 }
 
-enum ITEM_TYPE
-{
+enum ITEM_TYPE {
 	NORMAL = 0;
 	MATERIAL = 1;
 	TASK = 2;
 	EQUIP = 3;
 }
 
-enum EQUIP_SLOT
-{
+enum EQUIP_SLOT {
 	WEAPON = 0; // 武器
 	ACCESSORY = 1; // 护手
 	HELMET = 2; // 头盔
@@ -66,20 +59,17 @@ enum EQUIP_SLOT
 	SLOT_MAX = 7;
 }
 
-message NUserInfo 
-{
+message NUserInfo {
 	int32 id = 1;
 	NPlayerInfo player = 2;
 }
 
-message NPlayerInfo 
-{
+message NPlayerInfo {
 	int32 id = 1;
 	repeated NCharacterInfo characters = 2;
 }
 
-message NCharacterInfo 
-{
+message NCharacterInfo {
 	int32 id = 1;
 	int32 tid = 2;
 	string name = 3;
@@ -92,59 +82,52 @@ message NCharacterInfo
 	repeated NItemInfo Items = 10;
 	NBagInfo Bag = 11;
 	bytes Equips = 12;
+	repeated NQuestInfo quests = 13;
 }
 
-message NItemInfo 
-{
+message NItemInfo {
 	int32 id = 1;
 	int32 count = 2;
 }
 
-message NVector3
-{
+message NVector3 {
 	int32 x = 1;
 	int32 y = 2;
 	int32 z = 3;
 }
 
-message NBagInfo
-{
+message NBagInfo {
 	int32 Unlocked = 1;
 	bytes Items = 2;
 }
 
-enum STATUS_ACTION
-{
+enum STATUS_ACTION {
 	UPDATE = 0;
 	ADD = 1;
 	DELETE = 2;
 }
 
-enum STATUS_TYPE
-{
+enum STATUS_TYPE {
 	MONEY = 0;
 	EXP = 1;
 	SKILL_POINT = 2;
 	ITEM = 3;
 }
 
-enum STATUS_SOURCE
-{
+enum STATUS_SOURCE {
 	UPDATE = 0;
 	ADD = 1;
 	DELETE = 2;
 }
 
-message NStatus
-{
+message NStatus {
 	STATUS_TYPE type = 1;
 	STATUS_ACTION action = 2;
 	int32 id = 3;
 	int32 value = 4;
 }
 
-message StatusNotify
-{
+message StatusNotify {
 	repeated NStatus status = 1;
 }
 
@@ -174,18 +157,18 @@ message NEntitySync {
 //
 ////////////////////////////////////////////////////////////////
 
-message NetMessage{
+message NetMessage {
 	NetMessageRequest Request = 1;
 	NetMessageResponse Response = 2;
 }
 
-message NetMessageRequest{
+message NetMessageRequest {
 	UserRegisterRequest userRegister = 1;
 	UserLoginRequest userLogin = 2;
 	UserCreateCharacterRequest createChar = 3;
 	UserGameEnterRequest gameEnter = 4;
 	UserGameLeaveRequest gameLeave = 5;
-	
+
 	MapCharacterEnterRequest mapCharacterEnter = 6;
 
 	MapEntitySyncRequest mapEntitySync = 8;
@@ -193,9 +176,14 @@ message NetMessageRequest{
 
 	ItemBuyRequest itemBuy = 10;
 	ItemEquipRequest itemEquip = 11;
+
+	QuestListRequest questList = 12;
+	QuestAcceptRequest questAccept = 13;
+	QuestSubmitRequest questSubmit = 14;
+	QuestAbandonRequest questAbandon = 15;
 }
 
-message NetMessageResponse{
+message NetMessageResponse {
 	UserRegisterResponse userRegister = 1;
 	UserLoginResponse userLogin = 2;
 	UserCreateCharacterResponse createChar = 3;
@@ -209,6 +197,11 @@ message NetMessageResponse{
 
 	ItemBuyResponse itemBuy = 10;
 	ItemEquipResponse itemEquip = 11;
+
+	QuestListResponse questList = 12;
+	QuestAcceptResponse questAccept = 13;
+	QuestSubmitResponse questSubmit = 14;
+	QuestAbandonResponse questAbandon = 15;
 
 	StatusNotify statusNotify = 100;
 }
@@ -230,8 +223,7 @@ message UserLoginResponse {
 }
 
 
-message UserRegisterRequest
-{
+message UserRegisterRequest {
 	string user = 1;
 	string password = 2;
 }
@@ -242,8 +234,7 @@ message UserRegisterResponse {
 	int32 age = 3;
 }
 
-message UserCreateCharacterRequest
-{
+message UserCreateCharacterRequest {
 	string name = 1;
 	CHARACTER_CLASS class = 2;
 }
@@ -254,8 +245,7 @@ message UserCreateCharacterResponse {
 	repeated NCharacterInfo characters = 3;
 }
 
-message UserGameEnterRequest
-{
+message UserGameEnterRequest {
 	int32 characterIdx = 1;
 }
 
@@ -265,8 +255,8 @@ message UserGameEnterResponse {
 	NCharacterInfo character = 3;
 }
 
-message UserGameLeaveRequest
-{
+message UserGameLeaveRequest {
+
 }
 
 message UserGameLeaveResponse {
@@ -339,6 +329,74 @@ message ItemEquipRequest
 }
 
 message ItemEquipResponse
+{
+	RESULT result = 1;
+	string errormsg = 2;
+}
+
+// Quest System
+enum QUEST_STATUS
+{
+	IN_PROGRESS = 0;
+	COMPLETED = 1;
+	FINISHED = 2;
+	FAILED = 3;
+}
+
+enum QUEST_LIST_TYPE
+{
+	ALL = 0;
+	IN_PROGRESS = 1;
+	FINISHED = 2;
+}
+
+message NQuestInfo
+{
+	int32 quest_id = 1;
+	int32 quest_guid = 2;
+	QUEST_STATUS status = 3;
+	repeated int32 targets = 4;
+}
+
+message QuestListRequest
+{
+	QUEST_LIST_TYPE listType = 1;
+}
+
+message QuestListResponse
+{
+	RESULT result = 1;
+	string errormsg = 2;
+	repeated NQuestInfo quests = 3;
+}
+
+message QuestAcceptRequest
+{
+	int32 quest_id = 1;
+}
+
+message QuestAcceptResponse
+{
+	RESULT result = 1;
+}
+
+message QuestSubmitRequest
+{
+	int32 quest_id = 1;
+}
+
+message QuestSubmitResponse
+{
+	RESULT result = 1;
+	string errormsg = 2;
+}
+
+message QuestAbandonRequest
+{
+	int32 quest_id = 1;
+}
+
+message QuestAbandonResponse
 {
 	RESULT result = 1;
 	string errormsg = 2;

@@ -20,6 +20,7 @@ namespace Managers
         {
             this.UIResources.Add(typeof(UIBag), new UIElement() { Resource = "UI/UIBag", Cache = false});
             this.UIResources.Add(typeof(UIShop), new UIElement() { Resource = "UI/UIShop", Cache = false });
+            this.UIResources.Add(typeof(UICharEquip), new UIElement() { Resource = "UI/UICharEquip", Cache= false });
         }
 
         ~UIManager()
