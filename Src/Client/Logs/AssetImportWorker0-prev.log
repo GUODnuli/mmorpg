@@ -15,7 +15,7 @@ E:/UnityProject/myMmorpgclass5/Src/Client
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63516
+59676
 Successfully changed project path to: E:/UnityProject/myMmorpgclass5/Src/Client
 E:/UnityProject/myMmorpgclass5/Src/Client
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ E:/UnityProject/myMmorpgclass5/Src/Client
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [52136] Host "[IP] 192.168.1.6 [Port] 0 [Flags] 2 [Guid] 4189177336 [EditorId] 4189177336 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-0A286S5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [22812] Host "[IP] 192.168.1.6 [Port] 0 [Flags] 2 [Guid] 1950048193 [EditorId] 1950048193 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-0A286S5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [52136] Host "[IP] 192.168.1.6 [Port] 0 [Flags] 2 [Guid] 4189177336 [EditorId] 4189177336 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-0A286S5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [22812] Host "[IP] 192.168.1.6 [Port] 0 [Flags] 2 [Guid] 1950048193 [EditorId] 1950048193 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-0A286S5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 31 workers.
-Refreshing native plugins compatible for Editor in 7.26 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 18.65 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.23f1 (dbb3f7c5b5c6)
 [Subsystems] Discovering subsystems at path E:/Editor/2022.3.23f1/Editor/Data/Resources/UnitySubsystems
@@ -70,7 +70,7 @@ Initialize mono
 Mono path[0] = 'E:/Editor/2022.3.23f1/Editor/Data/Managed'
 Mono path[1] = 'E:/Editor/2022.3.23f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'E:/Editor/2022.3.23f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56124
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56996
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
@@ -79,8 +79,8 @@ Register platform support module: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngi
 Register platform support module: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/VisionOSPlayer/UnityEditor.VisionOS.Extensions.dll
 Register platform support module: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.004446 seconds.
-- Loaded All Assemblies, in  0.350 seconds
+Registered in 0.006958 seconds.
+- Loaded All Assemblies, in  0.293 seconds
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Failed to load: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/VisionOSPlayer\x64\UnityEditor.VisionOS.Native.dll
@@ -89,39 +89,39 @@ Native extension for VisionOS target not found
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 242 ms
+Android Extension - Scanning For ADB Devices 434 ms
 Native extension for OSXStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.447 seconds
-Domain Reload Profiling: 798ms
-	BeginReloadAssembly (194ms)
+- Finished resetting the current domain, in  0.688 seconds
+Domain Reload Profiling: 982ms
+	BeginReloadAssembly (107ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (2ms)
-	RebuildCommonClasses (20ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (38ms)
-	LoadAllAssembliesAndSetupDomain (90ms)
-		LoadAssemblies (197ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (22ms)
+	RebuildNativeTypeToScriptingClass (6ms)
+	initialDomainReloadingComplete (36ms)
+	LoadAllAssembliesAndSetupDomain (122ms)
+		LoadAssemblies (109ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (84ms)
-			TypeCache.Refresh (83ms)
-				TypeCache.ScanAssembly (76ms)
+		AnalyzeDomain (119ms)
+			TypeCache.Refresh (118ms)
+				TypeCache.ScanAssembly (109ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (448ms)
+	FinalizeReload (689ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (413ms)
+		SetupLoadedEditorAssemblies (640ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (314ms)
-			SetLoadedEditorAssemblies (3ms)
+			InitializePlatformSupportModulesInManaged (527ms)
+			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (66ms)
-			ProcessInitializeOnLoadMethodAttributes (28ms)
+			ProcessInitializeOnLoadAttributes (75ms)
+			ProcessInitializeOnLoadMethodAttributes (32ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -132,8 +132,8 @@ Begin MonoManager ReloadAssembly
 Duplicate assembly 'log4net.dll' with different versions detected, using 'Assets/References/log4net.dll, AssemblyName=log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=null' and ignoring 'Packages/com.unity.collab-proxy/Lib/Editor/PlasticSCM/log4netPlastic.dll, AssemblyName=log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a'.Duplicate assembly 'Newtonsoft.Json.dll' with different versions detected, using 'Packages/com.unity.nuget.newtonsoft-json/Runtime/Newtonsoft.Json.dll, AssemblyName=Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed' and ignoring 'Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll, AssemblyName=Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null'.Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.387 seconds
-Refreshing native plugins compatible for Editor in 5.71 ms, found 2 plugins.
+- Loaded All Assemblies, in  0.496 seconds
+Refreshing native plugins compatible for Editor in 5.30 ms, found 2 plugins.
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Failed to load: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/VisionOSPlayer\x64\UnityEditor.VisionOS.Native.dll
@@ -146,47 +146,47 @@ Package Manager log level set to [2]
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.582 seconds
-Domain Reload Profiling: 969ms
-	BeginReloadAssembly (90ms)
+- Finished resetting the current domain, in  0.665 seconds
+Domain Reload Profiling: 1161ms
+	BeginReloadAssembly (108ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (3ms)
+		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (13ms)
-	RebuildCommonClasses (19ms)
+		CreateAndSetChildDomain (16ms)
+	RebuildCommonClasses (22ms)
 	RebuildNativeTypeToScriptingClass (6ms)
-	initialDomainReloadingComplete (21ms)
-	LoadAllAssembliesAndSetupDomain (251ms)
-		LoadAssemblies (220ms)
+	initialDomainReloadingComplete (26ms)
+	LoadAllAssembliesAndSetupDomain (334ms)
+		LoadAssemblies (304ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (86ms)
-			TypeCache.Refresh (71ms)
-				TypeCache.ScanAssembly (56ms)
-			ScanForSourceGeneratedMonoScriptInfo (12ms)
+		AnalyzeDomain (96ms)
+			TypeCache.Refresh (78ms)
+				TypeCache.ScanAssembly (59ms)
+			ScanForSourceGeneratedMonoScriptInfo (15ms)
 			ResolveRequiredComponents (2ms)
-	FinalizeReload (583ms)
+	FinalizeReload (665ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (485ms)
+		SetupLoadedEditorAssemblies (555ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (26ms)
-			SetLoadedEditorAssemblies (3ms)
+			InitializePlatformSupportModulesInManaged (29ms)
+			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (49ms)
-			ProcessInitializeOnLoadAttributes (317ms)
-			ProcessInitializeOnLoadMethodAttributes (87ms)
+			BeforeProcessingInitializeOnLoad (55ms)
+			ProcessInitializeOnLoadAttributes (361ms)
+			ProcessInitializeOnLoadMethodAttributes (104ms)
 			AfterProcessingInitializeOnLoad (1ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (5ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 6.44 ms, found 2 plugins.
+		AwakeInstancesAfterBackupRestoration (6ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 6.42 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2636 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 70 unused Assets / (75.2 KB). Loaded Objects now: 3098.
-Memory consumption went from 139.8 MB to 139.7 MB.
-Total: 5.794200 ms (FindLiveObjects: 0.170400 ms CreateObjectMapping: 0.059100 ms MarkObjects: 5.451900 ms  DeleteObjects: 0.111700 ms)
+Unloading 2637 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 70 unused Assets / (75.5 KB). Loaded Objects now: 3099.
+Memory consumption went from 139.7 MB to 139.6 MB.
+Total: 4.203100 ms (FindLiveObjects: 0.122200 ms CreateObjectMapping: 0.030400 ms MarkObjects: 3.935300 ms  DeleteObjects: 0.114200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -203,1197 +203,13 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
 ========================================================================
-Received Import Request.
-  Time since last request: 20893.334874 seconds.
-  path: Assets/Resources/UI/UICharEquip 1.prefab
-  artifactKey: Guid(b519d8adcbb1ff740ad63b4468896694) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip 1.prefab using Guid(b519d8adcbb1ff740ad63b4468896694) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39d144324332fb4acdaf1f37e1e7628f') in 0.032596 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 251
-========================================================================
-Received Import Request.
-  Time since last request: 16.333723 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(b519d8adcbb1ff740ad63b4468896694) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(b519d8adcbb1ff740ad63b4468896694) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfb82495b435b98bd55e46cab872aeb2') in 0.005374 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 251
-========================================================================
-Received Import Request.
-  Time since last request: 25.409645 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '268368d386d9dbfd677bb957bd83b4cf') in 0.005108 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 251
-========================================================================
-Received Import Request.
-  Time since last request: 16.975321 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be7de91e1268317367d16e0af5c4b28f') in 0.004850 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 251
-========================================================================
-Received Import Request.
-  Time since last request: 7.068621 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e25e5dff6e373fda236025639d85c5b') in 0.005055 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 275
-========================================================================
-Received Import Request.
-  Time since last request: 7.867103 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8115811ad1a4ab6dd482c5addf5166a1') in 0.004977 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 275
-========================================================================
-Received Import Request.
-  Time since last request: 2.417195 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af4e72082860a65e9ecd4540f7aea4a0') in 0.005008 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 275
-========================================================================
-Received Import Request.
-  Time since last request: 10.274793 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08a83f73752bee6440ad05407420b107') in 0.005071 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 251
-========================================================================
-Received Import Request.
-  Time since last request: 1.429140 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '111fa4e689f97241e9499a43942496ce') in 0.005040 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 275
-========================================================================
-Received Import Request.
-  Time since last request: 6.048103 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '703c150e076fa64004b0874e53cf38ff') in 0.005356 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 275
-========================================================================
-Received Import Request.
-  Time since last request: 6.444039 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '763be5307622dad6b90e022574fd2ec1') in 0.004950 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 251
-========================================================================
-Received Import Request.
-  Time since last request: 3.828743 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32d3cdc006d95b12d7f24dcfe2a2cf72') in 0.006987 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 275
-========================================================================
-Received Import Request.
-  Time since last request: 7.058118 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a317de299a2914e276b1c6fc90f95337') in 0.005316 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 275
-========================================================================
-Received Import Request.
-  Time since last request: 5.451196 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4a44cf7c12a0a7788a231fe86a5d4ef') in 0.005037 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 275
-========================================================================
-Received Import Request.
-  Time since last request: 33.266360 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69caeae338929d57e47d7b54f5078b93') in 0.006043 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 275
-========================================================================
-Received Import Request.
-  Time since last request: 9.265262 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75113c1f0a3f7aacedf6b79780abdc62') in 0.004934 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 275
-========================================================================
-Received Import Request.
-  Time since last request: 7.252369 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1655c052e6eccff9a2097b8cc3d554ae') in 0.005817 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 275
-========================================================================
-Received Import Request.
-  Time since last request: 45.923006 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a58248ae78e6578c8ebdb4869660f7c') in 0.005396 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 251
-========================================================================
-Received Import Request.
-  Time since last request: 10.929132 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4bef539d7b7cad9ae67e3edfa8284bb') in 0.005078 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 251
-========================================================================
-Received Import Request.
-  Time since last request: 20.142985 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '533f89411e66f2307e6ac975ad65d37d') in 0.005290 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 251
-========================================================================
-Received Import Request.
-  Time since last request: 9.253939 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc7b1936ac56f5644e7cb251641fd138') in 0.004877 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 251
-========================================================================
-Received Import Request.
-  Time since last request: 13.154810 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b6aa8a39acb72fe4df600a0346db086') in 0.005373 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 251
-========================================================================
-Received Import Request.
-  Time since last request: 16.742878 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f23acf5368260fef1b3ec0bcdf5072df') in 0.005555 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 251
-========================================================================
-Received Import Request.
-  Time since last request: 22.187872 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c48095208ed1903eeada3ad4314b6d07') in 0.005434 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 251
-========================================================================
-Received Import Request.
-  Time since last request: 15.724632 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf4f1bc6b411e306160f594c3c980877') in 0.005135 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 251
-========================================================================
-Received Import Request.
-  Time since last request: 29.402335 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bed0941411fb9183ec4b52086ca9de68') in 0.005433 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 291
-========================================================================
-Received Import Request.
-  Time since last request: 4.631483 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eda44e10a0b4c347be98902dcd398283') in 0.006022 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 291
-========================================================================
-Received Import Request.
-  Time since last request: 3.825282 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0076f764389480b271c005a5efe7edb8') in 0.005623 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 291
-========================================================================
-Received Import Request.
-  Time since last request: 15.098429 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ed0cce43848f5f49bb4187144e9ec92') in 0.004615 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 251
-========================================================================
-Received Import Request.
-  Time since last request: 2.616449 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d9697bdf40db4c6418a529b3ee3a064') in 0.006194 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 291
-========================================================================
-Received Import Request.
-  Time since last request: 8.464405 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '087fe43a3991b1493c9ee51d10240cb4') in 0.005409 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 291
-========================================================================
-Received Import Request.
-  Time since last request: 6.255545 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8867a9130c5c0e56ec3d311d2b31afc') in 0.005740 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 291
-========================================================================
-Received Import Request.
-  Time since last request: 8.664830 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '214db34a29857d3c196eb8d68b72e24d') in 0.005025 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 291
-========================================================================
-Received Import Request.
-  Time since last request: 26.010305 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b481ba174cbe456c27a6dfb839e44c90') in 0.005586 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 291
-========================================================================
-Received Import Request.
-  Time since last request: 13.210975 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8a06b5b38d228b79a28db3f847f27d7') in 0.005540 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 291
-========================================================================
-Received Import Request.
-  Time since last request: 27.757384 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '401b776ce4ec1790b21cda248717edba') in 0.005027 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 291
-========================================================================
-Received Import Request.
-  Time since last request: 35.164880 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9d3896518eb43cb3240870d5e8bfaeb') in 0.005566 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 291
-========================================================================
-Received Import Request.
-  Time since last request: 6426.929319 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64ff6aedb77a915cc2c0419074ee5f5c') in 0.015163 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 217
-========================================================================
-Received Import Request.
-  Time since last request: 2.778282 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12c80a9eb2ef664db4f5c793dae7109a') in 0.004509 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 151
-========================================================================
-Received Import Request.
-  Time since last request: 7.049992 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '933aaffa1a2b13467a01843c5ec18c7b') in 0.004247 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 151
-========================================================================
-Received Import Request.
-  Time since last request: 10.253676 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d9347e6b7825c0d9cdeb8e49a461a28') in 0.004085 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 155
-========================================================================
-Received Import Request.
-  Time since last request: 4.425967 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73db9c7f21409d6bfc5ceb7c0932d9b2') in 0.005037 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 155
-========================================================================
-Received Import Request.
-  Time since last request: 1.604413 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e95d531f22b7f9c7d14f0d2108b21f7d') in 0.004464 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 155
-========================================================================
-Received Import Request.
-  Time since last request: 1.805271 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73476a7d518c9e68a55c393e0579ba67') in 0.003848 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 155
-========================================================================
-Received Import Request.
-  Time since last request: 2.009014 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07851387ed05cc6dea58b054363cfaf6') in 0.006609 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 155
-========================================================================
-Received Import Request.
-  Time since last request: 1.803829 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d2c63a4d8cf0f27cdf4ef220640d19d') in 0.003960 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 155
-========================================================================
-Received Import Request.
-  Time since last request: 5.242400 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e428b8738d42937b8a3271abf8ea5ece') in 0.004564 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 155
-========================================================================
-Received Import Request.
-  Time since last request: 8.173575 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c2a7af4fc1e6a3e4097d5b39fc2fb2f') in 0.004178 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 155
-========================================================================
-Received Import Request.
-  Time since last request: 7.436021 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28f9bdbf2cb5d9e42f16b239e50aa141') in 0.003804 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 155
-========================================================================
-Received Import Request.
-  Time since last request: 3.223801 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65a2075c902d8998d83a2489b4b70c19') in 0.004083 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 155
-========================================================================
-Received Import Request.
-  Time since last request: 2.219802 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '562b95bf105c03f05bbe0dd0a7e2241c') in 0.004135 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 155
-========================================================================
-Received Import Request.
-  Time since last request: 2.425330 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '215a1efb5881efd0366f6720ef2e8cb7') in 0.003975 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 155
-========================================================================
-Received Import Request.
-  Time since last request: 2.839053 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '083f89a0514ea5f313d3ee6d84b8763e') in 0.003934 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 155
-========================================================================
-Received Import Request.
-  Time since last request: 2.078754 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '086b34ad2177776dc76184c8cc09aeb8') in 0.003962 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 155
-========================================================================
-Received Import Request.
-  Time since last request: 543.309255 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69bcc27ccfed77db0eab0b8090b43c8d') in 0.006704 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 159
-========================================================================
-Received Import Request.
-  Time since last request: 4.611606 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '695594083dff697ddf5e3d0d419c5a29') in 0.004107 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 159
-========================================================================
-Received Import Request.
-  Time since last request: 2.221942 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa737a9f15c42d7d9e464e342fd2075b') in 0.004066 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 159
-========================================================================
-Received Import Request.
-  Time since last request: 2.216150 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f872ffe1d361e1c4b60e1732ea685985') in 0.003983 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 159
-========================================================================
-Received Import Request.
-  Time since last request: 5.252765 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fafc15e6a1834f9dae8ed374ef594cdd') in 0.004111 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 159
-========================================================================
-Received Import Request.
-  Time since last request: 4.437050 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be72df05485baff1be5b5901659ace7c') in 0.004206 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 160
-========================================================================
-Received Import Request.
-  Time since last request: 16.334823 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd214f4969213a59156951368594127d5') in 0.004195 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 160
-========================================================================
-Received Import Request.
-  Time since last request: 5.641607 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b2971f3536f8ccfdfb188a4e2b9da2e') in 0.004861 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 160
-========================================================================
-Received Import Request.
-  Time since last request: 2.832249 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb45b4b41aa5141723bd5d3e447d4175') in 0.003865 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 160
-========================================================================
-Received Import Request.
-  Time since last request: 3.212371 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a068c6800db516dbffa904a25fae217') in 0.004518 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 160
-========================================================================
-Received Import Request.
-  Time since last request: 1.007109 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f031f1f426592e85808b7b11614264de') in 0.003979 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 160
-========================================================================
-Received Import Request.
-  Time since last request: 33.222584 seconds.
-  path: Assets/UI/Login/3.png
-  artifactKey: Guid(e17949c7a08ef65438b868e822d792b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Login/3.png using Guid(e17949c7a08ef65438b868e822d792b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c538072ed8065d65ac353c627385e956') in 0.109106 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 3331.577198 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4de9dff4c562d002e4217b192f201688') in 0.036043 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 234
-========================================================================
-Received Import Request.
-  Time since last request: 28.983602 seconds.
-  path: Assets/Resources/UI/UIQuestSystem1.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem1.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ef5709db79010d332009e523ffa43b7') in 0.005166 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 234
-========================================================================
-Received Import Request.
-  Time since last request: 21.218486 seconds.
-  path: Assets/Resources/UI/UICharEquip.prefab
-  artifactKey: Guid(b519d8adcbb1ff740ad63b4468896694) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharEquip.prefab using Guid(b519d8adcbb1ff740ad63b4468896694) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9aeccafea1f0154aa57ea12efa8a09c1') in 0.007922 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 251
-========================================================================
-Received Import Request.
-  Time since last request: 8.292092 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca894afe0ce42717d18749c5e19bcf88') in 0.004999 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 234
-========================================================================
-Received Import Request.
-  Time since last request: 5.926500 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b1b1274ae1f27ba01b0e51463f072fd') in 0.003996 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 194
-========================================================================
-Received Import Request.
-  Time since last request: 42.309846 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07225c483e752e18e3b5f045ac032503') in 0.005383 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 194
-========================================================================
-Received Import Request.
-  Time since last request: 24.527110 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6216409dddbb84436d83ea2a90aa6e8f') in 0.004348 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 194
-========================================================================
-Received Import Request.
-  Time since last request: 3.239429 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '442bec5929485f2f3b6308f56c26da07') in 0.004092 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 194
-========================================================================
-Received Import Request.
-  Time since last request: 2.817762 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e727570934b716296f952e98b496430') in 0.003979 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 194
-========================================================================
-Received Import Request.
-  Time since last request: 18.125598 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b566c26f4a7ed66429814a4cbf7526f') in 0.003550 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 194
-========================================================================
-Received Import Request.
-  Time since last request: 39.364753 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7947ccc35e37669804ecc0861df3832') in 0.003979 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 194
-========================================================================
-Received Import Request.
-  Time since last request: 26.077384 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '235ab40c119da53419e0323f7e03c874') in 0.003615 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 194
-========================================================================
-Received Import Request.
-  Time since last request: 3.019525 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fafd8daf30c2141cf4b3000d368cbf2e') in 0.003746 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 194
-========================================================================
-Received Import Request.
-  Time since last request: 9.988569 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5835316323eb5f587903524c38d64880') in 0.003610 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 193
-========================================================================
-Received Import Request.
-  Time since last request: 6.649747 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '874dc2b5645ab26bf027192beb8eb917') in 0.004438 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 193
-========================================================================
-Received Import Request.
-  Time since last request: 3.816113 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae9af8ea443859238446b9b79aa743ea') in 0.003776 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 193
-========================================================================
-Received Import Request.
-  Time since last request: 3.018028 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94c34baf3971756176b748fc808fe2c8') in 0.004372 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 193
-========================================================================
-Received Import Request.
-  Time since last request: 11.080965 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84abce0ef6627b37112cda2a30829376') in 0.003920 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 190
-========================================================================
-Received Import Request.
-  Time since last request: 7.048843 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e43f2a836012326f693802eea9c7deba') in 0.003531 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 194
-========================================================================
-Received Import Request.
-  Time since last request: 13.514000 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65801e2819333c55e8b101ea41784bb5') in 0.003258 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 193
-========================================================================
-Received Import Request.
-  Time since last request: 17.130200 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af85ba99a281958cb42601d5872b96b5') in 0.003585 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 193
-========================================================================
-Received Import Request.
-  Time since last request: 5.636811 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17f239a86fce31099a8395d0ee7c20bb') in 0.004192 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 193
-========================================================================
-Received Import Request.
-  Time since last request: 6.854030 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f22a9d5cada383f624effb27c61c1a18') in 0.003533 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 193
-========================================================================
-Received Import Request.
-  Time since last request: 12.276494 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c42a4d2e2fc7024bd5f92db64e54eb77') in 0.004192 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 193
-========================================================================
-Received Import Request.
-  Time since last request: 5.049564 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce7bd8694894f901685f2433f7567be6') in 0.003672 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 193
-========================================================================
-Received Import Request.
-  Time since last request: 19.837957 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e980ee550d4b3735408eee007756877a') in 0.004545 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 194
-========================================================================
-Received Import Request.
-  Time since last request: 2.214694 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '514a3cf8e6e3eb4a6cfac7c4dc9293a4') in 0.003799 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 194
-========================================================================
-Received Import Request.
-  Time since last request: 2.687301 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87601e0ed1ed15ba8fd848ca8919730c') in 0.004112 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 194
-========================================================================
-Received Import Request.
-  Time since last request: 27.119959 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9295cd08d70a1921a82f48dda0c11f60') in 0.003714 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 195
-========================================================================
-Received Import Request.
-  Time since last request: 5.042161 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d3855dd9741253027ba3555dea174c2') in 0.003545 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 195
-========================================================================
-Received Import Request.
-  Time since last request: 24.648460 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23a60a65fae90e8380e4162d7e08c2c2') in 0.003627 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 199
-========================================================================
-Received Import Request.
-  Time since last request: 5.228264 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4368c4c4ac1ee86eb97e91b7b5528328') in 0.003679 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 199
-========================================================================
-Received Import Request.
-  Time since last request: 2.606760 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1c1bd44a5580ab0091d19113bf8cffa') in 0.003469 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 199
-========================================================================
-Received Import Request.
-  Time since last request: 2.617826 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b514ad2b4807043b6992ce9f2a07bc97') in 0.003640 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 199
-========================================================================
-Received Import Request.
-  Time since last request: 1.415825 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad8fe1a48f03f854f9507fff68884115') in 0.004787 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 199
-========================================================================
-Received Import Request.
-  Time since last request: 11.749228 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c38c1057ddb21abd14004dd079c26d96') in 0.003625 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 199
-========================================================================
-Received Import Request.
-  Time since last request: 15.993642 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'caa5fe5940bc0ed4bb487f2317732991') in 0.003370 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 199
-========================================================================
-Received Import Request.
-  Time since last request: 2.008392 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c4bd7bc6ff0b9bb83fff629dac09801') in 0.003820 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 199
-========================================================================
-Received Import Request.
-  Time since last request: 13.921146 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2c5e1e6e05ac54590fa449b4b85f356') in 0.003884 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 199
-========================================================================
-Received Import Request.
-  Time since last request: 3.232456 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aedbadfee43f868b570712e1e41e46a2') in 0.003265 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 199
-========================================================================
-Received Import Request.
-  Time since last request: 6.235903 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71f38522ce6b7b14e41d11735a3b3c2a') in 0.003493 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 199
-========================================================================
-Received Import Request.
-  Time since last request: 3.415874 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75306c3eae90e5b9d0a5908b17380e4d') in 0.004076 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 199
-========================================================================
-Received Import Request.
-  Time since last request: 9.472568 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b10522f2c97f75dbb38e57fade34726') in 0.003570 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 199
-========================================================================
-Received Import Request.
-  Time since last request: 1.610297 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95c2e6b9c7b98cf3b9b67b8d507ce4dc') in 0.003701 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 203
-========================================================================
-Received Import Request.
-  Time since last request: 11.084682 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5dbcf5753c5b5c96535e8b7d89d37be0') in 0.004134 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 203
-========================================================================
-Received Import Request.
-  Time since last request: 3.444909 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11178ddb650b8a3ab93ba0235436d7ca') in 0.003249 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 203
-========================================================================
-Received Import Request.
-  Time since last request: 7.072891 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c24c28fc987c295e31530ce1dfb45524') in 0.003989 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 203
-========================================================================
-Received Import Request.
-  Time since last request: 8.117555 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c1580dfa12c846f558dfb1a33d5ee88') in 0.003423 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 203
-========================================================================
-Received Import Request.
-  Time since last request: 2.213417 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e2d1d2f36deef017638b1b8c15b8480') in 0.003545 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 203
-========================================================================
-Received Import Request.
-  Time since last request: 3.445245 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f26ff31991e7bc285069e121860bb6c') in 0.004078 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 207
-========================================================================
-Received Import Request.
-  Time since last request: 9.268729 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6571caf86cbb142a3a40b536c41a203b') in 0.003408 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 207
-========================================================================
-Received Import Request.
-  Time since last request: 7.063906 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be48f8b21c9a1a1aa80b40ade8b0b52f') in 0.003871 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 207
-========================================================================
-Received Import Request.
-  Time since last request: 2.615340 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dea8326114f1258623f4302d80a1e9a0') in 0.005313 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 207
-========================================================================
-Received Import Request.
-  Time since last request: 5.836739 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c7d093e72b7c4eeba7ced1d2d9b869d') in 0.003484 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 211
-========================================================================
-Received Import Request.
-  Time since last request: 1.706255 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0316c6f3e1e27c48ccd9e6bd7729f724') in 0.003524 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 211
-========================================================================
-Received Import Request.
-  Time since last request: 6.452254 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0907cbf4524d89aa48c9a78165d30152') in 0.003882 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 211
-========================================================================
-Received Import Request.
-  Time since last request: 4.434901 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3eec61491a5adb088b93526d63dd7c50') in 0.003505 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 211
-========================================================================
-Received Import Request.
-  Time since last request: 332.599003 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87c089f8bde2a45ebe032d32b50b82a2') in 0.004777 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 220
-========================================================================
-Received Import Request.
-  Time since last request: 1.990983 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dbb7ef496d0325d1642e567fd3cf717') in 0.004277 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 220
-========================================================================
-Received Import Request.
-  Time since last request: 2.014307 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36d62689e5330ada77bb21aa32601654') in 0.003451 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 220
-========================================================================
-Received Import Request.
-  Time since last request: 1.217831 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90e2160a11a4c91de206242414ce8910') in 0.003648 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 229
-========================================================================
-Received Import Request.
-  Time since last request: 2.225450 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c43f4002ce6e06b42a4c8fc1f28cedd0') in 0.003797 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 229
-========================================================================
-Received Import Request.
-  Time since last request: 5.441997 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8eaf608f3913ed85a2aa2dc5359ee667') in 0.004136 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 238
-========================================================================
-Received Import Request.
-  Time since last request: 2.615797 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98c74e9bed00f5350f7a9403d5fad9d1') in 0.003905 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 238
-========================================================================
-Received Import Request.
-  Time since last request: 1.612055 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1f72594f4ee82ec36ee805512574789') in 0.004596 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 238
-========================================================================
-Received Import Request.
-  Time since last request: 2.214028 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea0316f2c30cea11cbab4dc91c3541a8') in 0.003970 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 247
-========================================================================
-Received Import Request.
-  Time since last request: 4.245832 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a30a18634f0fba99844dd830b56e3524') in 0.003835 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 247
-========================================================================
-Received Import Request.
-  Time since last request: 31.713577 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8754560dabb082d97e4d9fc0b012a68') in 0.005824 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 247
-========================================================================
-Received Import Request.
-  Time since last request: 7.038642 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f309a1e781136b4532cebe96367ae63') in 0.005692 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 247
-========================================================================
-Received Import Request.
-  Time since last request: 3.042155 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cfd36c3b3bb08d89269f5979d2d5c77') in 0.004517 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 247
-========================================================================
-Received Import Request.
-  Time since last request: 26.677755 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42c0f07062c1065dda3ea1dbffd6f85e') in 0.003791 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 247
-========================================================================
-Received Import Request.
-  Time since last request: 12.472489 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3da1108927ead65be752f1f91775eeb') in 0.004707 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 247
-========================================================================
-Received Import Request.
-  Time since last request: 22.203786 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97be7ea1527a047c1ccf75f0dee13da6') in 0.005626 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 247
-========================================================================
-Received Import Request.
-  Time since last request: 15.016937 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0511fbceaa4690acd45b926228c1355f') in 0.003666 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 247
-========================================================================
-Received Import Request.
-  Time since last request: 22.984855 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3de05c9609e9729c02388bfd13b6ee7d') in 0.004002 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 258
-========================================================================
-Received Import Request.
-  Time since last request: 3.502344 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '928d5d0c1231327017de6b386f3cb7ec') in 0.003759 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 258
-========================================================================
-Received Import Request.
-  Time since last request: 2.038450 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '183f8e7f9e0e58c6df743cecc662b100') in 0.003643 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 258
-========================================================================
-Received Import Request.
-  Time since last request: 14.556843 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d53bc8300c396a5515e5903472cab8e') in 0.004838 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 247
-========================================================================
-Received Import Request.
-  Time since last request: 7.079354 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c8548c6bb4f1fb179cc3a69a3f890df') in 0.004501 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 247
-========================================================================
-Received Import Request.
-  Time since last request: 3.219433 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05ca845c642baee36cb9cec146e0d6e7') in 0.004342 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 247
-========================================================================
-Received Import Request.
-  Time since last request: 5.256634 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77c1ab25463f3e0c96380ba2f9af612a') in 0.004744 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 247
-========================================================================
-Received Import Request.
-  Time since last request: 6.427794 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f45e98c4761111dc034c171f64ce313c') in 0.005650 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 247
-========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
 Duplicate assembly 'log4net.dll' with different versions detected, using 'Assets/References/log4net.dll, AssemblyName=log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=null' and ignoring 'Packages/com.unity.collab-proxy/Lib/Editor/PlasticSCM/log4netPlastic.dll, AssemblyName=log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a'.Duplicate assembly 'Newtonsoft.Json.dll' with different versions detected, using 'Packages/com.unity.nuget.newtonsoft-json/Runtime/Newtonsoft.Json.dll, AssemblyName=Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed' and ignoring 'Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll, AssemblyName=Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null'.Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.679 seconds
-Refreshing native plugins compatible for Editor in 4.58 ms, found 2 plugins.
+- Loaded All Assemblies, in  0.370 seconds
+Refreshing native plugins compatible for Editor in 3.89 ms, found 2 plugins.
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Failed to load: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/VisionOSPlayer\x64\UnityEditor.VisionOS.Native.dll
@@ -1405,46 +221,46 @@ Native extension for OSXStandalone target not found
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.896 seconds
-Domain Reload Profiling: 1575ms
-	BeginReloadAssembly (251ms)
+- Finished resetting the current domain, in  0.920 seconds
+Domain Reload Profiling: 1290ms
+	BeginReloadAssembly (108ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (12ms)
+		DisableScriptedObjects (3ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (116ms)
-	RebuildCommonClasses (20ms)
+		CreateAndSetChildDomain (27ms)
+	RebuildCommonClasses (18ms)
 	RebuildNativeTypeToScriptingClass (6ms)
-	initialDomainReloadingComplete (19ms)
-	LoadAllAssembliesAndSetupDomain (382ms)
-		LoadAssemblies (410ms)
+	initialDomainReloadingComplete (16ms)
+	LoadAllAssembliesAndSetupDomain (222ms)
+		LoadAssemblies (235ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (54ms)
-			TypeCache.Refresh (37ms)
-				TypeCache.ScanAssembly (25ms)
-			ScanForSourceGeneratedMonoScriptInfo (13ms)
-			ResolveRequiredComponents (3ms)
-	FinalizeReload (896ms)
+		AnalyzeDomain (44ms)
+			TypeCache.Refresh (30ms)
+				TypeCache.ScanAssembly (22ms)
+			ScanForSourceGeneratedMonoScriptInfo (10ms)
+			ResolveRequiredComponents (2ms)
+	FinalizeReload (920ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (478ms)
+		SetupLoadedEditorAssemblies (485ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (26ms)
-			SetLoadedEditorAssemblies (4ms)
+			SetLoadedEditorAssemblies (5ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (51ms)
-			ProcessInitializeOnLoadAttributes (310ms)
+			BeforeProcessingInitializeOnLoad (53ms)
+			ProcessInitializeOnLoadAttributes (314ms)
 			ProcessInitializeOnLoadMethodAttributes (86ms)
 			AfterProcessingInitializeOnLoad (1ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (6ms)
-Refreshing native plugins compatible for Editor in 7.33 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 5.73 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2610 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 63 unused Assets / (51.7 KB). Loaded Objects now: 3109.
-Memory consumption went from 135.8 MB to 135.8 MB.
-Total: 5.033300 ms (FindLiveObjects: 0.121300 ms CreateObjectMapping: 0.037000 ms MarkObjects: 4.756500 ms  DeleteObjects: 0.117500 ms)
+Unloading 2612 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 59 unused Assets / (48.9 KB). Loaded Objects now: 3103.
+Memory consumption went from 135.7 MB to 135.6 MB.
+Total: 3.900900 ms (FindLiveObjects: 0.107600 ms CreateObjectMapping: 0.028800 ms MarkObjects: 3.693200 ms  DeleteObjects: 0.070600 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -1461,203 +277,3 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-========================================================================
-Received Import Request.
-  Time since last request: 5998.413863 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b015b2247d5fcdba77a2d33f68c7cbce') in 0.045252 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 251
-========================================================================
-Received Import Request.
-  Time since last request: 2.400765 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd9baa332631319b0cbce02358e114c4') in 0.003588 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 251
-========================================================================
-Received Import Request.
-  Time since last request: 25.185026 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '252ff128a6afc750ec3b356bb497d5b0') in 0.003959 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 251
-========================================================================
-Received Import Request.
-  Time since last request: 1.597488 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bbe23d18b76e41123265c59aaa38aca') in 0.003424 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 251
-========================================================================
-Received Import Request.
-  Time since last request: 3.435363 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3eb7bd44791a7d29368430f2a095fa61') in 0.003960 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 251
-========================================================================
-Received Import Request.
-  Time since last request: 8.746647 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fad8432a7a608121ef5edb3aae64b76d') in 0.005792 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 251
-========================================================================
-Received Import Request.
-  Time since last request: 7.289189 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75f2327a67f65acb2bbff521c1910485') in 0.004457 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 252
-========================================================================
-Received Import Request.
-  Time since last request: 7.858163 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8207a753f8b42f53c0c6bd20192f4511') in 0.003806 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 252
-========================================================================
-Received Import Request.
-  Time since last request: 5.496064 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1b54132a5c225d56112125ba2027a12') in 0.004134 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 252
-========================================================================
-Received Import Request.
-  Time since last request: 9.681240 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfb7231501d351fe1b2702ad88efdd8b') in 0.004011 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 252
-========================================================================
-Received Import Request.
-  Time since last request: 7.463965 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'faf57a0cccc21eb69c75476360698b9b') in 0.003740 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 252
-========================================================================
-Received Import Request.
-  Time since last request: 6.448182 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a70ef5190419bad13e5f80ee6485a7c') in 0.003718 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 252
-========================================================================
-Received Import Request.
-  Time since last request: 1.230431 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58ed83b7505e7323de14139043bd1ba1') in 0.003997 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 247
-========================================================================
-Received Import Request.
-  Time since last request: 6.852630 seconds.
-  path: Assets/Resources/UI/UIQuestSystem.prefab
-  artifactKey: Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestSystem.prefab using Guid(6e0b770d47467a446b4ed3ea19bf7034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb32ee7ce5595762b9f6291da0109570') in 0.004616 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 247
-========================================================================
-Received Import Request.
-  Time since last request: 160.381119 seconds.
-  path: Assets/Resources/UI/UIEquipItems 1.prefab
-  artifactKey: Guid(a297917830be2534285986e4dc5967fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIEquipItems 1.prefab using Guid(a297917830be2534285986e4dc5967fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4473345e06800b6624e2c2c9ad2f5f4b') in 0.003208 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 35
-========================================================================
-Received Import Request.
-  Time since last request: 41.890016 seconds.
-  path: Assets/Resources/UI/UI.prefab
-  artifactKey: Guid(a297917830be2534285986e4dc5967fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UI.prefab using Guid(a297917830be2534285986e4dc5967fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d941aa163b6b381115b66e76294f8de') in 0.002073 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 35
-========================================================================
-Received Import Request.
-  Time since last request: 2450.240843 seconds.
-  path: Assets/Resources/UI/UIQuestItem.prefab
-  artifactKey: Guid(a297917830be2534285986e4dc5967fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestItem.prefab using Guid(a297917830be2534285986e4dc5967fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '382fc4b18cbed103540179c3691ecb21') in 0.007096 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 35
-========================================================================
-Received Import Request.
-  Time since last request: 17.957512 seconds.
-  path: Assets/Resources/UI/UIQuestItem.prefab
-  artifactKey: Guid(a297917830be2534285986e4dc5967fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestItem.prefab using Guid(a297917830be2534285986e4dc5967fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b09dd35eb87942e8318f6a7b35ea8279') in 0.002448 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 35
-========================================================================
-Received Import Request.
-  Time since last request: 5.854829 seconds.
-  path: Assets/Resources/UI/UIQuestItem.prefab
-  artifactKey: Guid(a297917830be2534285986e4dc5967fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestItem.prefab using Guid(a297917830be2534285986e4dc5967fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '194b97ebcd40d515b711f02ee85cca67') in 0.002661 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 35
-========================================================================
-Received Import Request.
-  Time since last request: 3.823366 seconds.
-  path: Assets/Resources/UI/UIQuestItem.prefab
-  artifactKey: Guid(a297917830be2534285986e4dc5967fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestItem.prefab using Guid(a297917830be2534285986e4dc5967fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03673faf0a21e10d2e107761d55666ac') in 0.002232 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 13
-========================================================================
-Received Import Request.
-  Time since last request: 5.149402 seconds.
-  path: Assets/Resources/UI/UIQuestItem.prefab
-  artifactKey: Guid(a297917830be2534285986e4dc5967fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestItem.prefab using Guid(a297917830be2534285986e4dc5967fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30e42f21714192304a8b6d1f28cacac0') in 0.001839 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 11
-========================================================================
-Received Import Request.
-  Time since last request: 3.625960 seconds.
-  path: Assets/Resources/UI/UIQuestItem.prefab
-  artifactKey: Guid(a297917830be2534285986e4dc5967fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestItem.prefab using Guid(a297917830be2534285986e4dc5967fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '549d209c51019f7a544dc3e9a5752c03') in 0.001604 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 11
-========================================================================
-Received Import Request.
-  Time since last request: 2782.100179 seconds.
-  path: Assets/Resources/UI/UIQuestItem.prefab
-  artifactKey: Guid(a297917830be2534285986e4dc5967fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestItem.prefab using Guid(a297917830be2534285986e4dc5967fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '909d4ba4632c1751175d7aa922e1c7ea') in 0.025247 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 11
-========================================================================
-Received Import Request.
-  Time since last request: 33.929292 seconds.
-  path: Assets/Resources/UI/UIQuestItem.prefab
-  artifactKey: Guid(a297917830be2534285986e4dc5967fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestItem.prefab using Guid(a297917830be2534285986e4dc5967fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c1c151136ad90661a9c6bfb759e7129') in 0.005263 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 12
-========================================================================
-Received Import Request.
-  Time since last request: 23.026146 seconds.
-  path: Assets/Resources/UI/UIQuestItem.prefab
-  artifactKey: Guid(a297917830be2534285986e4dc5967fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIQuestItem.prefab using Guid(a297917830be2534285986e4dc5967fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3284be926fd0b99ee8578a7c975eba86') in 0.002281 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 12
