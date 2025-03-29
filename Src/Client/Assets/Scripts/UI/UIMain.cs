@@ -39,4 +39,9 @@ public class UIMain : MonoSingleton<UIMain>
     {
         UIManager.Instance.Show<UICharEquip>();
     }
+
+    public void OnClickQuestSystem()
+    {
+        UIManager.Instance.Show<UIQuestSystem>();
+    }
 }

@@ -64,6 +64,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\Scripts\UI\UICharacterSelect.cs" />
     <Compile Include="Assets\Scripts\Network\NetClient.cs" />
+    <Compile Include="Assets\Scripts\UI\QuestSystem\UIQuestDialog.cs" />
     <Compile Include="Assets\Scripts\Models\BagItem.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Assets\Scripts\Scene\SceneManager.cs" />
     <Compile Include="Assets\Scripts\UI\Bag\UIBag.cs" />
     <Compile Include="Assets\Scripts\Managers\EquipManager.cs" />
+    <Compile Include="Assets\Scripts\UI\QuestSystem\UIQuestInfo.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\Scripts\UI\QuestSystem\UIQuestSystem.cs" />
     <Compile Include="Assets\Scripts\UI\Shop\UIShop.cs" />
@@ -111,6 +113,7 @@
     <Compile Include="Assets\Scripts\Utilities\GameUtil.cs" />
     <Compile Include="Assets\Scripts\UI\UIMain.cs" />
     <Compile Include="Assets\Scripts\Log\UnityLogger.cs" />
+    <Compile Include="Assets\Scripts\Managers\QuestManager.cs" />
     <Compile Include="Assets\Scripts\GameObject\EntityController.cs" />
     <Compile Include="Assets\Scripts\UI\Bag\UITabView.cs" />
     <Compile Include="Assets\Scripts\Managers\ShopManager.cs" />
@@ -118,6 +121,7 @@
     <Compile Include="Assets\Scripts\GameObject\GameObjectTool.cs" />
     <Compile Include="Assets\Scripts\Utilities\EnumUtil.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\Scripts\UI\TabView\TabView.cs" />
     <Compile Include="Assets\Scripts\UI\MessageBox.cs" />
     <Compile Include="Assets\Scripts\Assets\Resloader.cs" />
     <Compile Include="Assets\Scripts\UI\Bag\UIIconItem.cs" />
@@ -133,6 +137,7 @@
     <Compile Include="Assets\Scripts\UI\UILogin.cs" />
     <Compile Include="Assets\Scripts\UI\Bag\UITabButton.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+    <Compile Include="Assets\Scripts\UI\TabView\TabButton.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\Scripts\Services\UserService.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
