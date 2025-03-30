@@ -14,4 +14,10 @@ public class UIIconItem : MonoBehaviour
         this.mainImage.overrideSprite = Resloader.Load<Sprite>(iconName);
         this.mainText.text = text;
     }
+
+    public void SetSecondImage(string iconName, string text)
+    {
+        this.secondImage.overrideSprite = Resloader.Load<Sprite>(iconName);
+        this.mainText.text = text;
+    }
 }

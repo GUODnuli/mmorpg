@@ -1,4 +1,6 @@
 using Common.Data;
+using Managers;
+using Models;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
@@ -11,7 +13,7 @@ public class UIQuestSystem : UIWindow
 
     public TabView Tabs;
     public ListView listMain;
-    public ListView listside;
+    public ListView listSide;
 
     public UIQuestInfo questInfo;
 
@@ -20,7 +22,7 @@ public class UIQuestSystem : UIWindow
     private void Start()
     {
         this.listMain.onItemSelected += this.OnQuestSelected;
-        this.listside.onItemSelected += this.OnQuestSelected;
+        this.listSide.onItemSelected += this.OnQuestSelected;
         this.Tabs.OnTabSelect += this.OnTabSelected;
         RefreshUI();
     }
@@ -51,31 +53,31 @@ public class UIQuestSystem : UIWindow
     private void CleanAllQuestList()
     {
         this.listMain.RemoveAll();
-        this.listside.RemoveAll();
+        this.listSide.RemoveAll();
     }
 
     private void InitAllQuestItems()
     {
         foreach (var quest in QuestManager.Instance.allQuest)
         {
-            if (this.showAvailableList && quest.Info != null)
+            if (this.showAvailableList && quest.Value.Info != null)
             {
                 continue;
             }
-            if (!this.showAvailableList && quest.Info == null)
+            if (!this.showAvailableList && quest.Value.Info == null)
             {
                 continue;
             }
-            GameObject go = Instantiate(this.itemPrefab, quest.Value.Define.Type == QuestType.Main ? this.listMain.transform : this.listside.transform);
+            GameObject go = Instantiate(this.itemPrefab, quest.Value.Define.Type == QuestType.Main ? this.listMain.transform : this.listSide.transform);
             UIQuestItem ui = go.GetComponent<UIQuestItem>();
-            ui.SetQuestInfo(quest);
+            ui.SetQuestInfo(quest.Value);
             if (quest.Value.Define.Type == QuestType.Main)
             {
                 this.listMain.AddItem(ui);
             }
             else
             {
-                this.listside.AddItem(ui);
+                this.listSide.AddItem(ui);
             }
         }
     }

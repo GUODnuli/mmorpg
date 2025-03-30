@@ -41,9 +41,9 @@ namespace Managers
 
         public bool Interactive(NPCDefine npcDefine)
         {
-            if (npcDefine.Type == NpcType.Task)
+            if (DoTaskInteractive(npcDefine))
             {
-                return DoTaskInteractive(npcDefine);
+                return true;
             }
             else if (npcDefine.Type == NpcType.Functional)
             {
@@ -54,8 +54,11 @@ namespace Managers
 
         private bool DoTaskInteractive(NPCDefine npcDefine)
         {
-            MessageBox.Show("µã»÷ÁËNPC: " + npcDefine.Name);
-            return true;
+            var status = QuestManager.Instance.GetNpcQuestStatus(npcDefine.ID);
+            if (status == NpcQuestStatus.None)
+                return false;
+
+            return QuestManager.Instance.OpenNpcQuest(npcDefine.ID);
         }
 
         private bool DoFunctionInteractive(NPCDefine npcDefine)

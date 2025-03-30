@@ -743,6 +743,13 @@ namespace SkillBridge.Message
         [global::ProtoBuf.ProtoMember(1, Name = @"result")]
         public Result Result { get; set; }
 
+        [global::ProtoBuf.ProtoMember(2, Name = @"errormsg")]
+        [global::System.ComponentModel.DefaultValue("")]
+        public string Errormsg { get; set; } = "";
+
+        [global::ProtoBuf.ProtoMember(3, Name = @"quest")]
+        public NQuestInfo Quest { get; set; }
+
     }
 
     [global::ProtoBuf.ProtoContract()]
@@ -770,6 +777,9 @@ namespace SkillBridge.Message
         [global::ProtoBuf.ProtoMember(2, Name = @"errormsg")]
         [global::System.ComponentModel.DefaultValue("")]
         public string Errormsg { get; set; } = "";
+
+        [global::ProtoBuf.ProtoMember(3, Name = @"quest")]
+        public NQuestInfo Quest { get; set; }
 
     }
 
