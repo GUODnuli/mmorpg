@@ -22,12 +22,25 @@ namespace GameServer.Services
 
         private void OnQuestAccept(NetConnection<NetSession> sender, QuestAcceptRequest message)
         {
-            throw new NotImplementedException();
+            Character character = sender.Session.Character;
+            Log.InfoFormat("QuestAcceptRequest: character: {0}, QuestId: {1}", character.Id, message.QuestId);
+
+            sender.Session.Response.questAccept = new QuestAcceptResponse();
+
+            Result result = character.QuestManager.AcceptQuest(sender, message.QuestId);
+            sender.Session.Response.questAccept.Result = result;
+            sender.SendResponse();
         }
 
         private void OnQuestSubmit(NetConnection<NetSession> sender, QuestSubmitRequest message)
         {
-            throw new NotImplementedException();
+            Character character = sender.Session.Character;
+            Log.InfoFormat("QuestAcceptRequest: character: {0}, QuestId: {1}", character.Id, message.QuestId);
+        
+            sender.Session.Response.questSubmit = new QuestSubmitResponse();
+            Result result = character.QuestManager.SubmitQuest(sender, message.QuestId);
+            sender.Session.Response.questSubmit.Result = result;
+            sender.SendResponse();
         }
 
     }
