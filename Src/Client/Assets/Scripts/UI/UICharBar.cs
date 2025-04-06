@@ -22,11 +22,6 @@ public class UICharBar : MonoBehaviour
     void Update()
     {
         this.UpdateInfo();
-
-        if (this.transform != null & Camera.main.transform != null)
-        {
-            this.transform.forward = Camera.main.transform.forward;
-        }
     }
 
     private void UpdateInfo()

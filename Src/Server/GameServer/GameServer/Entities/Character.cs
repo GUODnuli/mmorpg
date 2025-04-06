@@ -16,6 +16,7 @@ namespace GameServer.Entities
         public TCharacter Data;
         public ItemManager ItemManager;
         public StatusManager StatusManager;
+        public QuestManager QuestManager;
 
         public Character(CharacterType type,TCharacter cha):
             base(new Core.Vector3Int(cha.MapPosX, cha.MapPosY, cha.MapPosZ),new Core.Vector3Int(100,0,0))
@@ -25,7 +26,7 @@ namespace GameServer.Entities
             this.Info.Type = type;
             this.Info.Id = cha.ID;
             this.Info.Name = cha.Name;
-            this.Info.Level = 1;
+            this.Info.Level = 10;
             this.Info.Tid = cha.TID;
             this.Info.Class = (CharacterClass)cha.Class;
             this.Info.mapId = cha.MapID;
