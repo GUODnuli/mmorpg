@@ -45,5 +45,33 @@ namespace GameServer.Managers
                 }
             };
         }
+
+        public Result AcceptQuest(NetConnection<NetSession> sender, int questId)
+        {
+            Character character = sender.Session.Character;
+            QuestDefine quest;
+
+            if (!DataManager.Instance.Quests.TryGetValue(questId, out quest))
+            {
+                sender.Session.Response.questAccept.Errormsg = "Quest not found";
+                return Result.Failed;
+            }
+
+            var dbquest = DBService.Instance.Entities.CharacterQuests.Create();
+            dbquest.QuestId = quest.ID;
+            if (quest.Target1 == QuestTarget.None)
+            {
+                dbquest.Status = (int)QuestStatus.Completed;
+            }
+            else
+            {
+                dbquest.Status = (int)QuestStatus.InProgress;
+            }
+
+            sender.Session.Response.questAccept.Quest = this.GetQuestInfo(dbquest);
+            character.Data.Quests.Add(dbquest);
+            DBService.Instance.Save();
+            return Result.Success;
+        }
     }
 }
