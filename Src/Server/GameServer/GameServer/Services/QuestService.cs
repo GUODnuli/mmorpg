@@ -20,6 +20,11 @@ namespace GameServer.Services
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<QuestSubmitRequest>(this.OnQuestSubmit);
         }
 
+        public void Init()
+        {
+
+        }
+
         private void OnQuestAccept(NetConnection<NetSession> sender, QuestAcceptRequest message)
         {
             Character character = sender.Session.Character;
