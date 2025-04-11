@@ -58,4 +58,54 @@ public class MapTools
         EditorSceneManager.OpenScene("Assets/Levels/" + currentScene + ".unity");
         EditorUtility.DisplayDialog("提示", "传送点导出完成", "确定");
     }
+
+    [MenuItem("Map Tools/Export SpawnPoints")]
+    public static void ExportSpawnPoint()
+    {
+        DataManager.Instance.Load();
+
+        Scene current = EditorSceneManager.GetActiveScene();
+        string currentScene = current.name;
+        if (current.isDirty)
+        {
+            EditorUtility.DisplayDialog("提示", "请先保存当前场景", "确定");
+            return;
+        }
+
+        List<SpawnPoint> allTeleporters = new List<SpawnPoint>();
+
+        foreach (var map in DataManager.Instance.Maps)
+        {
+            string sceneFile = "Assets/Levels/" + map.Value.Resource + ".unity";
+            if (!System.IO.File.Exists(sceneFile))
+            {
+                Debug.LogWarningFormat("Scene {0} not existed!", sceneFile);
+                continue;
+            }
+            EditorSceneManager.OpenScene(sceneFile, OpenSceneMode.Single);
+
+            SpawnPoint[] SpawnPoints = GameObject.FindObjectsOfType<SpawnPoint>();
+            foreach (var spawnPoint in SpawnPoints)
+            {
+                if (!DataManager.Instance.Teleporters.ContainsKey(spawnPoint.ID))
+                {
+                    EditorUtility.DisplayDialog("错误", string.Format("地图: {0} 中配置的 Spawnpoint: [{1}] 不存在。", map.Value.Resource, spawnPoint.ID), "确定");
+                    return;
+                }
+
+                TeleporterDefine def = DataManager.Instance.Teleporters[spawnPoint.ID];
+                if (def.MapID != map.Value.ID)
+                {
+                    EditorUtility.DisplayDialog("错误", string.Format("地图: {0} 中配置的 Spawnpoint: [{1}] MapID: [{2}] 不存在。", map.Value.Resource, spawnPoint.ID, def.ID), "确定");
+                    return;
+                }
+
+                def.Position = GameObjectTool.WorldToLogicN(spawnPoint.transform.position);
+                def.Direction = GameObjectTool.WorldToLogicN(spawnPoint.transform.forward);
+            }
+        }
+        DataManager.Instance.SaveTeleporters();
+        EditorSceneManager.OpenScene("Assets/Levels/" + currentScene + ".unity");
+        EditorUtility.DisplayDialog("提示", "怪物刷新点保存完成", "确定");
+    }
 }
