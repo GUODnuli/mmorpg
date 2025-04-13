@@ -72,7 +72,7 @@ public class MapTools
             return;
         }
 
-        List<SpawnPoint> allTeleporters = new List<SpawnPoint>();
+        List<SpawnPoint> allTeleporters = new();
 
         foreach (var map in DataManager.Instance.Maps)
         {
