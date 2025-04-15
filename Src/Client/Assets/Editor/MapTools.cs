@@ -72,7 +72,8 @@ public class MapTools
             return;
         }
 
-        List<SpawnPoint> allTeleporters = new();
+        if (DataManager.Instance.SpawnPoints == null)
+            DataManager.Instance.SpawnPoints = new Dictionary<int, Dictionary<int, SpawnPointDefine>>();
 
         foreach (var map in DataManager.Instance.Maps)
         {
@@ -83,28 +84,27 @@ public class MapTools
                 continue;
             }
             EditorSceneManager.OpenScene(sceneFile, OpenSceneMode.Single);
-
             SpawnPoint[] SpawnPoints = GameObject.FindObjectsOfType<SpawnPoint>();
+
+            if (!DataManager.Instance.SpawnPoints.ContainsKey(map.Value.ID))
+            {
+                DataManager.Instance.SpawnPoints[map.Value.ID] = new Dictionary<int, SpawnPointDefine>();
+            }
             foreach (var spawnPoint in SpawnPoints)
             {
-                if (!DataManager.Instance.Teleporters.ContainsKey(spawnPoint.ID))
+                if (!DataManager.Instance.SpawnPoints[map.Value.ID].ContainsKey(spawnPoint.ID))
                 {
-                    EditorUtility.DisplayDialog("错误", string.Format("地图: {0} 中配置的 Spawnpoint: [{1}] 不存在。", map.Value.Resource, spawnPoint.ID), "确定");
-                    return;
+                    DataManager.Instance.SpawnPoints[map.Value.ID][spawnPoint.ID] = new SpawnPointDefine();
                 }
 
-                TeleporterDefine def = DataManager.Instance.Teleporters[spawnPoint.ID];
-                if (def.MapID != map.Value.ID)
-                {
-                    EditorUtility.DisplayDialog("错误", string.Format("地图: {0} 中配置的 Spawnpoint: [{1}] MapID: [{2}] 不存在。", map.Value.Resource, spawnPoint.ID, def.ID), "确定");
-                    return;
-                }
-
+                SpawnPointDefine def = DataManager.Instance.SpawnPoints[map.Value.ID][spawnPoint.ID];
+                def.ID = spawnPoint.ID;
+                def.MapID = map.Value.ID;
                 def.Position = GameObjectTool.WorldToLogicN(spawnPoint.transform.position);
                 def.Direction = GameObjectTool.WorldToLogicN(spawnPoint.transform.forward);
             }
         }
-        DataManager.Instance.SaveTeleporters();
+        DataManager.Instance.SaveSpawnPoints();
         EditorSceneManager.OpenScene("Assets/Levels/" + currentScene + ".unity");
         EditorUtility.DisplayDialog("提示", "怪物刷新点保存完成", "确定");
     }

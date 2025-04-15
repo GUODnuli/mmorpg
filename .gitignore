@@ -53,3 +53,4 @@ ipch/
 ./Src/Client/Logs/
 ./Src/Client/UserSettings/
 /Src/Server/GameServer/GameServer/App.config
+/Src/Server/GameServer/GameServer/App.config

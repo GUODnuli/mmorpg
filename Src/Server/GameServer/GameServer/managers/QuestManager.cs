@@ -22,15 +22,15 @@ namespace GameServer.Managers
             this.Owner = Owner;
         }
 
-        public void GetQuestInfo(List<NQuestInfo> list)
+        public void GetQuestInfos(List<NQuestInfo> list)
         {
             foreach (var quest in this.Owner.Data.Quests)
             {
-                list.Add(GetQuestInfo(quest));
+                list.Add(GetQuestInfos(quest));
             }
         }
 
-        public NQuestInfo GetQuestInfo(TCharacterQuest quest)
+        public NQuestInfo GetQuestInfos(TCharacterQuest quest)
         {
             return new NQuestInfo()
             {
@@ -68,7 +68,7 @@ namespace GameServer.Managers
                 dbquest.Status = (int)QuestStatus.InProgress;
             }
 
-            sender.Session.Response.questAccept.Quest = this.GetQuestInfo(dbquest);
+            sender.Session.Response.questAccept.Quest = this.GetQuestInfos(dbquest);
             character.Data.Quests.Add(dbquest);
             DBService.Instance.Save();
             return Result.Success;
@@ -99,7 +99,7 @@ namespace GameServer.Managers
             }
 
             dbquest.Status = (int)QuestStatus.Finished;
-            sender.Session.Response.questSubmit.Quest = this.GetQuestInfo(dbquest);
+            sender.Session.Response.questSubmit.Quest = this.GetQuestInfos(dbquest);
             DBService.Instance.Save();
 
             if (quest.RewardGold > 0)
