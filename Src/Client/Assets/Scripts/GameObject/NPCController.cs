@@ -135,6 +135,5 @@ public class NPCController : MonoBehaviour
         {
             UIWorldElementManager.Instance.AddNpcQuestStatus(this.transform, questStatus);
         }
-
     }
 }

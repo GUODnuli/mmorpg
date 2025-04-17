@@ -29,7 +29,7 @@ namespace GameServer.Managers
                 }
                 else
                 {
-                    Log.ErrorFormat("SpawnRule: [{0}], SpawnPoint: [{1}] not existed.", this.rule.ID, this.spawnPoint.ID);
+                    Log.ErrorFormat("SpawnRule: [{0}], SpawnPoint: [{1}] not existed.", this.rule.ID, this.rule.SpawnPoint);
                 }
             }
         }
