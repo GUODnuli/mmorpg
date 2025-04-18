@@ -59,7 +59,7 @@ namespace GameServer.Models
             Log.InfoFormat("CharacterEnter: Map ID: {0}, Character ID: {1}", this.Define.ID, character.Info.Id);
 
             character.Info.mapId = this.ID;
-            this.MapCharacters.Add(character.Id, new MapCharacter(conn, character));
+            this.MapCharacters.Add(character.EntityId, new MapCharacter(conn, character));
 
             conn.Session.Response.mapCharacterEnter = new MapCharacterEnterResponse();
             conn.Session.Response.mapCharacterEnter.mapId = this.Define.ID;
@@ -100,18 +100,18 @@ namespace GameServer.Models
 
         internal void CharacterLeave(Character character)
         {
-            Log.InfoFormat("CharacterLeave: Map ID： {0}， Character Entity ID: {1}", this.Define.ID, character.Id);
+            Log.InfoFormat("CharacterLeave: Map ID： {0}， Character Entity ID: {1}", this.Define.ID, character.EntityId);
             foreach (var kv in this.MapCharacters)
             {
                 this.RemoveCharacterEnterMap(kv.Value.connection, character);
             }
-            this.MapCharacters.Remove(character.Id);
+            this.MapCharacters.Remove(character.EntityId);
         }
 
         void RemoveCharacterEnterMap(NetConnection<NetSession> conn, Character character)
         {
             conn.Session.Response.mapCharacterLeave = new MapCharacterLeaveResponse();
-            conn.Session.Response.mapCharacterLeave.characterId = character.Id;
+            conn.Session.Response.mapCharacterLeave.entityId = character.EntityId;
             conn.SendResponse();
         }
 
@@ -134,7 +134,7 @@ namespace GameServer.Models
 
         internal void MonsterEnter(Monster monster)
         {
-            Log.InfoFormat("MonsterSpawned: Map: {0}, monsterId: {1}", this.Define.ID, monster.Id);
+            Log.InfoFormat("MonsterSpawned: Map: {0}, monsterId: {1}", this.Define.ID, monster.EntityId);
             foreach(var kv in this.MapCharacters)
             {
                 this.AddCharacterEnterMap(kv.Value.connection, monster.Info);

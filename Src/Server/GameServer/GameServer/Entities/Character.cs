@@ -27,12 +27,12 @@ namespace GameServer.Entities
             this.Info.Id = cha.ID;
             this.Info.Name = cha.Name;
             this.Info.Level = 10;
-            this.Info.Tid = cha.TID;
+            this.Info.EntityId = cha.TID;
             this.Info.Class = (CharacterClass)cha.Class;
             this.Info.mapId = cha.MapID;
             this.Info.Gold = cha.Gold;
             this.Info.Entity = this.EntityData;
-            this.Define = DataManager.Instance.Characters[this.Info.Tid];
+            this.Define = DataManager.Instance.Characters[this.Info.EntityId];
             this.ItemManager = new ItemManager(this);
             this.ItemManager.GetItemInfos(this.Info.Items);
             this.Info.Bag = new NBagInfo();

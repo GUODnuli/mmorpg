@@ -55,8 +55,8 @@ namespace GameServer.Managers
         private void Spawn()
         {
             this.isSpawningCooldown = true;
-            Log.InfoFormat("Map: [{0}] Spawn Monster [{1}] Lv.[{2}] at SpawnPoint [{3}].", this.rule.MapID, this.rule.SpawnMonID, this.rule.SpawnLevel, this.spawnPoint.ID);
-            this.map.MonsterManager.Create(this.rule.SpawnMonID, this.rule.SpawnLevel, this.spawnPoint.Position, this.spawnPoint.Direction);
+            Log.InfoFormat("Map: [{0}] Spawn Monster [{1}] Lv.[{2}] at SpawnPoint [{3}].", this.rule.MapID, this.rule.SpawnMonConfigID, this.rule.SpawnLevel, this.spawnPoint.ID);
+            this.map.MonsterManager.Create(this.rule.SpawnMonConfigID, this.rule.SpawnLevel, this.spawnPoint.Position, this.spawnPoint.Direction);
         }
     }
 }

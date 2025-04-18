@@ -83155,6 +83155,7 @@ MonoBehaviour:
   global: 1
   nameBarPrefab: {fileID: 3832965826763396640, guid: 68f7fb02a9f7da542bdb3d7cc96775f5,
     type: 3}
+  questStatusPrefab: {fileID: 0}
 --- !u!114 &2139158998
 MonoBehaviour:
   m_ObjectHideFlags: 0

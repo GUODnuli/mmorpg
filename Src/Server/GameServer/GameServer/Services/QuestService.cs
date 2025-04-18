@@ -28,7 +28,7 @@ namespace GameServer.Services
         private void OnQuestAccept(NetConnection<NetSession> sender, QuestAcceptRequest message)
         {
             Character character = sender.Session.Character;
-            Log.InfoFormat("QuestAcceptRequest: character: {0}, QuestId: {1}", character.Id, message.QuestId);
+            Log.InfoFormat("QuestAcceptRequest: character: {0}, QuestId: {1}", character.EntityId, message.QuestId);
 
             sender.Session.Response.questAccept = new QuestAcceptResponse();
 
@@ -40,7 +40,7 @@ namespace GameServer.Services
         private void OnQuestSubmit(NetConnection<NetSession> sender, QuestSubmitRequest message)
         {
             Character character = sender.Session.Character;
-            Log.InfoFormat("QuestAcceptRequest: character: {0}, QuestId: {1}", character.Id, message.QuestId);
+            Log.InfoFormat("QuestAcceptRequest: character: {0}, QuestId: {1}", character.EntityId, message.QuestId);
         
             sender.Session.Response.questSubmit = new QuestSubmitResponse();
             Result result = character.QuestManager.SubmitQuest(sender, message.QuestId);

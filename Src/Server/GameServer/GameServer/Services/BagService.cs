@@ -25,7 +25,7 @@ namespace GameServer.Services
         private void OnBagSave(NetConnection<NetSession> sender, BagSaveRequest request)
         {
             Character character = sender.Session.Character;
-            Log.InfoFormat("BagSaveRequest: Character: {0}, Unlocked: {1}", character.Id, request.BagInfo.Unlocked);
+            Log.InfoFormat("BagSaveRequest: Character: {0}, Unlocked: {1}", character.EntityId, request.BagInfo.Unlocked);
 
             if (request.BagInfo != null)
             {

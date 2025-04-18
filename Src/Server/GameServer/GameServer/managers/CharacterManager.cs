@@ -38,8 +38,8 @@ namespace GameServer.Managers
         {
             Character character = new Character(CharacterType.Player, tCharacter);
             EntityManager.Instance.AddEntity(tCharacter.MapID, character);
-            character.Info.Id = character.Id;
-            this.Characters[character.Id] = character;
+            character.Info.EntityId = character.EntityId;
+            this.Characters[character.EntityId] = character;
             return character;
         }
 

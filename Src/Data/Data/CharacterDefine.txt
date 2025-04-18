@@ -1,6 +1,6 @@
 {
   "1": {
-    "TID": 1,
+    "ConfigID": 1,
     "Name": "战士",
     "Type": "Normal",
     "Class": "WARRIOR",
@@ -10,7 +10,7 @@
     "Speed": 300
   },
   "2": {
-    "TID": 2,
+    "ConfigID": 2,
     "Name": "法师",
     "Type": "Normal",
     "Class": "WIZARD",
@@ -20,7 +20,7 @@
     "Speed": 300
   },
   "3": {
-    "TID": 3,
+    "ConfigID": 3,
     "Name": "弓箭手",
     "Type": "Normal",
     "Class": "ARCHER",
@@ -30,7 +30,7 @@
     "Speed": 300
   },
   "1001": {
-    "TID": 1001,
+    "ConfigID": 1001,
     "Name": "恶鬼",
     "Type": "Normal",
     "Class": "WARRIOR",
@@ -39,8 +39,8 @@
     "Speed": 300
   },
   "1002": {
-    "TID": 1002,
-    "Name": "-",
+    "ConfigID": 1002,
+    "Name": "石头人",
     "Type": "Normal",
     "Class": "WIZARD",
     "Resource": "Monster/M1002",
@@ -48,8 +48,8 @@
     "Speed": 300
   },
   "1003": {
-    "TID": 1003,
-    "Name": "-",
+    "ConfigID": 1003,
+    "Name": "看守",
     "Type": "Normal",
     "Class": "ARCHER",
     "Resource": "Monster/M1003",

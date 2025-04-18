@@ -31,7 +31,7 @@ namespace GameServer.Services
         {
             Character character = sender.Session.Character;
             NEntitySync entitySync = request.entitySync;
-            Log.InfoFormat("OnMapEntitySync: Character ID: {0}, Character Name: {1}, Entity ID: {2}, Entity Event: {3}, Entity: {4}", character.Id, character.Info.Name, entitySync.Id, entitySync.Event, entitySync.Entity);
+            Log.InfoFormat("OnMapEntitySync: Character ID: {0}, Character Name: {1}, Entity ID: {2}, Entity Event: {3}, Entity: {4}", character.EntityId, character.Info.Name, entitySync.Id, entitySync.Event, entitySync.Entity);
 
             MapManager.Instance[character.Info.mapId].UpdateEntity(entitySync);
         }
@@ -53,9 +53,9 @@ namespace GameServer.Services
             }
 
             Character character = sender.Session.Character;
-            if (!CharacterManager.Instance.Characters.ContainsKey(character.Id))
+            if (!CharacterManager.Instance.Characters.ContainsKey(character.EntityId))
             {
-                Log.WarningFormat("The character ID [{0}] not existed.", character.Id);
+                Log.WarningFormat("The character ID [{0}] not existed.", character.EntityId);
                 return;
             }
 

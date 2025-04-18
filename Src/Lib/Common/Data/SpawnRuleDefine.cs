@@ -10,7 +10,7 @@ namespace Common.Data
     {
         public int ID { get; set; }
         public int MapID { get; set; }
-        public int SpawnMonID { get; set; }
+        public int SpawnMonConfigID { get; set; }
         public int SpawnLevel{ get;set; }
         public SPAWN_TYPE SpawnType { get; set; }
         public int SpawnPoint { get; set; }

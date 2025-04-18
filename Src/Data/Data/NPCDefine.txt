@@ -1,13 +1,13 @@
 {
   "1": {
     "ID": 1,
-    "Name": "莉莉丝",
+    "Name": "埃布尔",
     "Description": "任务NPC",
     "Type": "Task"
   },
   "2": {
     "ID": 2,
-    "Name": "埃布尔",
+    "Name": "莉莉丝",
     "Description": "杂货商人",
     "Type": "Functional",
     "Function": "InvokeShop",

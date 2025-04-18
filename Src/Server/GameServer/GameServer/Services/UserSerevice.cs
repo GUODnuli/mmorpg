@@ -61,7 +61,7 @@ namespace GameServer.Services
                     info.Id = c.ID;
                     info.Name = c.Name;
                     info.Class = (CharacterClass)c.Class;
-                    info.Tid = c.ID;
+                    info.EntityId = c.TID;
                     info.Type = CharacterType.Player;
                     sender.Session.Response.userLogin.Userinfo.Player.Characters.Add(info);
                 }
@@ -145,7 +145,7 @@ namespace GameServer.Services
                         Id = 0,
                         Name = character.Name,
                         Class = (CharacterClass)character.Class,
-                        Tid = character.ID,
+                        EntityId = character.ID,
                         Type = CharacterType.Player,
                     };
                     sender.Session.Response.createChar.Characters.Add(nCharacterInfo);
@@ -186,7 +186,7 @@ namespace GameServer.Services
             try
             {
                 Character character = sender.Session.Character;
-                Log.InfoFormat("UserGameLeaveRequest: characterID: {0}, CharacterName: {1}, MapID: {2}", character.Id, character.Info.Name, character.Info.mapId);
+                Log.InfoFormat("UserGameLeaveRequest: characterID: {0}, CharacterName: {1}, MapID: {2}", character.EntityId, character.Info.Name, character.Info.mapId);
                 UserLeaveGame(character);
 
                 sender.Session.Response.gameLeave.Result = Result.Success;
@@ -203,7 +203,7 @@ namespace GameServer.Services
 
         public void UserLeaveGame(Character character)
         {
-            CharacterManager.Instance.RemoveCharacter(character.Id);
+            CharacterManager.Instance.RemoveCharacter(character.EntityId);
             MapManager.Instance[character.Info.mapId].CharacterLeave(character);
         }
     }
