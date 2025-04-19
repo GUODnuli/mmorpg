@@ -13,7 +13,7 @@ namespace GameServer.Entities
     {
         public int entityId
         {
-            get { return this.entityData.Id; }
+            get { return this.entityData.EntityId; }
         }
 
 

@@ -27,7 +27,7 @@
     "4": {
       "ID": 4,
       "MapID": 2,
-      "SpawnMonConfigID": 1004,
+      "SpawnMonConfigID": 1003,
       "SpawnLevel": 1,
       "SpawnPeriod": 60,
       "SpawnPoint": 4
@@ -53,7 +53,7 @@
     "3": {
       "ID": 3,
       "MapID": 3,
-      "SpawnMonConfigID": 1004,
+      "SpawnMonConfigID": 1003,
       "SpawnLevel": 1,
       "SpawnPeriod": 60,
       "SpawnPoint": 3

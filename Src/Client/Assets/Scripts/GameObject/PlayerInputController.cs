@@ -29,22 +29,22 @@ public class PlayerInputController : MonoBehaviour
         if (this.character == null)
         {
             DataManager.Instance.Load();
-            NCharacterInfo chainfo = new NCharacterInfo
-            {
-                Id = 1,
-                Name = "Test",
-                Tid = 1,
-                Entity = new NEntity
-                {
-                    Position = new NVector3(),
-                    Direction = new NVector3
-                    {
-                        X = 0,
-                        Y = 100,
-                        Z = 0
-                    },
-                },
-            };
+            NCharacterInfo chainfo = new NCharacterInfo();
+            //{
+            //    Id = 1,
+            //    Name = "Test",
+            //    ConfigId = 1,
+            //    Entity = new NEntity
+            //    {
+            //        Position = new NVector3(),
+            //        Direction = new NVector3
+            //        {
+            //            X = 0,
+            //            Y = 100,
+            //            Z = 0
+            //        },
+            //    },
+            //};
             this.character = new Character(chainfo);
 
             if (entityController != null)
@@ -115,7 +115,7 @@ public class PlayerInputController : MonoBehaviour
     }
 
     Vector3 lastPos;
-    float lastSync = 0;
+    //float lastSync = 0;
     private void LateUpdate()
     {
         Vector3 offset = this.rb.transform.position - lastPos;

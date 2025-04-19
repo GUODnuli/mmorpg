@@ -343,9 +343,7 @@ namespace Network
                         this.CloseConnection(NET_ERROR_ZERO_BYTE);
                         return false;
                     }
-
                     this.packageHandler.ReceiveData(this.receiveBuffer.GetBuffer(), 0, n);
-
                 }
             }
             catch (Exception e)

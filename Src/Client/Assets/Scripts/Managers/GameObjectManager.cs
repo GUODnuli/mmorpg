@@ -59,7 +59,7 @@ namespace Managers
                 Object obj = Resloader.Load<Object>(character.Define.Resource);
                 if (obj == null)
                 {
-                    Debug.LogErrorFormat("Character: [{0}], Resource: [{1}] not existed.", character.Define.TID, character.Define.Resource);
+                    Debug.LogErrorFormat("Character: [{0}], Resource: [{1}] not existed.", character.Define.ConfigId, character.Define.Resource);
                     return;
                 }
                 GameObject go = (GameObject)Instantiate(obj, this.transform);
@@ -99,7 +99,7 @@ namespace Managers
             PlayerInputController pc = go.GetComponent<PlayerInputController>();
             if (pc != null)
             {
-                if (character.Info.Id == Models.User.Instance.CurrentCharacter.Entity.Id)
+                if (character.Info.EntityId == User.Instance.CurrentCharacter.EntityId)
                 {
                     User.Instance.CurrentCharacterObject = go;
                     MainPlayerCamera.Instance.player = go;

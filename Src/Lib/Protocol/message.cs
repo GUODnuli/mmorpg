@@ -179,8 +179,8 @@ namespace SkillBridge.Message
         global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
             => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
 
-        [global::ProtoBuf.ProtoMember(1, Name = @"id")]
-        public int Id { get; set; }
+        [global::ProtoBuf.ProtoMember(1, Name = @"entity_id")]
+        public int EntityId { get; set; }
 
         [global::ProtoBuf.ProtoMember(2, Name = @"position")]
         public NVector3 Position { get; set; }
@@ -200,8 +200,8 @@ namespace SkillBridge.Message
         global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
             => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
 
-        [global::ProtoBuf.ProtoMember(1, Name = @"id")]
-        public int Id { get; set; }
+        [global::ProtoBuf.ProtoMember(1, Name = @"entity_id")]
+        public int EntityId { get; set; }
 
         [global::ProtoBuf.ProtoMember(2, Name = @"event")]
         public EntityEvent Event { get; set; }
@@ -986,6 +986,8 @@ namespace SkillBridge.Message
         Wizard = 2,
         [global::ProtoBuf.ProtoEnum(Name = @"ARCHER")]
         Archer = 3,
+        [global::ProtoBuf.ProtoEnum(Name = @"MONSTER")]
+        Monster = 100,
     }
 
     [global::ProtoBuf.ProtoContract(Name = @"CHARACTER_STATE")]

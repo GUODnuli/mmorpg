@@ -17,6 +17,8 @@ namespace GameServer.Models
     class Map
     {
         internal MapDefine Define;
+
+        // 地图中的角色以CharacterID为Key
         Dictionary<int, MapCharacter> MapCharacters = new Dictionary<int, MapCharacter>();
         SpawnManager SpawnManager = new SpawnManager();
         public MonsterManager MonsterManager = new MonsterManager();
@@ -56,10 +58,10 @@ namespace GameServer.Models
         /// <param name="character"></param>
         internal void CharacterEnter(NetConnection<NetSession> conn, Character character)
         {
-            Log.InfoFormat("CharacterEnter: Map ID: {0}, Character ID: {1}", this.Define.ID, character.Info.Id);
+            Log.InfoFormat("CharacterEnter: Map ID: {0}, Character ID: {1}", this.Define.ID, character.Id);
 
             character.Info.mapId = this.ID;
-            this.MapCharacters.Add(character.EntityId, new MapCharacter(conn, character));
+            this.MapCharacters.Add(character.Id, new MapCharacter(conn, character));
 
             conn.Session.Response.mapCharacterEnter = new MapCharacterEnterResponse();
             conn.Session.Response.mapCharacterEnter.mapId = this.Define.ID;
@@ -100,18 +102,18 @@ namespace GameServer.Models
 
         internal void CharacterLeave(Character character)
         {
-            Log.InfoFormat("CharacterLeave: Map ID： {0}， Character Entity ID: {1}", this.Define.ID, character.EntityId);
+            Log.InfoFormat("CharacterLeave: Map ID： {0}， Character ID: {1}", this.Define.ID, character.Id);
             foreach (var kv in this.MapCharacters)
             {
                 this.RemoveCharacterEnterMap(kv.Value.connection, character);
             }
-            this.MapCharacters.Remove(character.EntityId);
+            this.MapCharacters.Remove(character.Id);
         }
 
         void RemoveCharacterEnterMap(NetConnection<NetSession> conn, Character character)
         {
             conn.Session.Response.mapCharacterLeave = new MapCharacterLeaveResponse();
-            conn.Session.Response.mapCharacterLeave.entityId = character.EntityId;
+            conn.Session.Response.mapCharacterLeave.entityId = character.entityId;
             conn.SendResponse();
         }
 
@@ -119,7 +121,7 @@ namespace GameServer.Models
         {
             foreach (var kv in this.MapCharacters)
             {
-                if (kv.Value.character.entityId == entitySync.Id)
+                if (kv.Value.character.entityId == entitySync.EntityId)
                 {
                     kv.Value.character.Position = entitySync.Entity.Position;
                     kv.Value.character.Direction = entitySync.Entity.Direction;
@@ -134,7 +136,7 @@ namespace GameServer.Models
 
         internal void MonsterEnter(Monster monster)
         {
-            Log.InfoFormat("MonsterSpawned: Map: {0}, monsterId: {1}", this.Define.ID, monster.EntityId);
+            Log.InfoFormat("MonsterSpawned: Map: {0}, monsterId: {1}", this.Define.ID, monster.Id);
             foreach(var kv in this.MapCharacters)
             {
                 this.AddCharacterEnterMap(kv.Value.connection, monster.Info);

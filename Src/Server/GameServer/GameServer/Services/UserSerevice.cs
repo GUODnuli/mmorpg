@@ -61,7 +61,7 @@ namespace GameServer.Services
                     info.Id = c.ID;
                     info.Name = c.Name;
                     info.Class = (CharacterClass)c.Class;
-                    info.EntityId = c.TID;
+                    info.ConfigId = c.TID;
                     info.Type = CharacterType.Player;
                     sender.Session.Response.userLogin.Userinfo.Player.Characters.Add(info);
                 }
@@ -108,6 +108,7 @@ namespace GameServer.Services
                     Class = (int)request.Class,
                     TID = (int)request.Class,
                     MapID = 1,
+                    Level = 10,
                     MapPosX = 5000,
                     MapPosY = 4000,
                     MapPosZ = 820,
@@ -142,10 +143,10 @@ namespace GameServer.Services
                 {
                     NCharacterInfo nCharacterInfo = new NCharacterInfo
                     {
-                        Id = 0,
+                        Id = character.ID,
                         Name = character.Name,
                         Class = (CharacterClass)character.Class,
-                        EntityId = character.ID,
+                        ConfigId = character.TID,
                         Type = CharacterType.Player,
                     };
                     sender.Session.Response.createChar.Characters.Add(nCharacterInfo);
@@ -168,15 +169,17 @@ namespace GameServer.Services
             TCharacter dbchar = sender.Session.User.Player.Characters.ElementAt(request.characterIdx);
             Log.InfoFormat("UserGameEnterRequest: CharacterID: {0}, CharacterName: {1}, Map: {0}", dbchar.ID, dbchar.Name, dbchar.MapID);
             Character character = CharacterManager.Instance.AddCharacter(dbchar);
-
+            SessionManager.Instance.AddSession(character.Id, sender);
             sender.Session.Response.gameEnter = new UserGameEnterResponse();
             sender.Session.Response.gameEnter.Result = Result.Success;
-            sender.Session.Response.gameEnter.Errormsg = "成功进入游戏世界！";
-            sender.Session.Response.gameEnter.Character = character.Info;
+            sender.Session.Response.gameEnter.Errormsg = "欢迎进入极世界！";
 
+            // 进入成功，发送初始角色信息
+            sender.Session.Response.gameEnter.Character = character.Info;
             sender.SendResponse();
 
             sender.Session.Character = character;
+            sender.Session.PostResponser = character;
             MapManager.Instance[dbchar.MapID].CharacterEnter(sender, character);
         }
 
@@ -186,8 +189,9 @@ namespace GameServer.Services
             try
             {
                 Character character = sender.Session.Character;
-                Log.InfoFormat("UserGameLeaveRequest: characterID: {0}, CharacterName: {1}, MapID: {2}", character.EntityId, character.Info.Name, character.Info.mapId);
-                UserLeaveGame(character);
+                Log.InfoFormat("UserGameLeaveRequest: characterID: {0}, CharacterName: {1}, MapID: {2}", character.Id, character.Info.Name, character.Info.mapId);
+                SessionManager.Instance.RemoveSession(character.Id);
+                this.UserLeaveGame(character);
 
                 sender.Session.Response.gameLeave.Result = Result.Success;
                 sender.Session.Response.gameLeave.Errormsg = "离开游戏成功！";
@@ -203,8 +207,9 @@ namespace GameServer.Services
 
         public void UserLeaveGame(Character character)
         {
-            CharacterManager.Instance.RemoveCharacter(character.EntityId);
+            CharacterManager.Instance.RemoveCharacter(character.Id);
             MapManager.Instance[character.Info.mapId].CharacterLeave(character);
+            character.Clear();
         }
     }
 }

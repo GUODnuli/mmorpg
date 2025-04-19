@@ -33,7 +33,7 @@
     "ConfigID": 1001,
     "Name": "恶鬼",
     "Type": "Normal",
-    "Class": "WARRIOR",
+    "Class": "MONSTER",
     "Resource": "Monster/M1001",
     "InitLevel": 1,
     "Speed": 300
@@ -42,7 +42,7 @@
     "ConfigID": 1002,
     "Name": "石头人",
     "Type": "Normal",
-    "Class": "WIZARD",
+    "Class": "MONSTER",
     "Resource": "Monster/M1002",
     "InitLevel": 1,
     "Speed": 300
@@ -51,7 +51,7 @@
     "ConfigID": 1003,
     "Name": "看守",
     "Type": "Normal",
-    "Class": "ARCHER",
+    "Class": "MONSTER",
     "Resource": "Monster/M1003",
     "InitLevel": 1,
     "Speed": 300

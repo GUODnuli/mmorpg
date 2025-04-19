@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using GameServer.Models;
 using GameServer.Entities;
-using Common.Data;
+using Common;
 
 namespace GameServer.Managers
 {
@@ -31,9 +31,15 @@ namespace GameServer.Managers
             if (Rules.Count == 0)
                 return;
 
-            for (int i = 0; i < Rules.Count; i++)
+            foreach (var spawner in Rules.ToList())
             {
-                this.Rules[i].Update();
+                if(spawner.IsValid)
+                    spawner.Update();
+                else
+                {
+                    Rules.Remove(spawner);
+                    Log.WarningFormat("已移除无效的刷怪器: {0}", spawner.rule.ID);
+                }
             }
         }
     }

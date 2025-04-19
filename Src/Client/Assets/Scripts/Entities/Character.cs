@@ -5,7 +5,6 @@ using System.Text;
 using UnityEngine;
 
 using SkillBridge.Message;
-using System.Security.Cryptography;
 using Managers;
 
 namespace Entities
@@ -35,14 +34,14 @@ namespace Entities
         {
             get
             {
-                return this.Info.Id == Models.User.Instance.CurrentCharacter.Id;
+                return this.Info.EntityId == Models.User.Instance.CurrentCharacter.EntityId;
             }
         }
 
         public Character(NCharacterInfo info) : base(info.Entity)
         {
             this.Info = info;
-            this.Define = DataManager.Instance.Characters[info.Tid];
+            this.Define = DataManager.Instance.Characters[info.ConfigId];
         }
 
         public void MoveForward()

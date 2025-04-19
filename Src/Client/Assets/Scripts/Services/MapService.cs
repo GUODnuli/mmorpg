@@ -41,7 +41,7 @@ namespace Services
             Debug.LogFormat("OnMapCharacterEnter: Map: {0}, Count: {1}", response.mapId, response.Characters.Count);
             foreach (var cha in response.Characters)
             {
-                if (User.Instance.CurrentCharacter == null || User.Instance.CurrentCharacter.Id == cha.Id)
+                if (User.Instance.CurrentCharacter == null || User.Instance.CurrentCharacter.EntityId == cha.EntityId)
                 {
                     User.Instance.CurrentCharacter = cha;
                 }
@@ -53,7 +53,6 @@ namespace Services
                 this.EnterMap(response.mapId);
                 this.CurrentMapId = response.mapId;
             }
-
         }
 
         private void EnterMap(int mapId)
@@ -72,10 +71,10 @@ namespace Services
 
         private void OnMapCharacterLeave(object sender, MapCharacterLeaveResponse response)
         {
-            Debug.LogFormat("OnCharacterLeave: Character ID: {0}", response.characterId);
-            if (User.Instance.CurrentCharacter.Id != response.characterId)
+            Debug.LogFormat("OnCharacterLeave: Character ID: {0}", response.entityId);
+            if (User.Instance.CurrentCharacter.Id != response.entityId)
             {
-                CharacterManager.Instance.RemoveCharacter(response.characterId);
+                CharacterManager.Instance.RemoveCharacter(response.entityId);
             }
             else
             {
@@ -85,13 +84,13 @@ namespace Services
 
         public void SendMapEntitySync(EntityEvent entityEvent, NEntity nEntity)
         {
-            Debug.LogFormat("MapEntityUpdateRequest: Entity ID: {0}, Entity Pos: {1}, Entity Dir: {2}, Entity Speed: {3}", nEntity.Id, nEntity.Position.String(), nEntity.Direction.ToString(), nEntity.Speed.ToString());
+            Debug.LogFormat("MapEntityUpdateRequest: Entity ID: {0}, Entity Pos: {1}, Entity Dir: {2}, Entity Speed: {3}", nEntity.EntityId, nEntity.Position.String(), nEntity.Direction.ToString(), nEntity.Speed.ToString());
             NetMessage message = new NetMessage();
             message.Request = new NetMessageRequest();
             message.Request.mapEntitySync = new MapEntitySyncRequest();
             message.Request.mapEntitySync.entitySync = new NEntitySync
             {
-                Id = nEntity.Id,
+                EntityId = nEntity.EntityId,
                 Event = entityEvent,
                 Entity = nEntity,
             };
@@ -106,7 +105,7 @@ namespace Services
             foreach (var v in response.entitySyncs)
             {
                 EntityManager.Instance.OnEntitySync(v);
-                sb.AppendFormat("Entity ID: {0}, Entity Event: {1}, Entity: {2}", v.Id, v.Event, v.Entity.String());
+                sb.AppendFormat("Entity ID: {0}, Entity Event: {1}, Entity: {2}", v.EntityId, v.Event, v.Entity.String());
                 sb.AppendLine();
             }
             Debug.Log(sb.ToString());

@@ -32,7 +32,7 @@ namespace Entities
 
         public Entity(NEntity entity)
         {
-            this.entityId = entity.Id;
+            this.entityId = entity.EntityId;
             this.entityData = entity;
             this.SetEntityData(entity);
         }

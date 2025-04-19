@@ -17,7 +17,7 @@ namespace Services
         public UnityEngine.Events.UnityAction<Result, string> OnRegister;
         public UnityEngine.Events.UnityAction<Result, string> OnLogin;
         public UnityEngine.Events.UnityAction<Result, string> OnCharacterCreate;
-        public UnityEngine.Events.UnityAction<Result, string> OnGameEnter;
+        //public UnityEngine.Events.UnityAction<Result, string> OnGameEnter;
         NetMessage pendingMessage = null;
         bool connected = false;
 

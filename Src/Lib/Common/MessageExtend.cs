@@ -6,7 +6,6 @@ using UnityEngine;
 
 namespace SkillBridge.Message
 {
-
     public static class MessageExtend
     {
         public static string String(this NVector3 self)
@@ -16,7 +15,7 @@ namespace SkillBridge.Message
 
         public static string String(this NEntity self)
         {
-            return string.Format("({0}:pos:{1},dir:{2},spd:{3}", self.Id, self.Position.String(), self.Direction.String(), self.Speed);
+            return string.Format("({0}:pos:{1},dir:{2},spd:{3}", self.EntityId, self.Position.String(), self.Direction.String(), self.Speed);
         }
 
 
@@ -29,7 +28,7 @@ namespace SkillBridge.Message
 
         public static bool Equal(this NEntity self, NEntity rhs)
         {
-            if (self.Id != rhs.Id) return false;
+            if (self. EntityId!= rhs.EntityId) return false;
             if (self.Position == null)
             {
                 if (rhs.Position != null) return false;

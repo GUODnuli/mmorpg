@@ -18,7 +18,7 @@ namespace GameServer.Managers
         {
             AllEntities.Add(entity);
             // 加入管理器并生成唯一ID
-            entity.EntityData.Id = ++this.idx;
+            entity.EntityData.EntityId = ++this.idx;
             List<Entity> entities = null;
             if (!MapEntities.TryGetValue(mapId, out entities))
             {
