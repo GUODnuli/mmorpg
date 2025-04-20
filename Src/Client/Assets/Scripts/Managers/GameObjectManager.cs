@@ -63,7 +63,7 @@ namespace Managers
                     return;
                 }
                 GameObject go = (GameObject)Instantiate(obj, this.transform);
-                go.name = "Character_" + character.entityId + "_" + character.Info.Name;
+                go.name = "Character_" + character.Id + "_" + character.Name;
                 Characters[character.entityId] = go;
 
                 UIWorldElementManager.Instance.AddCharacterNameBar(go.transform, character);
@@ -93,13 +93,13 @@ namespace Managers
             if (ec != null)
             {
                 ec.entity = character;
-                ec.isPlayer = character.IsPlayer;
+                ec.isPlayer = character.IsCurrentPlayer;
             }
 
             PlayerInputController pc = go.GetComponent<PlayerInputController>();
             if (pc != null)
             {
-                if (character.Info.EntityId == User.Instance.CurrentCharacter.EntityId)
+                if (character.IsCurrentPlayer)
                 {
                     User.Instance.CurrentCharacterObject = go;
                     MainPlayerCamera.Instance.player = go;

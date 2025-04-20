@@ -41,7 +41,7 @@ namespace Services
             Debug.LogFormat("OnMapCharacterEnter: Map: {0}, Count: {1}", response.mapId, response.Characters.Count);
             foreach (var cha in response.Characters)
             {
-                if (User.Instance.CurrentCharacter == null || User.Instance.CurrentCharacter.EntityId == cha.EntityId)
+                if (User.Instance.CurrentCharacter == null || (cha.Type == CharacterType.Player && User.Instance.CurrentCharacter.Id == cha.Id))
                 {
                     User.Instance.CurrentCharacter = cha;
                 }
@@ -72,7 +72,7 @@ namespace Services
         private void OnMapCharacterLeave(object sender, MapCharacterLeaveResponse response)
         {
             Debug.LogFormat("OnCharacterLeave: Character ID: {0}", response.entityId);
-            if (User.Instance.CurrentCharacter.Id != response.entityId)
+            if (User.Instance.CurrentCharacter.EntityId != response.entityId)
             {
                 CharacterManager.Instance.RemoveCharacter(response.entityId);
             }

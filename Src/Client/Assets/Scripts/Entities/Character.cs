@@ -15,6 +15,11 @@ namespace Entities
 
         public Common.Data.CharacterDefine Define;
 
+        public int Id
+        {
+            get { return this.Info.Id; }
+        }
+
         public string Name
         {
             get
@@ -32,9 +37,15 @@ namespace Entities
 
         public bool IsPlayer
         {
+            get { return this.Info.Type == CharacterType.Player; }
+        }
+
+        public bool IsCurrentPlayer
+        {
             get
             {
-                return this.Info.EntityId == Models.User.Instance.CurrentCharacter.EntityId;
+                if (!IsPlayer) return false;
+                return this.Info.Id == Models.User.Instance.CurrentCharacter.Id;
             }
         }
 

@@ -53,14 +53,14 @@ namespace Managers
             OnCharacterEnter?.Invoke(character);
         }
 
-        public void RemoveCharacter(int characterId)
+        public void RemoveCharacter(int entityId)
         {
-            Debug.LogFormat("RemoveCharacter: Character ID: {0}", characterId);
-            if (this.Characters.ContainsKey(characterId))
+            Debug.LogFormat("RemoveCharacter: Character ID: {0}", entityId);
+            if (this.Characters.ContainsKey(entityId))
             {
-                EntityManager.Instance.RemoveEntity(this.Characters[characterId].Info.Entity);
-                OnCharacterLeave?.Invoke(this.Characters[characterId]);
-                this.Characters.Remove(characterId);
+                EntityManager.Instance.RemoveEntity(this.Characters[entityId].Info.Entity);
+                OnCharacterLeave?.Invoke(this.Characters[entityId]);
+                this.Characters.Remove(entityId);
             }
         }
     }
