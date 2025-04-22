@@ -118,5 +118,46 @@ namespace GameServer.Services
             }
             sender.SendResponse();
         }
+
+        /// <summary>
+        /// 收到删除好友请求
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="request"></param>
+        private void OnFriendRemove(NetConnection<NetSession> sender, FriendRemoveRequest request)
+        {
+            Character character = sender.Session.Character;
+            Log.InfoFormat("OnFriendRemove: Character Id: {0}, Remove Friend Id: {1}", character.Id, request.FriendId);
+
+            sender.Session.Response.friendRemove = new FriendRemoveResponse();
+
+            if (character.FriendManager.RemoveFriendById(request.FriendId))
+            {
+                sender.Session.Response.friendRemove.Result = Result.Success;
+                var friend = SessionManager.Instance.GetSession(request.FriendId);
+                if (friend != null)
+                {
+                    friend.Session.Character.FriendManager.RemoveFriendById(character.Id);
+                }
+                else
+                {
+                    this.RemoveFriend(request.FriendId, character.Id);
+                }
+            }
+            else
+                sender.Session.Response.friendRemove.Result = Result.Failed;
+
+            DBService.Instance.Save();
+            sender.SendResponse();
+        }
+
+        private void RemoveFriend(int friendId, int characterId)
+        {
+            var removeItem = DBService.Instance.Entities.CharacterFriends.FirstOrDefault(v => v.TCharacterID == friendId && v.FriendID == characterId);
+            if (removeItem != null)
+            {
+                DBService.Instance.Entities.CharacterFriends.Remove(removeItem);
+            }
+        }
     }
 }
