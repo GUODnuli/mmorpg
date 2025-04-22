@@ -83,7 +83,11 @@ namespace Services
             };
         }
 
-        // 收到添加好友响应
+        /// <summary>
+        /// 收到添加好友响应
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="message"></param>
         private void OnFriendAddResponse(object sender, FriendAddResponse message)
         {
             if (message.Result == Result.Success)
