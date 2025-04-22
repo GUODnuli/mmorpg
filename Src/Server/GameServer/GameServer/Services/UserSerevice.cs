@@ -179,7 +179,7 @@ namespace GameServer.Services
             sender.SendResponse();
 
             sender.Session.Character = character;
-            sender.Session.PostResponser = character;
+            sender.Session.PostResponse = character;
             MapManager.Instance[dbchar.MapID].CharacterEnter(sender, character);
         }
 

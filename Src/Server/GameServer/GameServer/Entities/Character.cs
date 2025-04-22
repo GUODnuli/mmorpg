@@ -2,7 +2,7 @@
 using GameServer.Core;
 using SkillBridge.Message;
 using GameServer.Managers;
-using Network;
+using GameServer.Network;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace GameServer.Entities
 {
-    class Character : CharacterBase, IPostResponser
+    class Character : CharacterBase, IPostResponse
     {
        
         public TCharacter Data;

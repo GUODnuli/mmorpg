@@ -9,6 +9,7 @@ using GameServer.Entities;
 using GameServer.Services;
 using SkillBridge.Message;
 using GameServer.Managers;
+using GameServer.Network;
 
 namespace Network
 {
@@ -17,9 +18,11 @@ namespace Network
         public TUser User { get; set; }
         public Character Character { get; set; }
         public NEntity Entity { get; set; } 
+        public IPostResponse PostResponse { get; set; }
 
         public void Disconnected()
         {
+            this.PostResponse = null;
             if (this.Character != null)
             {
                 UserService.Instance.UserLeaveGame(this.Character);
@@ -44,10 +47,8 @@ namespace Network
         {
             if (response != null)
             {
-                if (this.Character != null && this.Character.StatusManager.HasStatus)
-                {
-                    this.Character.StatusManager.ApplyResponse(Response);
-                }
+                if (PostResponse != null)
+                    this.PostResponse.PostProcess(Response);
                 byte[] data = PackageHandler.PackMessage(response);
                 response = null;
                 return data;
