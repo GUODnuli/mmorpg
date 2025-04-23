@@ -49,10 +49,19 @@
   },
   "1003": {
     "ConfigID": 1003,
-    "Name": "看守",
+    "Name": "小恶魔",
     "Type": "Normal",
     "Class": "MONSTER",
     "Resource": "Monster/M1003",
+    "InitLevel": 1,
+    "Speed": 300
+  },
+  "1004": {
+    "ConfigID": 1004,
+    "Name": "死神",
+    "Type": "Normal",
+    "Class": "MONSTER",
+    "Resource": "Monster/M1004",
     "InitLevel": 1,
     "Speed": 300
   }
