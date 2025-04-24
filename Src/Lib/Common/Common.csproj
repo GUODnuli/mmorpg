@@ -89,4 +89,8 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy $(TargetDir)Common.* E:\UnityProject\myMmorpgclass5\Src\Client\Assets\References\
+copy $(TargetDir)Protocol.* E:\UnityProject\myMmorpgclass5\Src\Client\Assets\References\</PostBuildEvent>
+  </PropertyGroup>
 </Project>

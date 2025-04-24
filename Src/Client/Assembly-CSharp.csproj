@@ -149,6 +149,7 @@
     <Compile Include="Assets\Scripts\Models\User.cs" />
     <Compile Include="Assets\Scripts\UI\UICharBar.cs" />
     <Compile Include="Assets\Scripts\UI\FriendSystem\UIFriendItem.cs" />
+    <Compile Include="Assets\Scripts\Managers\SpriteManager.cs" />
     <Compile Include="Assets\Scripts\Services\ItemService.cs" />
     <Compile Include="Assets\Scripts\Managers\EntityManager.cs" />
     <Compile Include="Assets\Scripts\UI\MiniMap\UIMiniMap.cs" />
