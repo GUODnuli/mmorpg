@@ -6,6 +6,11 @@ namespace Managers
 {
     public class SpriteManager : MonoSingleton<SpriteManager>
     {
-        public Sprite[] sprites;
+        public Sprite[] classIcons;
+
+        //public Sprite classIcons(int idx)
+        //{
+        //    return sprites[idx];
+        //}
     }
 }

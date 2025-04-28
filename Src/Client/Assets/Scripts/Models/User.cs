@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
+using SkillBridge.Message;
 
 namespace Models
 {
@@ -26,6 +27,8 @@ namespace Models
         public MapDefine CurrentMap { get; set; }
 
         public GameObject CurrentCharacterObject {  get; set; }
+
+        public NTeamInfo TeamInfo { get; set; }
 
         public void AddGold(int gold)
         {

@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 6154949871991569554}
   - component: {fileID: 154165660983923434}
   - component: {fileID: 4392868682898041024}
-  - component: {fileID: 7144820268876488954}
+  - component: {fileID: 8702592476843264267}
   m_Layer: 5
   m_Name: UIFriendItem
   m_TagString: Untagged
@@ -359,7 +359,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 154165660983923434}
---- !u!114 &7144820268876488954
+--- !u!114 &8702592476843264267
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
