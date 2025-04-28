@@ -188,7 +188,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -4.9784, y: 0}
+  m_AnchoredPosition: {x: -4.9783936, y: 0}
   m_SizeDelta: {x: 0.0432, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3101779164806649493
@@ -509,7 +509,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -639,6 +639,7 @@ GameObject:
   - component: {fileID: 2810206688903661282}
   - component: {fileID: 6154949871991569554}
   - component: {fileID: 154165660983923434}
+  - component: {fileID: 5385778542886339087}
   m_Layer: 5
   m_Name: UITeamItem
   m_TagString: Untagged
@@ -708,6 +709,24 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5385778542886339087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7319370627172360450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66c14ed9f85ff49409d8099cad173ee4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 0}
+  nickname: {fileID: 7790563663283318777}
+  backgroud: {fileID: 154165660983923434}
+  classIcon: {fileID: 1201071101129441955}
+  leaderIcon: {fileID: 503534683637302339}
+  idx: 0
 --- !u!1 &8945189079678432700
 GameObject:
   m_ObjectHideFlags: 0
