@@ -45,7 +45,10 @@ public class UITeam : MonoBehaviour
 
         for(int i = 0; i < 5; i++)
         {
-
+            if (i < User.Instance.TeamInfo.Members.Count)
+            {
+                this.
+            }
         }
     }
 }
