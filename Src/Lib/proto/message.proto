@@ -223,7 +223,7 @@ message NetMessageResponse {
 
 	TeamInviteResponse teamInviteRsp = 20;
 	TeamInviteRequest teamInviteReq = 21;
-	TeamInfotResponse teamInfo = 22;
+	TeamInfoResponse teamInfo = 22;
 	TeamLeaveResponse teamLeave = 23;
 
 	StatusNotify statusNotify = 100;
@@ -526,7 +526,7 @@ message TeamInfoRequest
 
 }
 
-message TeamInfotResponse
+message TeamInfoResponse
 {
 	RESULT result = 1;
 	string errormsg = 2;

@@ -47,8 +47,21 @@ public class UITeam : MonoBehaviour
         {
             if (i < User.Instance.TeamInfo.Members.Count)
             {
-                this.
+                this.Members[i].SetMemberInfo(i, User.Instance.TeamInfo.Members[i], User.Instance.TeamInfo.Members[i].Id == User.Instance.TeamInfo.Leader);
+                this.Members[i].gameObject.SetActive(true);
+            }
+            else
+            {
+                this.Members[i].gameObject.SetActive(false);
             }
         }
+    }
+
+    public void OnClickLeave()
+    {
+        MessageBox.Show("确定要离开队伍吗？", "退出队伍", MessageBoxType.Confirm, "确定离开", "取消").OnYes = () =>
+        {
+            TeamService.Instance.SendTeamLeaveRequest(User.Instance.TeamInfo.Id);
+        };
     }
 }

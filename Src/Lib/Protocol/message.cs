@@ -369,7 +369,7 @@ namespace SkillBridge.Message
         public TeamInviteRequest teamInviteReq { get; set; }
 
         [global::ProtoBuf.ProtoMember(22)]
-        public TeamInfotResponse teamInfo { get; set; }
+        public TeamInfoResponse teamInfo { get; set; }
 
         [global::ProtoBuf.ProtoMember(23)]
         public TeamLeaveResponse teamLeave { get; set; }
@@ -1054,7 +1054,7 @@ namespace SkillBridge.Message
     }
 
     [global::ProtoBuf.ProtoContract()]
-    public partial class TeamInfotResponse : global::ProtoBuf.IExtensible
+    public partial class TeamInfoResponse : global::ProtoBuf.IExtensible
     {
         private global::ProtoBuf.IExtension __pbn__extensionData;
         global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
