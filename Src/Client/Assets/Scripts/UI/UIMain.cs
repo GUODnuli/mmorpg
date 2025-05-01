@@ -11,6 +11,7 @@ public class UIMain : MonoSingleton<UIMain>
     public Text avatarName;
     public Text avatarLevel;
     public Image avatarImage;
+    public UITeam TeamWindow;
 
     // Start is called before the first frame update
     protected override void OnStart()
@@ -48,5 +49,10 @@ public class UIMain : MonoSingleton<UIMain>
     public void OnClickFriendSystem()
     {
         UIManager.Instance.Show<UIFriends>();
+    }
+
+    public void ShowTeamUI(bool show)
+    {
+        TeamWindow.ShowTeam(show);
     }
 }

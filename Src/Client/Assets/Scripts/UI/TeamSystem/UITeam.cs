@@ -61,7 +61,7 @@ public class UITeam : MonoBehaviour
     {
         MessageBox.Show("确定要离开队伍吗？", "退出队伍", MessageBoxType.Confirm, "确定离开", "取消").OnYes = () =>
         {
-            TeamService.Instance.SendTeamLeaveRequest(User.Instance.TeamInfo.Id);
+            TeamService.Instance.SendTeamLeaveRequest();
         };
     }
 }
