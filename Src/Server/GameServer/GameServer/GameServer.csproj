@@ -121,6 +121,7 @@
     <Compile Include="Managers\Spawner.cs" />
     <Compile Include="Managers\SpawnManager.cs" />
     <Compile Include="Managers\StatusManager.cs" />
+    <Compile Include="Managers\TeamManager.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\Map.cs" />
     <Compile Include="Models\Team.cs" />

@@ -31,6 +31,25 @@ namespace GameServer.Models
             timestamp = Time.timestamp;
         }
 
+        public void Leave(Character member)
+        {
+            Log.InfoFormat("Leave Team: {0}: {1}", member.Id, member.Info.Name);
+            this.Members.Remove(member);
+            if(member == this.Leader)
+            {
+                if (this.Members.Count != 0)
+                {
+                    this.Leader = this.Members[0];
+                }
+                else
+                {
+                    this.Leader = null;
+                }
+                member.Team = null;
+                timestamp = Time.timestamp;
+            }
+        }
+
         public void PostProcess(NetMessageResponse message)
         {
             if (message.teamInfo == null)
