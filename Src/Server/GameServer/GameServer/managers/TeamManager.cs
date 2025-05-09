@@ -51,6 +51,6 @@ namespace GameServer.Managers
             this.Teams.Add(team);
             team.Id = this.Teams.Count;
             return team;
-        }
+        } 
     }
 }
