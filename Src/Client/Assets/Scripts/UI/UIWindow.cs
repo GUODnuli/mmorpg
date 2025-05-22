@@ -30,12 +30,17 @@ public abstract class UIWindow : MonoBehaviour
 
     public virtual void OnCloseClick()
     {
-        this.Close();
+        this.Close(); 
     }
 
     public virtual void OnYesClick()
     {
         this.Close(WindowResult.Yes);
+    }
+
+    public virtual void OnNoClick()
+    {
+        this.Close(WindowResult.No);
     }
 
     private void OnMouseDown()
