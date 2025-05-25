@@ -1,0 +1,628 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.23f1 (dbb3f7c5b5c6) revision 14398455'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22631) 64bit Professional' Language: 'zh' Physical Memory: 32508 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+E:\Editor\2022.3.23f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+E:/UnityProject/myMmorpgclass5/Src/Client
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+52054
+Successfully changed project path to: E:/UnityProject/myMmorpgclass5/Src/Client
+E:/UnityProject/myMmorpgclass5/Src/Client
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [27980] Host "[IP] 192.168.1.6 [Port] 0 [Flags] 2 [Guid] 203750307 [EditorId] 203750307 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-0A286S5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [27980] Host "[IP] 192.168.1.6 [Port] 0 [Flags] 2 [Guid] 203750307 [EditorId] 203750307 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-0A286S5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 31 workers.
+Refreshing native plugins compatible for Editor in 11.77 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.23f1 (dbb3f7c5b5c6)
+[Subsystems] Discovering subsystems at path E:/Editor/2022.3.23f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/UnityProject/myMmorpgclass5/Src/Client/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 4070 Ti SUPER (ID=0x2705)
+    Vendor:   NVIDIA
+    VRAM:     16063 MB
+    Driver:   32.0.15.7640
+Initialize mono
+Mono path[0] = 'E:/Editor/2022.3.23f1/Editor/Data/Managed'
+Mono path[1] = 'E:/Editor/2022.3.23f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'E:/Editor/2022.3.23f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56912
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/VisionOSPlayer/UnityEditor.VisionOS.Extensions.dll
+Register platform support module: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.004370 seconds.
+- Loaded All Assemblies, in  0.209 seconds
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Failed to load: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/VisionOSPlayer\x64\UnityEditor.VisionOS.Native.dll
+Native extension for VisionOS target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+Native extension for iOS target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 261 ms
+Native extension for OSXStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.488 seconds
+Domain Reload Profiling: 697ms
+	BeginReloadAssembly (68ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (0ms)
+	RebuildCommonClasses (20ms)
+	RebuildNativeTypeToScriptingClass (6ms)
+	initialDomainReloadingComplete (31ms)
+	LoadAllAssembliesAndSetupDomain (84ms)
+		LoadAssemblies (68ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (82ms)
+			TypeCache.Refresh (81ms)
+				TypeCache.ScanAssembly (73ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (488ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (452ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (339ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (1ms)
+			ProcessInitializeOnLoadAttributes (76ms)
+			ProcessInitializeOnLoadMethodAttributes (32ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+Duplicate assembly 'log4net.dll' with different versions detected, using 'Assets/References/log4net.dll, AssemblyName=log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=null' and ignoring 'Packages/com.unity.collab-proxy/Lib/Editor/PlasticSCM/log4netPlastic.dll, AssemblyName=log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a'.Duplicate assembly 'Newtonsoft.Json.dll' with different versions detected, using 'Packages/com.unity.nuget.newtonsoft-json/Runtime/Newtonsoft.Json.dll, AssemblyName=Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed' and ignoring 'Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll, AssemblyName=Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null'.Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.445 seconds
+Refreshing native plugins compatible for Editor in 3.40 ms, found 2 plugins.
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Failed to load: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/VisionOSPlayer\x64\UnityEditor.VisionOS.Native.dll
+Native extension for VisionOS target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.670 seconds
+Domain Reload Profiling: 1115ms
+	BeginReloadAssembly (116ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (10ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (15ms)
+	RebuildCommonClasses (19ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (25ms)
+	LoadAllAssembliesAndSetupDomain (278ms)
+		LoadAssemblies (242ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (92ms)
+			TypeCache.Refresh (76ms)
+				TypeCache.ScanAssembly (58ms)
+			ScanForSourceGeneratedMonoScriptInfo (13ms)
+			ResolveRequiredComponents (2ms)
+	FinalizeReload (670ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (554ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (30ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (55ms)
+			ProcessInitializeOnLoadAttributes (364ms)
+			ProcessInitializeOnLoadMethodAttributes (100ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 6.46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2661 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 70 unused Assets / (77.4 KB). Loaded Objects now: 3123.
+Memory consumption went from 140.2 MB to 140.2 MB.
+Total: 9.676000 ms (FindLiveObjects: 0.241200 ms CreateObjectMapping: 0.058000 ms MarkObjects: 9.183100 ms  DeleteObjects: 0.192100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+========================================================================
+Received Import Request.
+  Time since last request: 29021.626059 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopNoGuild.prefab
+  artifactKey: Guid(c418888293cdd6749b0f892ffabcd739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopNoGuild.prefab using Guid(c418888293cdd6749b0f892ffabcd739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8e5d1ac11aa17e7a0ca8830dab1b3fa') in 0.051767 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 50
+========================================================================
+Received Import Request.
+  Time since last request: 183.435899 seconds.
+  path: Assets/Resources/UI/Guild/UIInputBox.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIInputBox.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfe175c7d782e06010a41fa60e6b0c57') in 0.013806 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 68
+========================================================================
+Received Import Request.
+  Time since last request: 9.450152 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '366a269f90667030484421f3674f71fe') in 0.013433 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 68
+========================================================================
+Received Import Request.
+  Time since last request: 6.980638 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dca02c50bc6a186a9e6a9790a0506624') in 0.011355 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 68
+========================================================================
+Received Import Request.
+  Time since last request: 14.901523 seconds.
+  path: Assets/Resources/UI/UIInputBox.prefab
+  artifactKey: Guid(500d9541eec90e44d9427abd97cc6b0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/UIInputBox.prefab using Guid(500d9541eec90e44d9427abd97cc6b0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95005667e9739b4b1d16de6409be8c03') in 0.011021 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 68
+========================================================================
+Received Import Request.
+  Time since last request: 47.855981 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c27b0b88367776bad83cbc0bbe74175') in 0.013997 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 68
+========================================================================
+Received Import Request.
+  Time since last request: 7.314329 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1783449bc5be9ab2d90a33f683e5ccf') in 0.011846 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 68
+========================================================================
+Received Import Request.
+  Time since last request: 12.086588 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca325a21026b7985ee004c72cc2fd0a4') in 0.012502 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 68
+========================================================================
+Received Import Request.
+  Time since last request: 4.218744 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '841cc61e8a76e028a5864596fba1b4bb') in 0.011747 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 68
+========================================================================
+Received Import Request.
+  Time since last request: 2.000017 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '335f792b212f23eabec399a79932be60') in 0.011387 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 68
+========================================================================
+Received Import Request.
+  Time since last request: 5.628290 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '930dd35751924ba1dba246acd32d5729') in 0.011424 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 68
+========================================================================
+Received Import Request.
+  Time since last request: 5.841019 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '738b6554f8e08c84c3ce5117f4c2ec3b') in 0.013081 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 68
+========================================================================
+Received Import Request.
+  Time since last request: 1.193778 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1e11d597002713d14837a5ee47f3772') in 0.011820 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 68
+========================================================================
+Received Import Request.
+  Time since last request: 4.014566 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3baedadc8110af01392e3924ec145b7c') in 0.011949 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 68
+========================================================================
+Received Import Request.
+  Time since last request: 8.456218 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '168bead196d3eed30c8c1c5da2afb05c') in 0.011542 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 68
+========================================================================
+Received Import Request.
+  Time since last request: 3.264919 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ec72b8b472e8ace1decd0ef6126073f') in 0.011425 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 68
+========================================================================
+Received Import Request.
+  Time since last request: 14.286425 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7cd18fae4a60563e282583a745a028a') in 0.012295 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 68
+========================================================================
+Received Import Request.
+  Time since last request: 7.464240 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a969a435b84f2a7e4cc7f5243dac183') in 0.011567 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 85
+========================================================================
+Received Import Request.
+  Time since last request: 5.398329 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3efd7169ccdc9b134d09762db7756bf3') in 0.047259 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 81
+========================================================================
+Received Import Request.
+  Time since last request: 5.797864 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2d6a4197dfa00f069f5b6dd44756808') in 0.011111 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 81
+========================================================================
+Received Import Request.
+  Time since last request: 5.832343 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3e3d183b8350dd581fe484658d03938') in 0.018146 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 81
+========================================================================
+Received Import Request.
+  Time since last request: 11.005470 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7aa12d36958e1b71df85204812ac496') in 0.016753 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 81
+========================================================================
+Received Import Request.
+  Time since last request: 6.045799 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d2e903eff0f2198a572bc8b1749de55') in 0.012166 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 81
+========================================================================
+Received Import Request.
+  Time since last request: 38.587412 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '011ed320d06791c2d9e8d22735677697') in 0.017093 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 81
+========================================================================
+Received Import Request.
+  Time since last request: 10.182932 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b4e534a8acc3587a2cb80a5092720cf') in 0.014514 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 81
+========================================================================
+Received Import Request.
+  Time since last request: 18.292833 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '444b931d4cb1ad11fcd5e55e290738d1') in 0.011796 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 81
+========================================================================
+Received Import Request.
+  Time since last request: 10.075768 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2842bd9b024da4e290077813a82fb277') in 0.011218 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 81
+========================================================================
+Received Import Request.
+  Time since last request: 9.884941 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b653a26ba96fb173bcdfb46a63d57f5c') in 0.012506 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 81
+========================================================================
+Received Import Request.
+  Time since last request: 13.277227 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aecdf2c2379ddffb1fc51a5f85c3830b') in 0.012742 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 81
+========================================================================
+Received Import Request.
+  Time since last request: 3.412853 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8ae7d3a5584d903240e648e892f16cf') in 0.012301 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 81
+========================================================================
+Received Import Request.
+  Time since last request: 6.235710 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65abd4d5b6fb916697e04474f9e9a4dc') in 0.011609 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 81
+========================================================================
+Received Import Request.
+  Time since last request: 3.433208 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c365a4dbbdef3b4df6f171960bf972f') in 0.012040 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 81
+========================================================================
+Received Import Request.
+  Time since last request: 3.212646 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '785ff856e39e72b5b2006d148c90712a') in 0.015311 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 81
+========================================================================
+Received Import Request.
+  Time since last request: 23.527372 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4760cc08863c43ae43dd695f7f84e015') in 0.041159 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 81
+========================================================================
+Received Import Request.
+  Time since last request: 3.701891 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f4b0eb831bc7edec529206e3c8121f0') in 0.012075 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 81
+========================================================================
+Received Import Request.
+  Time since last request: 2.200352 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9afa64c92d47c4d7d09d2536df482ed') in 0.013587 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 78
+========================================================================
+Received Import Request.
+  Time since last request: 2.610901 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f95d5dd08410f9e4932b14cccaeccc60') in 0.017235 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 78
+========================================================================
+Received Import Request.
+  Time since last request: 1.395335 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5af65144fde55728c5684721c843010b') in 0.022575 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 78
+========================================================================
+Received Import Request.
+  Time since last request: 3.512456 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26acb41ff92550e494dd413125450dee') in 0.025157 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 78
+========================================================================
+Received Import Request.
+  Time since last request: 1.382826 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16c0d859d43fccb7c2c8bddf7b77e629') in 0.011542 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 78
+========================================================================
+Received Import Request.
+  Time since last request: 2.004470 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b6d0a125f99d4163eba708be60d664c') in 0.019407 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 78
+========================================================================
+Received Import Request.
+  Time since last request: 7.467397 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48bbf6e51ccca4d4923075d401a38680') in 0.050506 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 78
+========================================================================
+Received Import Request.
+  Time since last request: 1.559259 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdb715db93acd00fbb6c9f8d094731bd') in 0.011918 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 78
+========================================================================
+Received Import Request.
+  Time since last request: 1.195361 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ae82abee97a5fe9f96bed13bac65446') in 0.012298 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 78
+========================================================================
+Received Import Request.
+  Time since last request: 2.828471 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54a5ec806e06abe04770c849254a2b84') in 0.012436 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 74
+========================================================================
+Received Import Request.
+  Time since last request: 4.817668 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afe7279403fa28f66c27b5b953806532') in 0.011742 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 74
+========================================================================
+Received Import Request.
+  Time since last request: 7.511475 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a27e28bd7ae69b40ffcb07bfbd0cd947') in 0.015722 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 74
+========================================================================
+Received Import Request.
+  Time since last request: 3.695382 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e88412dcdfe512b8e955284e3ccfb30c') in 0.011256 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 74
+========================================================================
+Received Import Request.
+  Time since last request: 1.397401 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cc6bdec0bb01dcf7608c14ce90ef1c0') in 0.012914 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 74
+========================================================================
+Received Import Request.
+  Time since last request: 6.445250 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57e378e6cf4bc0aad6e6d26c03ba54d6') in 0.011590 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 74
+========================================================================
+Received Import Request.
+  Time since last request: 6.235007 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e5350f80dea65635b6546d3d01cf53a') in 0.011751 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 74
+========================================================================
+Received Import Request.
+  Time since last request: 20.735184 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b3c1aa2917253e588577a6cbadfc553') in 0.011936 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 74
+========================================================================
+Received Import Request.
+  Time since last request: 5.391770 seconds.
+  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
+  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e37fbba87066cf1d2e4401cc54842dc8') in 0.011109 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 73
