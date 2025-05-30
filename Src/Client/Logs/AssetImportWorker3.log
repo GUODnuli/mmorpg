@@ -9,11 +9,11 @@ C:\Program Files\Unity\Hub\Editor\2022.3.23f1\Editor\Unity.exe
 -batchMode
 -noUpm
 -name
-AssetImportWorker1
+AssetImportWorker3
 -projectPath
 C:/Users/62411/Project/UnityProject/MyMmorpg/Src/Client
 -logFile
-Logs/AssetImportWorker1.log
+Logs/AssetImportWorker3.log
 -srvPort
 55408
 Successfully changed project path to: C:/Users/62411/Project/UnityProject/MyMmorpg/Src/Client
@@ -49,12 +49,12 @@ C:/Users/62411/Project/UnityProject/MyMmorpg/Src/Client
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [26656] Host "[IP] 198.18.0.1 [Port] 0 [Flags] 2 [Guid] 3070330268 [EditorId] 3070330268 [Version] 1048832 [Id] WindowsEditor(7,zhuangxiaosen) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [9040] Host "[IP] 198.18.0.1 [Port] 0 [Flags] 2 [Guid] 1083173468 [EditorId] 1083173468 [Version] 1048832 [Id] WindowsEditor(7,zhuangxiaosen) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [26656] Host "[IP] 198.18.0.1 [Port] 0 [Flags] 2 [Guid] 3070330268 [EditorId] 3070330268 [Version] 1048832 [Id] WindowsEditor(7,zhuangxiaosen) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [9040] Host "[IP] 198.18.0.1 [Port] 0 [Flags] 2 [Guid] 1083173468 [EditorId] 1083173468 [Version] 1048832 [Id] WindowsEditor(7,zhuangxiaosen) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 15 workers.
-Refreshing native plugins compatible for Editor in 8.87 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 10.56 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.23f1 (dbb3f7c5b5c6)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.23f1/Editor/Data/Resources/UnitySubsystems
@@ -70,44 +70,44 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.23f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.23f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.23f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56164
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56460
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003643 seconds.
-- Loaded All Assemblies, in  0.625 seconds
+Registered in 0.003511 seconds.
+- Loaded All Assemblies, in  0.582 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.187 seconds
-Domain Reload Profiling: 811ms
-	BeginReloadAssembly (468ms)
+- Finished resetting the current domain, in  0.191 seconds
+Domain Reload Profiling: 772ms
+	BeginReloadAssembly (420ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
 	RebuildCommonClasses (22ms)
-	RebuildNativeTypeToScriptingClass (7ms)
+	RebuildNativeTypeToScriptingClass (6ms)
 	initialDomainReloadingComplete (36ms)
-	LoadAllAssembliesAndSetupDomain (92ms)
-		LoadAssemblies (467ms)
+	LoadAllAssembliesAndSetupDomain (97ms)
+		LoadAssemblies (419ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (90ms)
-			TypeCache.Refresh (89ms)
-				TypeCache.ScanAssembly (80ms)
+		AnalyzeDomain (96ms)
+			TypeCache.Refresh (94ms)
+				TypeCache.ScanAssembly (84ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (188ms)
+	FinalizeReload (191ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (147ms)
+		SetupLoadedEditorAssemblies (150ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
+			InitializePlatformSupportModulesInManaged (6ms)
 			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (100ms)
-			ProcessInitializeOnLoadMethodAttributes (31ms)
+			ProcessInitializeOnLoadAttributes (103ms)
+			ProcessInitializeOnLoadMethodAttributes (33ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -118,55 +118,55 @@ Begin MonoManager ReloadAssembly
 Duplicate assembly 'log4net.dll' with different versions detected, using 'Assets/References/log4net.dll, AssemblyName=log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=null' and ignoring 'Packages/com.unity.collab-proxy/Lib/Editor/PlasticSCM/log4netPlastic.dll, AssemblyName=log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a'.Duplicate assembly 'Newtonsoft.Json.dll' with different versions detected, using 'Packages/com.unity.nuget.newtonsoft-json/Runtime/Newtonsoft.Json.dll, AssemblyName=Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed' and ignoring 'Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll, AssemblyName=Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null'.Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.764 seconds
-Refreshing native plugins compatible for Editor in 5.22 ms, found 2 plugins.
+- Loaded All Assemblies, in  0.510 seconds
+Refreshing native plugins compatible for Editor in 4.60 ms, found 2 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.469 seconds
-Domain Reload Profiling: 1231ms
-	BeginReloadAssembly (405ms)
+- Finished resetting the current domain, in  0.428 seconds
+Domain Reload Profiling: 937ms
+	BeginReloadAssembly (134ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
+		DisableScriptedObjects (3ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (16ms)
-	RebuildCommonClasses (20ms)
+		CreateAndSetChildDomain (19ms)
+	RebuildCommonClasses (24ms)
 	RebuildNativeTypeToScriptingClass (6ms)
-	initialDomainReloadingComplete (28ms)
-	LoadAllAssembliesAndSetupDomain (302ms)
-		LoadAssemblies (568ms)
+	initialDomainReloadingComplete (31ms)
+	LoadAllAssembliesAndSetupDomain (313ms)
+		LoadAssemblies (289ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (94ms)
-			TypeCache.Refresh (77ms)
-				TypeCache.ScanAssembly (61ms)
-			ScanForSourceGeneratedMonoScriptInfo (13ms)
+		AnalyzeDomain (113ms)
+			TypeCache.Refresh (97ms)
+				TypeCache.ScanAssembly (80ms)
+			ScanForSourceGeneratedMonoScriptInfo (12ms)
 			ResolveRequiredComponents (2ms)
-	FinalizeReload (469ms)
+	FinalizeReload (428ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (361ms)
+		SetupLoadedEditorAssemblies (329ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (4ms)
 			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (57ms)
-			ProcessInitializeOnLoadAttributes (191ms)
-			ProcessInitializeOnLoadMethodAttributes (100ms)
+			BeforeProcessingInitializeOnLoad (54ms)
+			ProcessInitializeOnLoadAttributes (173ms)
+			ProcessInitializeOnLoadMethodAttributes (90ms)
 			AfterProcessingInitializeOnLoad (4ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 5.91 ms, found 2 plugins.
+		AwakeInstancesAfterBackupRestoration (5ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 5.73 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2666 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 70 unused Assets / (75.6 KB). Loaded Objects now: 3124.
-Memory consumption went from 128.5 MB to 128.4 MB.
-Total: 4.283100 ms (FindLiveObjects: 0.193300 ms CreateObjectMapping: 0.041500 ms MarkObjects: 3.871100 ms  DeleteObjects: 0.176100 ms)
+Unloading 70 unused Assets / (76.0 KB). Loaded Objects now: 3124.
+Memory consumption went from 128.4 MB to 128.4 MB.
+Total: 4.486600 ms (FindLiveObjects: 0.173600 ms CreateObjectMapping: 0.041400 ms MarkObjects: 4.107800 ms  DeleteObjects: 0.163000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -182,32 +182,9 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-========================================================================
-Received Import Request.
-  Time since last request: 943278.638111 seconds.
-  path: Assets/Resources/UI/Guild/UIGuildPopCreate.prefab
-  artifactKey: Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/Guild/UIGuildPopCreate.prefab using Guid(7c8be57004863ea47af080fa9229308c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '708245b38437095772db5cbfeed1d87e') in 0.035513 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 74
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Resources/UI/UIInputBox.prefab
-  artifactKey: Guid(500d9541eec90e44d9427abd97cc6b0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIInputBox.prefab using Guid(500d9541eec90e44d9427abd97cc6b0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '629341cf688f082ce8aff4c23ffb1916') in 0.019374 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 68
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Resources/UI/UITeamItem.prefab
-  artifactKey: Guid(b64f367bfeb788348bb48a635377bbae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UITeamItem.prefab using Guid(b64f367bfeb788348bb48a635377bbae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a473914a6456f368aefe917e1b02de83') in 0.003615 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 44
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: 由于线程退出或应用程序请求，已中止 I/O 操作。
+TcpMessagingSession - receive error
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
 AssetImportWorker is now disconnected from the server
 Process exiting
 Exiting without the bug reporter. Application will terminate with return code 0
