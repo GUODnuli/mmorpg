@@ -499,6 +499,7 @@ GameObject:
   - component: {fileID: 223420220395199798}
   - component: {fileID: 114343322507700096}
   - component: {fileID: 114530391675336540}
+  - component: {fileID: 206420362374663453}
   m_Layer: 5
   m_Name: UIGuildPopCreate
   m_TagString: Untagged
@@ -589,6 +590,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &206420362374663453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813644301806410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1c3463aafab9c4fac92841e09f79b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputName: {fileID: 895450531401485663}
+  inputNotice: {fileID: 5933936889644886897}
 --- !u!1 &1922593807536806
 GameObject:
   m_ObjectHideFlags: 0
