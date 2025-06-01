@@ -19,7 +19,7 @@
         <EntityTypeShape EntityType="ExtremeWorldModel.TCharacterFriend" Width="1.5" PointX="10.75" PointY="8.25" />
         <AssociationConnector Association="ExtremeWorldModel.TCharacterTCharacterFriend" />
         <EntityTypeShape EntityType="ExtremeWorldModel.TGuild" Width="1.5" PointX="1" PointY="4.875" />
-        <EntityTypeShape EntityType="ExtremeWorldModel.TGuidMember" Width="1.5" PointX="4.25" PointY="4.875" />
+        <EntityTypeShape EntityType="ExtremeWorldModel.TGuildMember" Width="1.5" PointX="4.25" PointY="4.875" />
         <AssociationConnector Association="ExtremeWorldModel.TGuildTGuidMember" />
         <EntityTypeShape EntityType="ExtremeWorldModel.TGuildApply" Width="1.5" PointX="4.25" PointY="8.25" />
         <AssociationConnector Association="ExtremeWorldModel.TGuildTGuildApply" />

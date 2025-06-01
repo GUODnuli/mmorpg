@@ -773,7 +773,7 @@ GameObject:
   - component: {fileID: 8072018973049458072}
   - component: {fileID: 8078381829379782064}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: ButtonClose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -905,7 +905,7 @@ GameObject:
   - component: {fileID: 5339075068746779132}
   - component: {fileID: 8007303041972712738}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
