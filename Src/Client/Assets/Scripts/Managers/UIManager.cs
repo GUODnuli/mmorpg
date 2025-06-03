@@ -24,10 +24,10 @@ namespace Managers
             this.UIResources.Add(typeof(UIQuestSystem), new UIElement() { Resource = "UI/UIQuestSystem", Cache = false });
             this.UIResources.Add(typeof(UIQuestDialog), new UIElement() { Resource = "UI/UIQuestDialog", Cache = false });
             this.UIResources.Add(typeof(UIFriends), new UIElement() { Resource = "UI/UIFriends",Cache = false });
-            //this.UIResources.Add(typeof(UIGuild), new UIElement() { Resource = "UI/Guild/UIGuild", Cache = false });
-            //this.UIResources.Add(typeof(UIGuildList), new UIElement() { Resource = "UI/Guild/UIGuildList", Cache = false });
+            this.UIResources.Add(typeof(UIGuild), new UIElement() { Resource = "UI/Guild/UIGuild", Cache = false });
+            this.UIResources.Add(typeof(UIGuildList), new UIElement() { Resource = "UI/Guild/UIGuildList", Cache = false });
             this.UIResources.Add(typeof(UIGuildPopNoGuild), new UIElement() { Resource = "UI/Guild/UIGuildPopNoGuild", Cache = false });
-            //this.UIResources.Add(typeof(UIGuildPopCreate), new UIElement() { Resource = "UI/Guild/UIGuildPopCreate", Cache = false });
+            this.UIResources.Add(typeof(UIGuildPopCreate), new UIElement() { Resource = "UI/Guild/UIGuildPopCreate", Cache = false });
         }
 
         ~UIManager()

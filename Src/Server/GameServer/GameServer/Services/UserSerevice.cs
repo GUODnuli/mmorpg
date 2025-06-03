@@ -136,6 +136,7 @@ namespace GameServer.Services
                     ItemID = 2,
                     ItemCount = 20,
                 });
+
                 sender.Session.User.Player.Characters.Add(addCharacter);
                 DBService.Instance.Entities.SaveChanges();
 

@@ -23,7 +23,7 @@ namespace Managers
         {
             if (this.HasGuild)
             {
-                //UIManager.Instance.Show<UIGuild>();
+                UIManager.Instance.Show<UIGuild>();
             }
             else
             {

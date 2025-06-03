@@ -53,7 +53,7 @@ public class UIMain : MonoSingleton<UIMain>
 
     public void OnClickGuild()
     {
-        //GuildManager.Instance.ShowGuild();
+        GuildManager.Instance.ShowGuild();
     }
 
     public void OnClickRide()

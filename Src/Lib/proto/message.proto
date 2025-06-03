@@ -202,6 +202,7 @@ message NetMessageRequest {
 	GuildRequest guild = 27;
 	GuildLeaveRequest guildLeave = 28;
 	GuildListRequest guildList = 29;
+	GuildAdminRequest guildAdmin = 30;
 }
 
 message NetMessageResponse {
@@ -240,6 +241,7 @@ message NetMessageResponse {
 	GuildResponse guild = 27;
 	GuildLeaveResponse guildLeave = 28;
 	GuildListResponse guildList = 29;
+	GuildAdminResponse guildAdmin = 30;
 
 	StatusNotify statusNotify = 100;
 }
@@ -675,4 +677,26 @@ message GuildResponse
 	RESULT result = 1;
 	string errormsg = 2;
 	NGuildInfo guildInfo = 3;
+}
+
+// 公会管理
+enum GUILD_ADMIN_COMMAND
+{
+	KICKOUT = 1;     // 踢人
+	PROMOTE = 2;   // 晋升
+	DEPOST = 3;      // 罢免
+	TRANSFER = 4;  // 转让会长
+}
+
+message GuildAdminRequest
+{
+	GUILD_ADMIN_COMMAND command = 1;
+	int32 target = 2;
+}
+
+message GuildAdminResponse
+{
+	RESULT result = 1;
+	string errormsg = 2;
+	GuildAdminRequest command = 3;
 }
