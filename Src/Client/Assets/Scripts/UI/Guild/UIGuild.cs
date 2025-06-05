@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Services;
 using Managers;
+using SkillBridge.Message;
 
 public class UIGuild : UIWindow
 {
@@ -10,7 +11,10 @@ public class UIGuild : UIWindow
     public ListView listMain;
     public Transform itemRoot;
     public UIGuildInfo uiInfo;
-    public UIGuildItem selectedItem;
+    public UIGuildMemberItem selectedItem;
+
+    public GameObject panelAdmin;
+    public GameObject panelLeader;
 
     private void Start()
     {
@@ -21,7 +25,7 @@ public class UIGuild : UIWindow
 
     private void OnDestroy()
     {
-        GuildService.Instance.OnGuildUpdate = null;
+        GuildService.Instance.OnGuildUpdate -= UpdateUI;
     }
 
     void UpdateUI()
@@ -30,11 +34,14 @@ public class UIGuild : UIWindow
 
         ClearList();
         InitItems();
+
+        this.panelAdmin.SetActive(GuildManager.Instance.myMemberInfo.Title > GuildTitle.None);
+        this.panelLeader.SetActive(GuildManager.Instance.myMemberInfo.Title == GuildTitle.President);
     }
 
     public void OnGuildMemberSelected(ListView.ListViewItem item)
     {
-        this.selectedItem = item as UIGuildItem;
+        this.selectedItem = item as UIGuildMemberItem;
     }
 
     private void InitItems()
@@ -70,17 +77,22 @@ public class UIGuild : UIWindow
 
     public void OnClickApproveList()
     {
-
+        UIManager.Instance.Show<UIGuildApproveList>();
     }
 
     public void OnClickDeport()
     {
-
+        if (selectedItem == null)
+        {
+            MessageBox.Show("请选择要踢出的成员。");
+            return;
+        }
+        MessageBox.Show(string.Format("确定要将【{0}】踢出公会吗？", this.selectedItem.Info.Info.Name), "踢出公会", MessageBoxType.Confirm);
     }
 
     public void OnClickQuit()
     {
-
+        // fix me
     }
 
     //public void OnClickChat()

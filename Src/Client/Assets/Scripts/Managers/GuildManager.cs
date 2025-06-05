@@ -8,6 +8,7 @@ namespace Managers
     public class GuildManager : Singleton<GuildManager>
     {
         public NGuildInfo guildInfo;
+        public GuildTitle myMemberInfo;
 
         public bool HasGuild
         {
