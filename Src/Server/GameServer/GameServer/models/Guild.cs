@@ -16,7 +16,6 @@ namespace GameServer.Models
     {
         public TGuild Data;
         public int Id { get { return Data.Id; } }
-        private Character Leader;
         public string Name { get { return Data.Name; } }
         public List<Character> Members = new List<Character>();
         public double timestamp;
@@ -43,6 +42,7 @@ namespace GameServer.Models
 
             DBService.Instance.Entities.TGuildApplies.Add(dbApply);
             Data.Applies.Add(dbApply);
+            DBService.Instance.Save();
             return true;
         }
 
@@ -67,12 +67,12 @@ namespace GameServer.Models
             return true;
         }
 
-        public void AddMember(int id, string name, int @class, int level, GuildTitle title)
+        public void AddMember(int characterId, string name, int @class, int level, GuildTitle title)
         {
             DateTime now = DateTime.Now;
             TGuildMember dbMember = new TGuildMember()
             {
-                CharacterId = id,
+                CharacterId = characterId,
                 Name = name,
                 Class = @class,
                 Level = level,
@@ -80,6 +80,17 @@ namespace GameServer.Models
                 JoinTime = now,
             };
             this.Data.Members.Add(dbMember);
+            var character = CharacterManager.Instance.GetCharacter(characterId);
+            if (character != null)
+            {
+                character.Data.GuildId = this.Id;
+            }
+            else
+            {
+                TCharacter dbCharacter = DBService.Instance.Entities.Characters.SingleOrDefault(c => c.ID == characterId);
+                dbCharacter.GuildId = this.Id;
+            }
+            DBService.Instance.Save();
             timestamp = TimeUtil.timestamp;
         }
 
@@ -99,9 +110,15 @@ namespace GameServer.Models
             if (dbMember == null)
                 Log.ErrorFormat("Member {0} not found in database.", member.Id);
             this.Data.Members.Remove(dbMember);
+
+            TCharacter dbCharacter = DBService.Instance.Entities.Characters.SingleOrDefault(c => c.ID == member.Id);
+            dbCharacter.GuildId = null;
+
             Members.Remove(member);
             member.Guild = null;
+
             Log.InfoFormat("Leave Guild: {0}: {1}", member.Id, member.Info.Name);
+            DBService.Instance.Save();
             timestamp = TimeUtil.timestamp;
             return true;
         }
@@ -180,11 +197,6 @@ namespace GameServer.Models
                     memberInfo.Status = 0;
                 }
 
-                if (member.Id == Data.LeaderID)
-                {
-                    Leader = character;
-                }
-
                 members.Add(memberInfo);
             }
             return members;
@@ -206,6 +218,7 @@ namespace GameServer.Models
             List<NGuildApplyInfo> applies = new List<NGuildApplyInfo>();
             foreach (var apply in Data.Applies)
             {
+                if (apply.Result != (int)ApplyResult.None) continue;
                 applies.Add(new NGuildApplyInfo()
                 {
                     guildId = apply.GuildId,
@@ -217,6 +230,41 @@ namespace GameServer.Models
                 });
             }
             return applies;
+        }
+
+        TGuildMember GetDBMember(int characterId)
+        {
+            foreach(var member in this.Data.Members)
+            {
+                if (member.CharacterId == characterId)
+                    return member;
+            }
+            return null;
+        }
+
+        public void ExcuteAdmin(GuildAdminCommand command, int targetId, int characterId)
+        {
+            var target = GetDBMember(targetId);
+            var character = GetDBMember(characterId);
+            switch(command)
+            {
+                case GuildAdminCommand.Promote:
+                    target.Title = (int)GuildTitle.VicePresident; break;
+                case GuildAdminCommand.Depost:
+                    target.Title = (int)GuildTitle.None; break;
+                case GuildAdminCommand.Transfer:
+                    int tmp = target.Title;
+                    target.Title = (int)GuildTitle.President;
+                    character.Title = tmp;
+                    this.Data.LeaderID = targetId;
+                    this.Data.LeaderName = target.Name;
+                    break;
+                case GuildAdminCommand.Kickout:
+                    // fix me
+                    break;
+            }
+            DBService.Instance.Save();
+            timestamp = TimeUtil.timestamp;
         }
     }
 }

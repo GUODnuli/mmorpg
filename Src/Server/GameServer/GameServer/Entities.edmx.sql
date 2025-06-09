@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 06/01/2025 12:41:07
--- Generated from EDMX file: C:\Users\62411\Project\UnityProject\MyMmorpg\Src\Server\GameServer\GameServer\Entities.edmx
+-- Date Created: 06/09/2025 03:21:16
+-- Generated from EDMX file: E:\UnityProject\myMmorpgclass5\Src\Server\GameServer\GameServer\Entities.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -36,7 +36,7 @@ IF OBJECT_ID(N'[dbo].[FK_TCharacterTCharacterFriend]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[CharacterFriends] DROP CONSTRAINT [FK_TCharacterTCharacterFriend];
 GO
 IF OBJECT_ID(N'[dbo].[FK_TGuildTGuidMember]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[TGuidMembers] DROP CONSTRAINT [FK_TGuildTGuidMember];
+    ALTER TABLE [dbo].[TGuildMembers] DROP CONSTRAINT [FK_TGuildTGuidMember];
 GO
 IF OBJECT_ID(N'[dbo].[FK_TGuildTGuildApply]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[TGuildApplies] DROP CONSTRAINT [FK_TGuildTGuildApply];
@@ -70,8 +70,8 @@ GO
 IF OBJECT_ID(N'[dbo].[TGuilds]', 'U') IS NOT NULL
     DROP TABLE [dbo].[TGuilds];
 GO
-IF OBJECT_ID(N'[dbo].[TGuidMembers]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[TGuidMembers];
+IF OBJECT_ID(N'[dbo].[TGuildMembers]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[TGuildMembers];
 GO
 IF OBJECT_ID(N'[dbo].[TGuildApplies]', 'U') IS NOT NULL
     DROP TABLE [dbo].[TGuildApplies];
@@ -111,7 +111,7 @@ CREATE TABLE [dbo].[Characters] (
     [Equips] binary(28)  NOT NULL,
     [Level] int  NOT NULL,
     [Exp] bigint  NOT NULL,
-    [GuildId] int  NOT NULL,
+    [GuildId] int  NULL,
     [Player_ID] int  NOT NULL,
     [Bag_ID] int  NOT NULL
 );

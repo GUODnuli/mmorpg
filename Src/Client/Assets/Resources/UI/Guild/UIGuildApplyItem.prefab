@@ -436,7 +436,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1419514134665349336}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7806364067001527332}
+        m_TargetAssemblyTypeName: UIGuildApplyItem, Assembly-CSharp
+        m_MethodName: OnDecline
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6258055085060135065
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,7 +569,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4670695915579137632}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7806364067001527332}
+        m_TargetAssemblyTypeName: UIGuildApplyItem, Assembly-CSharp
+        m_MethodName: OnAccept
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7319370627172360450
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,6 +592,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2810206688903661282}
   - component: {fileID: 6154949871991569554}
+  - component: {fileID: 7806364067001527332}
   m_Layer: 5
   m_Name: UIGuildApplyItem
   m_TagString: Untagged
@@ -608,6 +633,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7319370627172360450}
   m_CullTransparentMesh: 1
+--- !u!114 &7806364067001527332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7319370627172360450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 559143b160913174ca0d922cb23767c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 0}
+  nickname: {fileID: 1981489069290713352}
+  class: {fileID: 6228177156098237583}
+  level: {fileID: 8272943959642679419}
 --- !u!1 &7799626592660218762
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,4 +802,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u901A\u8FC7"
+  m_Text: "\u62D2\u7EDD"
