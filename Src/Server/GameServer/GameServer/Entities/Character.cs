@@ -57,7 +57,7 @@ namespace GameServer.Entities
             this.StatusManager = new StatusManager(this);
             this.FriendManager = new FriendManager(this);
             this.FriendManager.GetFriendInfos(this.Info.Friends);
-            this.Guild = GuildManager.Instance.GetGuild(this.Data.GuildId);
+            this.Guild = GuildManager.Instance.GetGuild((int)this.Data.GuildId);
         }
 
         public long Gold

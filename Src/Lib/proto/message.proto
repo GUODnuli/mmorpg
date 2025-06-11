@@ -203,6 +203,8 @@ message NetMessageRequest {
 	GuildLeaveRequest guildLeave = 28;
 	GuildListRequest guildList = 29;
 	GuildAdminRequest guildAdmin = 30;
+
+	ChatRequest chat = 31;
 }
 
 message NetMessageResponse {
@@ -242,6 +244,8 @@ message NetMessageResponse {
 	GuildLeaveResponse guildLeave = 28;
 	GuildListResponse guildList = 29;
 	GuildAdminResponse guildAdmin = 30;
+
+	ChatResponse chat = 31;
 
 	StatusNotify statusNotify = 100;
 }
@@ -699,4 +703,50 @@ message GuildAdminResponse
 	RESULT result = 1;
 	string errormsg = 2;
 	GuildAdminRequest command = 3;
+}
+
+////////////////////////////////////////////////////////////////
+//
+//  Chat System
+//
+////////////////////////////////////////////////////////////////
+
+enum CHAT_CHANNEL
+{
+	ALL = -1;
+	LOCAL = 1;
+	WORLD = 2;
+	SYSTEM = 4;
+	PRIVATE = 8;
+	TEAM = 16;
+	GUILD = 32;
+}
+
+message ChatMessage
+{
+	CHAT_CHANNEL channel = 1;
+	int32 id = 2;
+	int32 from_id = 3;
+	string from_name = 4;
+	int32 to_id = 5;
+	string to_name = 6;
+	string message =7;
+	double time = 8;
+}
+
+message ChatRequest
+{
+	ChatMessage message = 1;
+}
+
+message ChatResponse
+{
+	RESULT result = 1;
+	string errormsg = 2;
+	repeated chatMessage localMessages = 3;
+	repeated ChatMessage worldMessages = 4;
+	repeated ChatMessage systemMessages = 5;
+	repeated ChatMessage privateMessages = 6;
+	repeated ChatMessage teamMessages = 7;
+	repeated ChatMessage guildMessages = 8;
 }
