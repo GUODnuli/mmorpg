@@ -34,7 +34,18 @@ namespace Managers
 
         internal void StartPrivateChat(int targetId, string targetName)
         {
-            
+            this.PrivateID = targetId;
+            this.PrivateName = targetName;
+
+            this.sendChannel = LocalChannel.Private;
+            if (this.OnChat != null)
+            {
+                this.OnChat();
+            }
         }
+
+        public List<ChatMessage> Message = new List<ChatMessage>();
+
+
     }
 }

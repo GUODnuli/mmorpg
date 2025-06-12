@@ -15,7 +15,7 @@ E:/UnityProject/myMmorpgclass5/Src/Client
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53787
+53693
 Successfully changed project path to: E:/UnityProject/myMmorpgclass5/Src/Client
 E:/UnityProject/myMmorpgclass5/Src/Client
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ E:/UnityProject/myMmorpgclass5/Src/Client
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [38496] Host "[IP] 192.168.1.6 [Port] 0 [Flags] 2 [Guid] 2370885553 [EditorId] 2370885553 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-0A286S5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [73576] Host "[IP] 192.168.1.6 [Port] 0 [Flags] 2 [Guid] 932429226 [EditorId] 932429226 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-0A286S5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [38496] Host "[IP] 192.168.1.6 [Port] 0 [Flags] 2 [Guid] 2370885553 [EditorId] 2370885553 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-0A286S5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [73576] Host "[IP] 192.168.1.6 [Port] 0 [Flags] 2 [Guid] 932429226 [EditorId] 932429226 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-0A286S5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 31 workers.
-Refreshing native plugins compatible for Editor in 276.25 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 7.11 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.23f1 (dbb3f7c5b5c6)
 [Subsystems] Discovering subsystems at path E:/Editor/2022.3.23f1/Editor/Data/Resources/UnitySubsystems
@@ -70,7 +70,7 @@ Initialize mono
 Mono path[0] = 'E:/Editor/2022.3.23f1/Editor/Data/Managed'
 Mono path[1] = 'E:/Editor/2022.3.23f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'E:/Editor/2022.3.23f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56788
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56156
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
@@ -79,8 +79,8 @@ Register platform support module: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngi
 Register platform support module: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/VisionOSPlayer/UnityEditor.VisionOS.Extensions.dll
 Register platform support module: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.004590 seconds.
-- Loaded All Assemblies, in  0.209 seconds
+Registered in 0.004190 seconds.
+- Loaded All Assemblies, in  0.264 seconds
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Failed to load: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/VisionOSPlayer\x64\UnityEditor.VisionOS.Native.dll
@@ -89,39 +89,39 @@ Native extension for VisionOS target not found
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 819 ms
+Android Extension - Scanning For ADB Devices 1134 ms
 Native extension for OSXStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.038 seconds
-Domain Reload Profiling: 1248ms
-	BeginReloadAssembly (65ms)
+- Finished resetting the current domain, in  1.389 seconds
+Domain Reload Profiling: 1653ms
+	BeginReloadAssembly (94ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (20ms)
-	RebuildNativeTypeToScriptingClass (6ms)
-	initialDomainReloadingComplete (31ms)
-	LoadAllAssembliesAndSetupDomain (87ms)
-		LoadAssemblies (65ms)
+	RebuildCommonClasses (21ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (37ms)
+	LoadAllAssembliesAndSetupDomain (105ms)
+		LoadAssemblies (94ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (85ms)
-			TypeCache.Refresh (84ms)
-				TypeCache.ScanAssembly (75ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (0ms)
-	FinalizeReload (1039ms)
+		AnalyzeDomain (102ms)
+			TypeCache.Refresh (101ms)
+				TypeCache.ScanAssembly (92ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (1389ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1002ms)
+		SetupLoadedEditorAssemblies (1340ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (898ms)
+			InitializePlatformSupportModulesInManaged (1222ms)
 			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (70ms)
-			ProcessInitializeOnLoadMethodAttributes (30ms)
+			ProcessInitializeOnLoadAttributes (80ms)
+			ProcessInitializeOnLoadMethodAttributes (34ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -129,11 +129,43 @@ Domain Reload Profiling: 1248ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-Duplicate assembly 'log4net.dll' with different versions detected, using 'Assets/References/log4net.dll, AssemblyName=log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=null' and ignoring 'Packages/com.unity.collab-proxy/Lib/Editor/PlasticSCM/log4netPlastic.dll, AssemblyName=log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a'.Duplicate assembly 'Newtonsoft.Json.dll' with different versions detected, using 'Packages/com.unity.nuget.newtonsoft-json/Runtime/Newtonsoft.Json.dll, AssemblyName=Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed' and ignoring 'Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll, AssemblyName=Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null'.Symbol file LoadedFromMemory is not a mono symbol file
+Duplicate assembly 'log4net.dll' with different versions detected, using 'Assets/References/log4net.dll, AssemblyName=log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=null' and ignoring 'Packages/com.unity.collab-proxy/Lib/Editor/PlasticSCM/log4netPlastic.dll, AssemblyName=log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a'.Duplicate assembly 'Newtonsoft.Json.dll' with different versions detected, using 'Packages/com.unity.nuget.newtonsoft-json/Runtime/Newtonsoft.Json.dll, AssemblyName=Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed' and ignoring 'Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll, AssemblyName=Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null'.Symbol file data-00000291A11AB850 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\UnityEngine.Purchasing.Stores.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000291A0A4A020 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000291A0A4A020 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000291A0A6E230 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000291A0A87240 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000291A0AA6700 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002919FD1D010 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002919FD758C0 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002919EFADAA0 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002919EFADAA0 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002919EFC70F0 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\Unity.Services.Analytics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000291A06949F0 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000291A04DA010 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000291A06949F0 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\UnityEditor.Purchasing.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000291A077B630 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002919FE74230 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.405 seconds
-Refreshing native plugins compatible for Editor in 3.58 ms, found 2 plugins.
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  1.936 seconds
+Refreshing native plugins compatible for Editor in 4.31 ms, found 2 plugins.
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Failed to load: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/VisionOSPlayer\x64\UnityEditor.VisionOS.Native.dll
@@ -141,52 +173,52 @@ Native extension for VisionOS target not found
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for OSXStandalone target not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.352 seconds
-Domain Reload Profiling: 1757ms
-	BeginReloadAssembly (93ms)
+- Finished resetting the current domain, in  1.490 seconds
+Domain Reload Profiling: 3426ms
+	BeginReloadAssembly (102ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (3ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (16ms)
-	RebuildCommonClasses (20ms)
+		CreateAndSetChildDomain (18ms)
+	RebuildCommonClasses (18ms)
 	RebuildNativeTypeToScriptingClass (6ms)
 	initialDomainReloadingComplete (24ms)
-	LoadAllAssembliesAndSetupDomain (262ms)
-		LoadAssemblies (229ms)
+	LoadAllAssembliesAndSetupDomain (1785ms)
+		LoadAssemblies (1755ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (87ms)
-			TypeCache.Refresh (73ms)
-				TypeCache.ScanAssembly (58ms)
-			ScanForSourceGeneratedMonoScriptInfo (11ms)
-			ResolveRequiredComponents (2ms)
-	FinalizeReload (1352ms)
+		AnalyzeDomain (88ms)
+			TypeCache.Refresh (72ms)
+				TypeCache.ScanAssembly (55ms)
+			ScanForSourceGeneratedMonoScriptInfo (12ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (1490ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1260ms)
+		SetupLoadedEditorAssemblies (1396ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (26ms)
+			InitializePlatformSupportModulesInManaged (29ms)
 			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (51ms)
-			ProcessInitializeOnLoadAttributes (1117ms)
-			ProcessInitializeOnLoadMethodAttributes (63ms)
+			BeforeProcessingInitializeOnLoad (54ms)
+			ProcessInitializeOnLoadAttributes (1235ms)
+			ProcessInitializeOnLoadMethodAttributes (73ms)
 			AfterProcessingInitializeOnLoad (1ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (5ms)
-Refreshing native plugins compatible for Editor in 5.86 ms, found 2 plugins.
+		AwakeInstancesAfterBackupRestoration (4ms)
+Refreshing native plugins compatible for Editor in 6.23 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2742 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 71 unused Assets / (75.1 KB). Loaded Objects now: 3209.
-Memory consumption went from 143.0 MB to 142.9 MB.
-Total: 12.620100 ms (FindLiveObjects: 0.311900 ms CreateObjectMapping: 0.082300 ms MarkObjects: 12.036800 ms  DeleteObjects: 0.187800 ms)
+Unloading 2745 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 71 unused Assets / (77.0 KB). Loaded Objects now: 3212.
+Memory consumption went from 142.8 MB to 142.7 MB.
+Total: 12.940600 ms (FindLiveObjects: 0.295500 ms CreateObjectMapping: 0.107800 ms MarkObjects: 12.256000 ms  DeleteObjects: 0.279500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -204,353 +236,41 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 1812.857029 seconds.
-  path: Assets/Resources/UI/UICharMenu.prefab
-  artifactKey: Guid(ea9b848eccb50674ca2b728627a17b31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UICharMenu.prefab using Guid(ea9b848eccb50674ca2b728627a17b31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5055b7e42604cf818f013b777bb6dfc') in 0.035946 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 40
-========================================================================
-Received Import Request.
-  Time since last request: 16.012170 seconds.
+  Time since last request: 19888.834266 seconds.
   path: Assets/Resources/UI/UIChat.prefab
   artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fc3354a847d0059734405153726d8db') in 0.004224 seconds
+Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60ee539ecbbdeac0fd6da1100825af66') in 0.056498 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 71
+Number of asset objects unloaded after import = 184
 ========================================================================
 Received Import Request.
-  Time since last request: 44.260612 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce72a6635b5d862f45b5db62732fba93') in 0.002332 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 71
-========================================================================
-Received Import Request.
-  Time since last request: 12.087874 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55b6122f002b4b21cf65c3d8880e393d') in 0.002293 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 71
-========================================================================
-Received Import Request.
-  Time since last request: 10.328449 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9e3b7aad684f2793911973d2cbeaed8') in 0.002757 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 71
-========================================================================
-Received Import Request.
-  Time since last request: 6.851737 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b72f147ef4b1affcff3d4501fe1f54b') in 0.002672 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 71
-========================================================================
-Received Import Request.
-  Time since last request: 6.840578 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adf3bd0a0e255ff206860adfa5b1e760') in 0.002936 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 71
-========================================================================
-Received Import Request.
-  Time since last request: 4.854475 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73c64b53dc9fd3f3774b4249efa8d7be') in 0.002693 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 71
-========================================================================
-Received Import Request.
-  Time since last request: 6.651386 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06930970ff780863bfa48c9b8aad8827') in 0.002303 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 71
-========================================================================
-Received Import Request.
-  Time since last request: 2.825478 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f25030c0991b8583ec447719ec9c9bb') in 0.002661 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 71
-========================================================================
-Received Import Request.
-  Time since last request: 9.549976 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc10eca5415fb52c34b1da71237b9409') in 0.002391 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 71
-========================================================================
-Received Import Request.
-  Time since last request: 23.829054 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a085608fe74f9a6a72aac4ad7d2a0c0') in 0.002201 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 71
-========================================================================
-Received Import Request.
-  Time since last request: 18.918144 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c53d2326102e840b9cc1b57f8a811c5a') in 0.002300 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 73
-========================================================================
-Received Import Request.
-  Time since last request: 6.857135 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67cc7b41079522b3af153f7705265a11') in 0.002931 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 73
-========================================================================
-Received Import Request.
-  Time since last request: 5.658480 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f481c18db30b97eb97193fce7db57283') in 0.003028 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 73
-========================================================================
-Received Import Request.
-  Time since last request: 2.232960 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63c1fbef1b23d7d6850a5b2e408e0720') in 0.002274 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 73
-========================================================================
-Received Import Request.
-  Time since last request: 4.973897 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70f923c95a5f4d02a799eb328b1a281b') in 0.003195 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 73
-========================================================================
-Received Import Request.
-  Time since last request: 2.681528 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0abec75f092bccce7047f07b6dbfb7a3') in 0.002625 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 73
-========================================================================
-Received Import Request.
-  Time since last request: 2.217630 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92d13aef82fa243716f62c6c7f576435') in 0.002289 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 82
-========================================================================
-Received Import Request.
-  Time since last request: 13.715218 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f35a9fc2538b9ccd02ab156960e258f8') in 0.002709 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 82
-========================================================================
-Received Import Request.
-  Time since last request: 5.983178 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfa926909ad84968d6c4ed255eadecd2') in 0.002909 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 82
-========================================================================
-Received Import Request.
-  Time since last request: 2.503486 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0e2ecd57f8f9b1f153355889d536151') in 0.002229 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 82
-========================================================================
-Received Import Request.
-  Time since last request: 3.293777 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50aa16cb6b8aa8c8d48056652470236a') in 0.003422 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 82
-========================================================================
-Received Import Request.
-  Time since last request: 5.651211 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '611dc0824f83854c80d197e7ce61c67a') in 0.002815 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 82
-========================================================================
-Received Import Request.
-  Time since last request: 2.616694 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff815291d0249c466a7a0accbec449e2') in 0.002939 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 82
-========================================================================
-Received Import Request.
-  Time since last request: 3.423377 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f760a75f13584f7ef3fac350643604bd') in 0.002155 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 82
-========================================================================
-Received Import Request.
-  Time since last request: 3.035504 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70d200696f7d42e64e7a861d0d53a58f') in 0.002781 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 82
-========================================================================
-Received Import Request.
-  Time since last request: 2.410720 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2bc01d72628bb83f43b90b6426ff23e') in 0.003027 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 82
-========================================================================
-Received Import Request.
-  Time since last request: 2.812889 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1523b1780806ed72fd085174b075f68') in 0.002647 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 82
-========================================================================
-Received Import Request.
-  Time since last request: 19.801205 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '529858a6a4a7fd98d14c7ef0dca2e709') in 0.002366 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 82
-========================================================================
-Received Import Request.
-  Time since last request: 15.523111 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a47ec5ba45cc2a160184f504bc82cdad') in 0.002125 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 82
-========================================================================
-Received Import Request.
-  Time since last request: 1.810602 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e662355757d31c8880ee17c441e075d7') in 0.002219 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 82
-========================================================================
-Received Import Request.
-  Time since last request: 1.004183 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af595cd13812809897cb447e9dd6ebbd') in 0.002302 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 82
-========================================================================
-Received Import Request.
-  Time since last request: 0.610912 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b099490415304a790f44e1270aaaf924') in 0.002588 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 82
-========================================================================
-Received Import Request.
-  Time since last request: 7.495551 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e838746a819701e4a69eeaee89a763f2') in 0.002856 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 82
-========================================================================
-Received Import Request.
-  Time since last request: 1.611005 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80e2866c360d7dee72641bf7c9e42f15') in 0.002515 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 82
-========================================================================
-Received Import Request.
-  Time since last request: 3.239169 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7aa4e00b42e80e8c263ddfe3b11bef3') in 0.002578 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 82
-========================================================================
-Received Import Request.
-  Time since last request: 1.207314 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c23244fd12440ab9092899b915241605') in 0.002774 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 82
-========================================================================
-Received Import Request.
-  Time since last request: 8.057297 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c43e00a7541771824c12614378e4ccdc') in 0.002385 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 82
-========================================================================
-Received Import Request.
-  Time since last request: 1.812434 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4b9aa33a46393abbe757ed43341596b') in 0.003041 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 82
-========================================================================
-Received Import Request.
-  Time since last request: 8.098525 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8faebd4de272971d0ab18371099368e0') in 0.002589 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 82
-========================================================================
-Received Import Request.
-  Time since last request: 1.812505 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a818298cc74c52e5caadd43484735e1b') in 0.002434 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 82
-========================================================================
-Received Import Request.
-  Time since last request: 53.912156 seconds.
-  path: Assets/UI/Prefabs/UIQuestStatus.prefab
-  artifactKey: Guid(e716248ad87cd994089afd80c83d6d81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Prefabs/UIQuestStatus.prefab using Guid(e716248ad87cd994089afd80c83d6d81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c32111c0319b80862c3421eab2642a6') in 0.002016 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 25
-========================================================================
-Received Import Request.
-  Time since last request: 1403.127460 seconds.
-  path: Assets/Scripts/UI/ChatSystem/UIChat.cs
-  artifactKey: Guid(30fb464dbff784a4099e269d77ae5630) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/UI/ChatSystem/UIChat.cs using Guid(30fb464dbff784a4099e269d77ae5630) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10a5adb594be588210178ff48694aa27') in 0.000624 seconds
+  Time since last request: 9.471652 seconds.
+  path: Assets/Resources/UI/Chat
+  artifactKey: Guid(4df10b3dc7a68094c9bcb78b518d7015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Chat using Guid(4df10b3dc7a68094c9bcb78b518d7015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7197a725b005f9150425a4f929b135e5') in 0.000368 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 3.716521 seconds.
+  path: Assets/Resources/UI/Chat/UIBag.prefab
+  artifactKey: Guid(69d4772518fd8e440a820c3b22658bf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Chat/UIBag.prefab using Guid(69d4772518fd8e440a820c3b22658bf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fee188e6b52dd16a88f6ec0727d5b54c') in 0.006274 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 460
+========================================================================
+Received Import Request.
+  Time since last request: 30.231534 seconds.
+  path: Assets/Resources/UI/Chat/UIChat.prefab
+  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Chat/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f5b249831f1a37c9e07698c5493543d') in 0.012684 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 184
+========================================================================
+Received Import Request.
+  Time since last request: 11.087722 seconds.
+  path: Assets/Resources/UI/Chat/UIChat.prefab
+  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Chat/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c0035dd09eaffaa617933a21c4461cc') in 0.003946 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 184
