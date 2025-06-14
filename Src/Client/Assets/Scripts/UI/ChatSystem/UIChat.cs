@@ -30,7 +30,7 @@ public class UIChat : MonoBehaviour
         InputManager.Instance.IsInputMode = chatText.isFocused;
     }
 
-    void OnDisPlayChannelSelected(int idx)
+    void OnDisplayChannelSelected(int idx)
     {
         ChatManager.Instance.displayChannel = (ChatManager.LocalChannel)idx;
         RefreshUI();
@@ -85,5 +85,27 @@ public class UIChat : MonoBehaviour
         {
             this.SendChat(text);
         }
+
+        this.chatText.text = "";
+    }
+
+    void SendChat(string content)
+    {
+        ChatManager.Instance.SendChat(content, ChatManager.Instance.PrivateID, ChatManager.Instance.PrivateName);
+    }
+
+    public void OnSendChannelChanged(int idx)
+    {
+        if (ChatManager.Instance.sendChannel == (ChatManager.LocalChannel)(idx + 1))
+        {
+            return;
+        }
+
+        if (!ChatManager.Instance.SetSendChannel((ChatManager.LocalChannel)idx + 1))
+        {
+            this.channelSelect.value = (int)ChatManager.Instance.sendChannel - 1;
+        }
+
+        this.RefreshUI();
     }
 }

@@ -15,7 +15,7 @@ E:/UnityProject/myMmorpgclass5/Src/Client
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53693
+57344
 Successfully changed project path to: E:/UnityProject/myMmorpgclass5/Src/Client
 E:/UnityProject/myMmorpgclass5/Src/Client
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ E:/UnityProject/myMmorpgclass5/Src/Client
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [73576] Host "[IP] 192.168.1.6 [Port] 0 [Flags] 2 [Guid] 932429226 [EditorId] 932429226 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-0A286S5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [76720] Host "[IP] 192.168.1.6 [Port] 0 [Flags] 2 [Guid] 2045336453 [EditorId] 2045336453 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-0A286S5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [73576] Host "[IP] 192.168.1.6 [Port] 0 [Flags] 2 [Guid] 932429226 [EditorId] 932429226 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-0A286S5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [76720] Host "[IP] 192.168.1.6 [Port] 0 [Flags] 2 [Guid] 2045336453 [EditorId] 2045336453 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-0A286S5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 31 workers.
-Refreshing native plugins compatible for Editor in 7.11 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 8.61 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.23f1 (dbb3f7c5b5c6)
 [Subsystems] Discovering subsystems at path E:/Editor/2022.3.23f1/Editor/Data/Resources/UnitySubsystems
@@ -70,7 +70,7 @@ Initialize mono
 Mono path[0] = 'E:/Editor/2022.3.23f1/Editor/Data/Managed'
 Mono path[1] = 'E:/Editor/2022.3.23f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'E:/Editor/2022.3.23f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56156
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56592
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
@@ -79,8 +79,8 @@ Register platform support module: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngi
 Register platform support module: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/VisionOSPlayer/UnityEditor.VisionOS.Extensions.dll
 Register platform support module: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.004190 seconds.
-- Loaded All Assemblies, in  0.264 seconds
+Registered in 0.004344 seconds.
+- Loaded All Assemblies, in  0.232 seconds
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Failed to load: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/VisionOSPlayer\x64\UnityEditor.VisionOS.Native.dll
@@ -89,39 +89,39 @@ Native extension for VisionOS target not found
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 1134 ms
+Android Extension - Scanning For ADB Devices 797 ms
 Native extension for OSXStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.389 seconds
-Domain Reload Profiling: 1653ms
-	BeginReloadAssembly (94ms)
+- Finished resetting the current domain, in  1.026 seconds
+Domain Reload Profiling: 1258ms
+	BeginReloadAssembly (70ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (1ms)
+		CreateAndSetChildDomain (0ms)
 	RebuildCommonClasses (21ms)
-	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (37ms)
-	LoadAllAssembliesAndSetupDomain (105ms)
-		LoadAssemblies (94ms)
+	RebuildNativeTypeToScriptingClass (6ms)
+	initialDomainReloadingComplete (33ms)
+	LoadAllAssembliesAndSetupDomain (102ms)
+		LoadAssemblies (71ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (102ms)
-			TypeCache.Refresh (101ms)
-				TypeCache.ScanAssembly (92ms)
-			ScanForSourceGeneratedMonoScriptInfo (1ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (1389ms)
+		AnalyzeDomain (99ms)
+			TypeCache.Refresh (98ms)
+				TypeCache.ScanAssembly (89ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (1026ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1340ms)
+		SetupLoadedEditorAssemblies (987ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (1222ms)
+			InitializePlatformSupportModulesInManaged (876ms)
 			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (80ms)
-			ProcessInitializeOnLoadMethodAttributes (34ms)
+			ProcessInitializeOnLoadAttributes (76ms)
+			ProcessInitializeOnLoadMethodAttributes (30ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -129,43 +129,11 @@ Domain Reload Profiling: 1653ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-Duplicate assembly 'log4net.dll' with different versions detected, using 'Assets/References/log4net.dll, AssemblyName=log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=null' and ignoring 'Packages/com.unity.collab-proxy/Lib/Editor/PlasticSCM/log4netPlastic.dll, AssemblyName=log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a'.Duplicate assembly 'Newtonsoft.Json.dll' with different versions detected, using 'Packages/com.unity.nuget.newtonsoft-json/Runtime/Newtonsoft.Json.dll, AssemblyName=Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed' and ignoring 'Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll, AssemblyName=Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null'.Symbol file data-00000291A11AB850 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\UnityEngine.Purchasing.Stores.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000291A0A4A020 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000291A0A4A020 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000291A0A6E230 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000291A0A87240 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000291A0AA6700 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002919FD1D010 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002919FD758C0 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002919EFADAA0 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002919EFADAA0 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002919EFC70F0 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\Unity.Services.Analytics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000291A06949F0 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000291A04DA010 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000291A06949F0 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\UnityEditor.Purchasing.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000291A077B630 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002919FE74230 doesn't match image E:\UnityProject\myMmorpgclass5\Src\Client\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
+Duplicate assembly 'log4net.dll' with different versions detected, using 'Assets/References/log4net.dll, AssemblyName=log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=null' and ignoring 'Packages/com.unity.collab-proxy/Lib/Editor/PlasticSCM/log4netPlastic.dll, AssemblyName=log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a'.Duplicate assembly 'Newtonsoft.Json.dll' with different versions detected, using 'Packages/com.unity.nuget.newtonsoft-json/Runtime/Newtonsoft.Json.dll, AssemblyName=Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed' and ignoring 'Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll, AssemblyName=Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null'.Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  1.936 seconds
-Refreshing native plugins compatible for Editor in 4.31 ms, found 2 plugins.
+- Loaded All Assemblies, in  0.418 seconds
+Refreshing native plugins compatible for Editor in 3.93 ms, found 2 plugins.
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Failed to load: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/VisionOSPlayer\x64\UnityEditor.VisionOS.Native.dll
@@ -173,52 +141,78 @@ Native extension for VisionOS target not found
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for OSXStandalone target not found
+
+=================================================================
+	Native Crash Reporting
+=================================================================
+Got a UNKNOWN while executing native code. This usually indicates
+a fatal error in the mono runtime or one of the native libraries 
+used by your application.
+=================================================================
+
+=================================================================
+	Managed Stacktrace:
+=================================================================
+	  at <unknown> <0xffffffff>
+	  at System.Reflection.FieldInfo:internal_from_handle_type <0x000c7>
+	  at System.Reflection.FieldInfo:GetFieldFromHandle <0x001c2>
+	  at System.RuntimeType:GetFields_internal <0x00432>
+	  at System.RuntimeType:GetFieldCandidates <0x0014a>
+	  at System.RuntimeType:GetFields <0x000aa>
+	  at Candlelight.PropertyBackingFieldDrawer:.cctor <0x01a44>
+	  at System.Object:runtime_invoke_void <0x00184>
+	  at <unknown> <0xffffffff>
+	  at System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor <0x000c1>
+	  at System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor <0x0019a>
+	  at UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes <0x00b22>
+	  at <Module>:runtime_invoke_void_object <0x0018a>
+=================================================================
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.490 seconds
-Domain Reload Profiling: 3426ms
-	BeginReloadAssembly (102ms)
+- Finished resetting the current domain, in  1.415 seconds
+Domain Reload Profiling: 1833ms
+	BeginReloadAssembly (95ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (3ms)
+		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (18ms)
-	RebuildCommonClasses (18ms)
-	RebuildNativeTypeToScriptingClass (6ms)
-	initialDomainReloadingComplete (24ms)
-	LoadAllAssembliesAndSetupDomain (1785ms)
-		LoadAssemblies (1755ms)
+		CreateAndSetChildDomain (15ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (23ms)
+	LoadAllAssembliesAndSetupDomain (270ms)
+		LoadAssemblies (230ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (88ms)
-			TypeCache.Refresh (72ms)
-				TypeCache.ScanAssembly (55ms)
-			ScanForSourceGeneratedMonoScriptInfo (12ms)
-			ResolveRequiredComponents (3ms)
-	FinalizeReload (1490ms)
+		AnalyzeDomain (96ms)
+			TypeCache.Refresh (80ms)
+				TypeCache.ScanAssembly (63ms)
+			ScanForSourceGeneratedMonoScriptInfo (13ms)
+			ResolveRequiredComponents (2ms)
+	FinalizeReload (1415ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1396ms)
+		SetupLoadedEditorAssemblies (1315ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (29ms)
+			InitializePlatformSupportModulesInManaged (27ms)
 			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (54ms)
-			ProcessInitializeOnLoadAttributes (1235ms)
+			ProcessInitializeOnLoadAttributes (1157ms)
 			ProcessInitializeOnLoadMethodAttributes (73ms)
 			AfterProcessingInitializeOnLoad (1ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (4ms)
-Refreshing native plugins compatible for Editor in 6.23 ms, found 2 plugins.
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 7.92 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2745 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 71 unused Assets / (77.0 KB). Loaded Objects now: 3212.
-Memory consumption went from 142.8 MB to 142.7 MB.
-Total: 12.940600 ms (FindLiveObjects: 0.295500 ms CreateObjectMapping: 0.107800 ms MarkObjects: 12.256000 ms  DeleteObjects: 0.279500 ms)
+Unloading 71 unused Assets / (75.7 KB). Loaded Objects now: 3212.
+Memory consumption went from 143.0 MB to 143.0 MB.
+Total: 13.204800 ms (FindLiveObjects: 0.195800 ms CreateObjectMapping: 0.055300 ms MarkObjects: 12.705200 ms  DeleteObjects: 0.246700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -236,41 +230,33 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 19888.834266 seconds.
-  path: Assets/Resources/UI/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60ee539ecbbdeac0fd6da1100825af66') in 0.056498 seconds
+  Time since last request: 27031.919025 seconds.
+  path: Assets/Resources/Character/Wizard.prefab
+  artifactKey: Guid(b7ff0c9c92b561446a21774fbf316dc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Character/Wizard.prefab using Guid(b7ff0c9c92b561446a21774fbf316dc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '496a727c62f57529570367c9287f67ab') in 0.103958 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 184
+Number of asset objects unloaded after import = 234
 ========================================================================
 Received Import Request.
-  Time since last request: 9.471652 seconds.
-  path: Assets/Resources/UI/Chat
-  artifactKey: Guid(4df10b3dc7a68094c9bcb78b518d7015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/Chat using Guid(4df10b3dc7a68094c9bcb78b518d7015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7197a725b005f9150425a4f929b135e5') in 0.000368 seconds
+  Time since last request: 0.000025 seconds.
+  path: Assets/Resources/Character/Archer.prefab
+  artifactKey: Guid(e123cac6a36a3594b90bd6e758b8db3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Character/Archer.prefab using Guid(e123cac6a36a3594b90bd6e758b8db3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '270c6afc0b4243311524856501319a68') in 0.031790 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 380
+========================================================================
+Received Import Request.
+  Time since last request: 11.467090 seconds.
+  path: Assets/Scripts/UI/ChatSystem/UIChat.cs
+  artifactKey: Guid(30fb464dbff784a4099e269d77ae5630) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI/ChatSystem/UIChat.cs using Guid(30fb464dbff784a4099e269d77ae5630) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c18c946d883881e44cc046699cf371d2') in 0.000665 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 3.716521 seconds.
-  path: Assets/Resources/UI/Chat/UIBag.prefab
-  artifactKey: Guid(69d4772518fd8e440a820c3b22658bf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/Chat/UIBag.prefab using Guid(69d4772518fd8e440a820c3b22658bf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fee188e6b52dd16a88f6ec0727d5b54c') in 0.006274 seconds
+  Time since last request: 5088.810211 seconds.
+  path: Assets/Scripts/UI/ChatSystem/UIChat.cs
+  artifactKey: Guid(30fb464dbff784a4099e269d77ae5630) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI/ChatSystem/UIChat.cs using Guid(30fb464dbff784a4099e269d77ae5630) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8541cdfc7b2d86fb626532bb6acdb618') in 0.008398 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 460
-========================================================================
-Received Import Request.
-  Time since last request: 30.231534 seconds.
-  path: Assets/Resources/UI/Chat/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/Chat/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f5b249831f1a37c9e07698c5493543d') in 0.012684 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 184
-========================================================================
-Received Import Request.
-  Time since last request: 11.087722 seconds.
-  path: Assets/Resources/UI/Chat/UIChat.prefab
-  artifactKey: Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/UI/Chat/UIChat.prefab using Guid(e880942680adec840a072eb16a7da19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c0035dd09eaffaa617933a21c4461cc') in 0.003946 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 184
+Number of asset objects unloaded after import = 0
