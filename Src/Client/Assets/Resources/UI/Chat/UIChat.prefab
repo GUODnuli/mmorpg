@@ -3037,6 +3037,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5379793779062451027}
+  - component: {fileID: 5392321388809927335}
   m_Layer: 5
   m_Name: UIChat
   m_TagString: Untagged
@@ -3066,6 +3067,23 @@ RectTransform:
   m_AnchoredPosition: {x: 960, y: 540}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5392321388809927335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6769181319290514511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30fb464dbff784a4099e269d77ae5630, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textArea: {fileID: 8474068639347829087}
+  channelTab: {fileID: 1050464569432659020}
+  chatText: {fileID: 8425297460639088749}
+  chatTarget: {fileID: 8328875757048421621}
+  channelSelect: {fileID: 6847121072964817127}
 --- !u!1 &6852415999776315723
 GameObject:
   m_ObjectHideFlags: 0

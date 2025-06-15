@@ -8,6 +8,9 @@ namespace Common.Data
 {
     public class GameDefine
     {
-        public int GuildMaxMemberCount { get; set; }
+        public const int BagMaxItemPerPage = 30;
+        public const int GuildMaxMemberCount = 100;
+        public const int MaxChatRecoredNums = 20;
+        public const int MaxChatRecoredTime = 600;
     }
 }

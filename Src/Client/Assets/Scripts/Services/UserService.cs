@@ -201,7 +201,7 @@ namespace Services
         {
             Debug.LogFormat("UserGameEnterRequest::characterId: {0}", characterIdx);
 
-            //ChatManager.Instance.Init();
+            ChatManager.Instance.Init();
 
             NetMessage message = new NetMessage();
             message.Request = new NetMessageRequest();

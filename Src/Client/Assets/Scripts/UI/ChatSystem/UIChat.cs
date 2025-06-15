@@ -77,6 +77,7 @@ public class UIChat : MonoBehaviour
     public void OnClickSend()
     {
         OnEndInput(this.chatText.text);
+        RefreshUI();
     }
 
     public void OnEndInput(string text)
