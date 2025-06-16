@@ -54,3 +54,6 @@ ipch/
 ./Src/Client/UserSettings/
 /Src/Server/GameServer/GameServer/App.config
 /Src/Server/GameServer/GameServer/App.config
+
+!Src/Client/Assets/ThirdParty/Candlelight/
+!Src/Client/Assets/ThirdParty/Candlelight/**
