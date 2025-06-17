@@ -16,5 +16,11 @@
     "Name": "装备商店",
     "Description": "玩家购买装备的商店",
     "Status": 1
+  },
+  "4": {
+    "ID": 4,
+    "Name": "坐骑商店",
+    "Description": "玩家购买坐骑的商店",
+    "Status": 1
   }
 }

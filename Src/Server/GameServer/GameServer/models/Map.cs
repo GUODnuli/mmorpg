@@ -69,7 +69,7 @@ namespace GameServer.Models
 
             foreach (var i in this.MapCharacters)
             {
-                // 这个遍历里面分别干了两件事，节省了一次遍历时间
+                // 这个遍历里面分别干了两件事，节省了一次遍历
                 // 遍历当前地图的所有角色，并加入到本次response
                 conn.Session.Response.mapCharacterEnter.Characters.Add(i.Value.character.Info);
                 if (i.Value.character != character)
@@ -126,6 +126,10 @@ namespace GameServer.Models
                     kv.Value.character.Position = entitySync.Entity.Position;
                     kv.Value.character.Direction = entitySync.Entity.Direction;
                     kv.Value.character.Speed = entitySync.Entity.Speed;
+                    if (entitySync.Event == EntityEvent.Ride)
+                    {
+                        kv.Value.character.Ride = entitySync.Param;
+                    }
                 } 
                 else
                 {

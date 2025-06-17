@@ -25,6 +25,7 @@ namespace Managers
         public Dictionary<int, EquipDefine> Equips = null;
         public Dictionary<int, QuestDefine> Quests = null;
         public Dictionary<int, Dictionary<int, SpawnPointDefine>> SpawnPoints = null;
+        public Dictionary<int, RideDefine> Rides = null;
 
         public DataManager()
         {
@@ -63,6 +64,9 @@ namespace Managers
 
             json = File.ReadAllText(this.DataPath + "SpawnPointDefine.txt");
             this.SpawnPoints = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnPointDefine>>>(json);
+
+            json = File.ReadAllText(this.DataPath + "RideDefine.txt");
+            this.Rides = JsonConvert.DeserializeObject<Dictionary<int, RideDefine>>(json);
         }
 
 
@@ -115,6 +119,11 @@ namespace Managers
 
             json = File.ReadAllText(this.DataPath + "SpawnPointDefine.txt");
             this.SpawnPoints = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnPointDefine>>>(json);
+
+            yield return null;
+
+            json = File.ReadAllText(this.DataPath + "RideDefine.txt");
+            this.Rides = JsonConvert.DeserializeObject<Dictionary<int, RideDefine>>(json);
 
             yield return null;
         }

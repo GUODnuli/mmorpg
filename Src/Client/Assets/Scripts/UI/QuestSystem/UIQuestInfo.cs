@@ -13,10 +13,12 @@ public class UIQuestInfo : MonoBehaviour
     public UIIconItem rewardItems;
     public Text experience;
     public Text gold;
+    public Text overview;
 
     public void SetQuestInfo(Quest quest)
     {
         this.title.text = string.Format("[{0}]{1}",quest.Define.Type, quest.Define.Name);
+        if (this.overview != null) this.overview.text = quest.Define.Overview;
         
         // fix me
         //for (int i = 1; i <= 3; i++)
@@ -26,19 +28,22 @@ public class UIQuestInfo : MonoBehaviour
         //    PropertyInfo numProperty = quest.Define.GetType().GetProperty($"Target{i}Num");
         //}
 
-        if (quest.Info == null)
+        if (this.description != null)
         {
-            this.description.text = quest.Define.Dialog;
-        }
-        else
-        {
-            if (quest.Info.Status == SkillBridge.Message.QuestStatus.Completed)
+            if (quest.Info == null)
             {
-                this.description.text = quest.Define.DialogFinish;
+                this.description.text = quest.Define.Dialog;
             }
             else
             {
-                this.description.text = quest.Define.DialogIncomplete;
+                if (quest.Info.Status == SkillBridge.Message.QuestStatus.Completed)
+                {
+                    this.description.text = quest.Define.DialogFinish;
+                }
+                else
+                {
+                    this.description.text = quest.Define.DialogIncomplete;
+                }
             }
         }
 
