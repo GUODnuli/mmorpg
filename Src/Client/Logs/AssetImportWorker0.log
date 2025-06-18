@@ -15,7 +15,7 @@ E:/UnityProject/myMmorpgclass5/Src/Client
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-65407
+49986
 Successfully changed project path to: E:/UnityProject/myMmorpgclass5/Src/Client
 E:/UnityProject/myMmorpgclass5/Src/Client
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ E:/UnityProject/myMmorpgclass5/Src/Client
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [47588] Host "[IP] 192.168.1.6 [Port] 0 [Flags] 2 [Guid] 2603966492 [EditorId] 2603966492 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-0A286S5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [30268] Host "[IP] 192.168.1.6 [Port] 0 [Flags] 2 [Guid] 1281796125 [EditorId] 1281796125 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-0A286S5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [47588] Host "[IP] 192.168.1.6 [Port] 0 [Flags] 2 [Guid] 2603966492 [EditorId] 2603966492 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-0A286S5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [30268] Host "[IP] 192.168.1.6 [Port] 0 [Flags] 2 [Guid] 1281796125 [EditorId] 1281796125 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-0A286S5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 31 workers.
-Refreshing native plugins compatible for Editor in 6.88 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 8.06 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.23f1 (dbb3f7c5b5c6)
 [Subsystems] Discovering subsystems at path E:/Editor/2022.3.23f1/Editor/Data/Resources/UnitySubsystems
@@ -70,7 +70,7 @@ Initialize mono
 Mono path[0] = 'E:/Editor/2022.3.23f1/Editor/Data/Managed'
 Mono path[1] = 'E:/Editor/2022.3.23f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'E:/Editor/2022.3.23f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56152
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56616
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
@@ -79,8 +79,8 @@ Register platform support module: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngi
 Register platform support module: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/VisionOSPlayer/UnityEditor.VisionOS.Extensions.dll
 Register platform support module: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.003801 seconds.
-- Loaded All Assemblies, in  0.444 seconds
+Registered in 0.003921 seconds.
+- Loaded All Assemblies, in  0.210 seconds
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Failed to load: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/VisionOSPlayer\x64\UnityEditor.VisionOS.Native.dll
@@ -89,39 +89,39 @@ Native extension for VisionOS target not found
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 955 ms
+Android Extension - Scanning For ADB Devices 808 ms
 Native extension for OSXStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.162 seconds
-Domain Reload Profiling: 1607ms
-	BeginReloadAssembly (183ms)
+- Finished resetting the current domain, in  1.054 seconds
+Domain Reload Profiling: 1264ms
+	BeginReloadAssembly (63ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (36ms)
-	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (46ms)
-	LoadAllAssembliesAndSetupDomain (171ms)
-		LoadAssemblies (189ms)
+	RebuildCommonClasses (20ms)
+	RebuildNativeTypeToScriptingClass (6ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (91ms)
+		LoadAssemblies (63ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (163ms)
-			TypeCache.Refresh (162ms)
-				TypeCache.ScanAssembly (139ms)
+		AnalyzeDomain (89ms)
+			TypeCache.Refresh (88ms)
+				TypeCache.ScanAssembly (80ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (1162ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (1054ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1129ms)
+		SetupLoadedEditorAssemblies (1019ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (1024ms)
-			SetLoadedEditorAssemblies (3ms)
+			InitializePlatformSupportModulesInManaged (887ms)
+			SetLoadedEditorAssemblies (5ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (1ms)
-			ProcessInitializeOnLoadAttributes (72ms)
-			ProcessInitializeOnLoadMethodAttributes (29ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (91ms)
+			ProcessInitializeOnLoadMethodAttributes (34ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -132,8 +132,8 @@ Begin MonoManager ReloadAssembly
 Duplicate assembly 'log4net.dll' with different versions detected, using 'Assets/References/log4net.dll, AssemblyName=log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=null' and ignoring 'Packages/com.unity.collab-proxy/Lib/Editor/PlasticSCM/log4netPlastic.dll, AssemblyName=log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a'.Duplicate assembly 'Newtonsoft.Json.dll' with different versions detected, using 'Packages/com.unity.nuget.newtonsoft-json/Runtime/Newtonsoft.Json.dll, AssemblyName=Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed' and ignoring 'Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll, AssemblyName=Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null'.Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.453 seconds
-Refreshing native plugins compatible for Editor in 4.13 ms, found 2 plugins.
+- Loaded All Assemblies, in  0.407 seconds
+Refreshing native plugins compatible for Editor in 5.22 ms, found 2 plugins.
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Failed to load: E:/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/VisionOSPlayer\x64\UnityEditor.VisionOS.Native.dll
@@ -141,52 +141,52 @@ Native extension for VisionOS target not found
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for OSXStandalone target not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.372 seconds
-Domain Reload Profiling: 1825ms
-	BeginReloadAssembly (132ms)
+- Finished resetting the current domain, in  0.658 seconds
+Domain Reload Profiling: 1065ms
+	BeginReloadAssembly (91ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
+		DisableScriptedObjects (3ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (16ms)
+		CreateAndSetChildDomain (15ms)
 	RebuildCommonClasses (19ms)
-	RebuildNativeTypeToScriptingClass (6ms)
-	initialDomainReloadingComplete (25ms)
-	LoadAllAssembliesAndSetupDomain (270ms)
-		LoadAssemblies (263ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (21ms)
+	LoadAllAssembliesAndSetupDomain (268ms)
+		LoadAssemblies (225ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (86ms)
-			TypeCache.Refresh (71ms)
-				TypeCache.ScanAssembly (55ms)
-			ScanForSourceGeneratedMonoScriptInfo (13ms)
-			ResolveRequiredComponents (2ms)
-	FinalizeReload (1372ms)
+		AnalyzeDomain (94ms)
+			TypeCache.Refresh (80ms)
+				TypeCache.ScanAssembly (64ms)
+			ScanForSourceGeneratedMonoScriptInfo (12ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (658ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1279ms)
+		SetupLoadedEditorAssemblies (556ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (23ms)
-			SetLoadedEditorAssemblies (3ms)
+			InitializePlatformSupportModulesInManaged (32ms)
+			SetLoadedEditorAssemblies (5ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (50ms)
-			ProcessInitializeOnLoadAttributes (1141ms)
-			ProcessInitializeOnLoadMethodAttributes (60ms)
-			AfterProcessingInitializeOnLoad (1ms)
+			BeforeProcessingInitializeOnLoad (59ms)
+			ProcessInitializeOnLoadAttributes (349ms)
+			ProcessInitializeOnLoadMethodAttributes (108ms)
+			AfterProcessingInitializeOnLoad (2ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (5ms)
-Refreshing native plugins compatible for Editor in 6.51 ms, found 2 plugins.
+		AwakeInstancesAfterBackupRestoration (7ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 5.69 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2746 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 71 unused Assets / (77.3 KB). Loaded Objects now: 3213.
-Memory consumption went from 142.9 MB to 142.8 MB.
-Total: 11.303600 ms (FindLiveObjects: 0.203000 ms CreateObjectMapping: 0.079400 ms MarkObjects: 10.853400 ms  DeleteObjects: 0.166500 ms)
+Unloading 70 unused Assets / (75.8 KB). Loaded Objects now: 3208.
+Memory consumption went from 141.9 MB to 141.8 MB.
+Total: 4.212400 ms (FindLiveObjects: 0.119500 ms CreateObjectMapping: 0.030300 ms MarkObjects: 3.928000 ms  DeleteObjects: 0.133700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -204,62 +204,17 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 13558.822555 seconds.
-  path: Assets/Models/Rides/R001/fbx/R001_Jump.FBX
-  artifactKey: Guid(98e0225bd1f3ca548a712b9750eaf954) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Rides/R001/fbx/R001_Jump.FBX using Guid(98e0225bd1f3ca548a712b9750eaf954) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da9d46b21bbee8b1e441220ad02f3eff') in 0.022337 seconds
+  Time since last request: 10522.192468 seconds.
+  path: Assets/Scripts/Managers/DataManager.cs
+  artifactKey: Guid(217f6c911448ff547974fdee085ae5be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Managers/DataManager.cs using Guid(217f6c911448ff547974fdee085ae5be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd41e8b8e0fe8ff00138dbed9404d7f85') in 0.001820 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 73
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Models/Rides/R001/fbx/R001_Idle.FBX
-  artifactKey: Guid(34661b507a650584db5b080c15dd4b43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Rides/R001/fbx/R001_Idle.FBX using Guid(34661b507a650584db5b080c15dd4b43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ea90c380af78df81883a865cfb23da0') in 0.002135 seconds
+  Time since last request: 1501.155161 seconds.
+  path: Assets/Scripts/Managers/DataManager.cs
+  artifactKey: Guid(217f6c911448ff547974fdee085ae5be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Managers/DataManager.cs using Guid(217f6c911448ff547974fdee085ae5be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cab8df203e2c9330eb702905b9c5b34f') in 0.000867 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 85
-========================================================================
-Received Import Request.
-  Time since last request: 90.516230 seconds.
-  path: Assets/Models/Rides/R001/fbx/R001_Idle.FBX
-  artifactKey: Guid(34661b507a650584db5b080c15dd4b43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Rides/R001/fbx/R001_Idle.FBX using Guid(34661b507a650584db5b080c15dd4b43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09c48c14847e97a0ba7bf3b23091c071') in 0.002366 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 84
-========================================================================
-Received Import Request.
-  Time since last request: 14.128906 seconds.
-  path: Assets/Models/Rides/R001/fbx/R001_Idle.FBX
-  artifactKey: Guid(34661b507a650584db5b080c15dd4b43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Rides/R001/fbx/R001_Idle.FBX using Guid(34661b507a650584db5b080c15dd4b43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ddd62fc7c2d9fcc93dd85039ffe4da5') in 0.002768 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 85
-========================================================================
-Received Import Request.
-  Time since last request: 63.477169 seconds.
-  path: Assets/Models/Rides/R001/R000.mat
-  artifactKey: Guid(c1356b57c1981e24f875a6e027d63179) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Rides/R001/R000.mat using Guid(c1356b57c1981e24f875a6e027d63179) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53f65aefb8a1ecafae52d9dc02047dea') in 0.051454 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.178866 seconds.
-  path: Assets/Models/Rides/R001/R003.mat
-  artifactKey: Guid(77c39d0c593e9ac44862104b173b58a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Rides/R001/R003.mat using Guid(77c39d0c593e9ac44862104b173b58a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68ac1d851324642581e5f4e45f3c7225') in 0.014072 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Models/Rides/R001/R002.mat
-  artifactKey: Guid(30d1ea1b839cf3f4184e8fad087877aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Rides/R001/R002.mat using Guid(30d1ea1b839cf3f4184e8fad087877aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e08e52ed449e6bd63af1b1f7ebb46bfc') in 0.012523 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: 由于线程退出或应用程序请求，已中止 I/O 操作。
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+Number of asset objects unloaded after import = 0

@@ -5,34 +5,45 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using SkillBridge.Message;
+using Services;
 
 namespace Models
 {
     class User : Singleton<User>
     {
-        SkillBridge.Message.NUserInfo userInfo;
+        NUserInfo userInfo;
 
-        public SkillBridge.Message.NUserInfo Info
+        public NUserInfo Info
         {
             get { return userInfo; }
         }
 
-        public void SetupUserInfo(SkillBridge.Message.NUserInfo info)
+        public void SetupUserInfo(NUserInfo info)
         {
             this.userInfo = info;
         }
 
-        public SkillBridge.Message.NCharacterInfo CurrentCharacter { get; set; }
+        public NCharacterInfo CurrentCharacter { get; set; }
 
         public MapDefine CurrentMap { get; set; }
 
-        public GameObject CurrentCharacterObject {  get; set; }
+        public PlayerInputController CurrentCharacterObject {  get; set; }
 
         public NTeamInfo TeamInfo { get; set; }
 
         public void AddGold(int gold)
         {
             this.CurrentCharacter.Gold += gold;
+        }
+
+        public int CurrentRide = 0;
+        internal void Ride(int id)
+        {
+            if (CurrentRide != id)
+            {
+                CurrentRide = id;
+                CurrentCharacterObject
+            }
         }
     }
 }
