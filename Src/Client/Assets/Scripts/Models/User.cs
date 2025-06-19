@@ -42,7 +42,12 @@ namespace Models
             if (CurrentRide != id)
             {
                 CurrentRide = id;
-                CurrentCharacterObject
+                CurrentCharacterObject.SendEntityEvent(EntityEvent.Ride, CurrentRide);
+            }
+            else
+            {
+                CurrentRide = 0;
+                CurrentCharacterObject.SendEntityEvent(EntityEvent.Ride, 0);
             }
         }
     }
