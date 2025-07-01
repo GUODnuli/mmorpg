@@ -30,7 +30,8 @@ namespace Managers
             this.UIResources.Add(typeof(UIGuildPopNoGuild), new UIElement() { Resource = "UI/Guild/UIGuildPopNoGuild", Cache = false });
             this.UIResources.Add(typeof(UIGuildPopCreate), new UIElement() { Resource = "UI/Guild/UIGuildPopCreate", Cache = false });
             this.UIResources.Add(typeof(UIGuildApplyList), new UIElement() { Resource = "UI/Guild/UIFuildApplyList", Cache = false });
-            //this.UIResources.Add(typeof(UIPopCharMenu), new UIElement() { Resource = "UI/UIPopCharMenu", Cache = false });
+            this.UIResources.Add(typeof(UIPopCharMenu), new UIElement() { Resource = "UI/UIPopCharMenu", Cache = false });
+            this.UIResources.Add(typeof(UIRide), new UIElement() { Resource = "UI/Ride/UIRide", Cache = false });
         }
 
         ~UIManager()
