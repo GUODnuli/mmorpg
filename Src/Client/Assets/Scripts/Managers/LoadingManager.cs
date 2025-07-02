@@ -44,6 +44,10 @@ namespace Managers
             ShopManager.Instance.Init();
             FriendService.Instance.Init();
             TeamService.Instance.Init();
+            GuildService.Instance.Init();
+            ChatService.Instance.Init();
+            StatusService.Instance.Init();
+            SoundManager.Instance.PlayMusic(SoundDefine.Music_Login);
 
             // Fake Loading Simulate
             for (float i = 50; i < 100;)
