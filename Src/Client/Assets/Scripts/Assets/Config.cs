@@ -1,4 +1,5 @@
 using UnityEngine;
+using Managers;
 
 class Config
 {
@@ -12,7 +13,7 @@ class Config
         set
         {
             PlayerPrefs.SetInt("Music", value ? 1 : 0);
-            SoundManager.Instance.MusicOn = value;
+            SoundManager.Instance.musicOn = value;
         }
     }
 
@@ -25,8 +26,8 @@ class Config
 
         set
         {
-            PlayerPrefs.SetInt("Music", value ? 1 : 0);
-            SoundManager.Instance.MusicOn = value;
+            PlayerPrefs.SetInt("Sound", value ? 1 : 0);
+            SoundManager.Instance.soundOn = value;
         }
     }
 
@@ -40,7 +41,7 @@ class Config
         set
         {
             PlayerPrefs.SetInt("MusicVolume", value);
-            SoundManager.Instance.MusicVolume = value;
+            SoundManager.Instance.musicVolume = value;
         }
     }
 
@@ -54,7 +55,7 @@ class Config
         set
         {
             PlayerPrefs.SetInt("SoundVolume", value);
-            SoundManager.Instance.SoundVolume = value;
+            SoundManager.Instance.soundVolume = value;
         }
     }
 

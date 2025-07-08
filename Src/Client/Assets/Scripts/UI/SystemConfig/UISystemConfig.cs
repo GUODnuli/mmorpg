@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Models;
 using UnityEngine.UI;
+using Managers;
 
 public class UISystemConfig : UIWindow
 {
@@ -60,16 +61,16 @@ public class UISystemConfig : UIWindow
     float lastPlay = 0;
     private void PlaySound()
     {
-        if (Time.realtimeSinceStartup - lastPlayer > 0.1)
+        if (Time.realtimeSinceStartup - lastPlay > 0.1)
         {
             lastPlay = Time.realtimeSinceStartup;
-            SoundManager.Instance.PlayerSound(SoundDefine.SFX_UI_Click);
+            SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

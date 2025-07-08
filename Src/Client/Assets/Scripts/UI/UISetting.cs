@@ -9,7 +9,7 @@ public class UISetting : UIWindow
     public void ExitToCharacterSelect()
     {
         SceneManager.Instance.LoadScene("CharSelect");
-        SoundManager.Instance.PlayerMusic(SoundDefine.Music_Select);
+        SoundManager.Instance.PlayMusic(SoundDefine.Music_Select);
         UserService.Instance.SendGameLeave();
     }
 

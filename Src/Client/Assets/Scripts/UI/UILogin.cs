@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Services;
 using SkillBridge.Message;
+using Managers;
 
 public class UILogin : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class UILogin : MonoBehaviour
         if (result == Result.Success)
         {
             SceneManager.Instance.LoadScene("CharSelect");
+            SoundManager.Instance.PlayMusic(SoundDefine.Music_Select);
         }
         else
         {
@@ -54,6 +56,7 @@ public class UILogin : MonoBehaviour
             MessageBox.Show("请阅读并同意用户协议");
             return;
         }
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
         UserService.Instance.SendLogin(this.username.text, this.password.text);
     }
 }

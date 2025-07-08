@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Services;
+using Managers;
 
 public class UIRegister : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class UIRegister : MonoBehaviour
     public Button buttonRegister;
     public Toggle aggreToS;
     public Toggle rememberUsername;
+    public GameObject uiLogin;
 
     // Start is called before the first frame update
     void Start()
@@ -57,6 +59,13 @@ public class UIRegister : MonoBehaviour
             MessageBox.Show("请阅读并同意用户协议");
             return;
         }
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
         UserService.Instance.SendRegister(this.username.text, this.password.text);
+    }
+
+    void CloseRegister()
+    {
+        this.gameObject.SetActive(false);
+        uiLogin.SetActive(true);
     }
 }
