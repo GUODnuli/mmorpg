@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
 using System.Reflection;
 using Common.Data;
 using Models;
+using SkillBridge.Message;
+using Managers;
 
 public class UIQuestInfo : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class UIQuestInfo : MonoBehaviour
     public Text experience;
     public Text gold;
     public Text overview;
+
+    public Button navButton;
+    private int npc = 0;
 
     public void SetQuestInfo(Quest quest)
     {
@@ -50,9 +54,26 @@ public class UIQuestInfo : MonoBehaviour
         this.gold.text = quest.Define.RewardGold.ToString();
         this.experience.text = quest.Define.RewardExp.ToString();
 
+        if (quest.Info == null)
+        {
+            this.npc = quest.Define.AcceptNPC;
+        }
+        else if (quest.Info.Status == QuestStatus.Completed)
+        {
+            this.npc = quest.Define.SubmitNPC;
+        }
+        this.navButton.gameObject.SetActive(this.npc > 0);
+
         foreach (var fitter in this.GetComponentsInChildren<ContentSizeFitter>())
         {
             fitter.SetLayoutVertical();
         }
+    }
+
+    public void OnClickNav()
+    {
+        Vector3 pos = NPCManager.Instance.GetNpcPosition(this.npc);
+        User.Instance.CurrentCharacterObject.StartNav(pos);
+        UIManager.Instance.Close<UIQuestSystem>();
     }
 }

@@ -92,6 +92,10 @@ public class NPCController : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (Vector3.Distance(this.transform.position, User.Instance.CurrentCharacterObject.transform.position) > 2f)
+        {
+            User.Instance.CurrentCharacterObject.StartNav(this.transform.position);
+        }
         Interactive();
     }
 

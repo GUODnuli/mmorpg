@@ -89,5 +89,10 @@ namespace Managers
                 info.Instance = null;
             }
         }
+
+        public void Close<T>()
+        {
+            this.Close(typeof(T));
+        }
     }
 }
