@@ -49,7 +49,7 @@ public class UIBag : UIWindow
 
     public void SetBag()
     {
-        this.money.text = User.Instance.CurrentCharacter.Gold.ToString();
+        this.money.text = User.Instance.CurrentCharacterInfo.Gold.ToString();
     }
 
     void Clear()

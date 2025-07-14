@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Common.Battle;
 
 public class UICharEquip : UIWindow
 {
@@ -16,6 +17,13 @@ public class UICharEquip : UIWindow
     public Transform itemListRoot;
 
     public List<Transform> slots;
+
+    public Text hp;
+    public Slider hpSlider;
+    public Text mp;
+    public Slider mpSlider;
+
+    public Text[] attrs;
 
     private void Start()
     {
@@ -34,6 +42,7 @@ public class UICharEquip : UIWindow
         InitAllEquipItems();
         ClearEquipedList();
         InitEquipedItems();
+        InitAttributes();
     }
 
     void InitAllEquipItems()
@@ -78,6 +87,41 @@ public class UICharEquip : UIWindow
                 GameObject go = Instantiate(itemEquipedPrefab, slots[i]);
                 UIEquipItem ui = go.GetComponent<UIEquipItem>();
                 ui.SetEquipItem(i, item, this, true);
+            }
+        }
+    }
+
+    void InitAttributes()
+    {
+        var charAttr = User.Instance.CurrentCharacter.Attributes;
+        if (this.hp.text != null)
+        {
+            string.Format("{0}/{1}", charAttr.HP, charAttr.MaxHP);
+        }
+        if (this.mp.text != null)
+        {
+            string.Format("{0}/{1}", charAttr.MP, charAttr.MaxMP);
+        }
+        if (this.hpSlider != null)
+        {
+            this.hpSlider.maxValue = charAttr.MaxHP;
+            this.hpSlider.value = charAttr.HP;
+        }
+        if (this.mpSlider != null)
+        {
+            this.mpSlider.maxValue = charAttr.MaxMP;
+            this.mpSlider.value = charAttr.MP;
+        }
+
+        for (int i = (int)AttributeType.STR; i < (int)AttributeType.STR; i++)
+        {
+            if (i == (int)AttributeType.CRI)
+            {
+                this.attrs[i - 2].text = string.Format("{0.f2}%", charAttr.Final.Data[i] * 100);
+            }
+            else
+            {
+                this.attrs[i - 2].text = ((int)charAttr.Final.Data[i]).ToString();
             }
         }
     }

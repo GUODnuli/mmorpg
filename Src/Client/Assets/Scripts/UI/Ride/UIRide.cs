@@ -37,7 +37,7 @@ public class UIRide : UIWindow
         foreach(var kv in ItemManager.Instance.Items)
         {
             var define = kv.Value.Define;
-            if (define.Type == ItemType.Ride && (define.LimitClass == CharacterClass.None || define.LimitClass == User.Instance.CurrentCharacter.Class))
+            if (define.Type == ItemType.Ride && (define.LimitClass == CharacterClass.None || define.LimitClass == User.Instance.CurrentCharacterInfo.Class))
             {
                 GameObject go = Instantiate(itemPrefab, this.listMain.transform);
                 UIRideItem ui = go.GetComponent<UIRideItem>();

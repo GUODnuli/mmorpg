@@ -21,8 +21,8 @@ public class UIMain : MonoSingleton<UIMain>
 
     private void UpdateAvatar()
     {
-        this.avatarName.text = string.Format("{0}", User.Instance.CurrentCharacter.Name);
-        this.avatarLevel.text = User.Instance.CurrentCharacter.Level.ToString();
+        this.avatarName.text = string.Format("{0}", User.Instance.CurrentCharacterInfo.Name);
+        this.avatarLevel.text = User.Instance.CurrentCharacterInfo.Level.ToString();
     }
 
     public void BackToCharacterSelect()

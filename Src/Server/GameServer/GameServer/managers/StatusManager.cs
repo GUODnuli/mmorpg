@@ -57,6 +57,16 @@ namespace GameServer.Managers
             this.AddStatus(StatusType.Item, id, count, action);
         }
 
+        public void AddExpChange(int expDelta)
+        {
+            this.AddStatus(StatusType.Exp, 0, expDelta, StatusAction.Add);
+        }
+
+        public void AddLevelUp(int levelDelta)
+        {
+            this.AddStatus(StatusType.Level, 0, levelDelta, StatusAction.Add);
+        }
+
         public void PostProcess(NetMessageResponse message)
         {
             if (message.statusNotify == null)

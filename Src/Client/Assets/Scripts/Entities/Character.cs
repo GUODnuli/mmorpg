@@ -6,6 +6,8 @@ using UnityEngine;
 
 using SkillBridge.Message;
 using Managers;
+using Common.Data;
+using Common.Battle;
 
 namespace Entities
 {
@@ -13,7 +15,8 @@ namespace Entities
     {
         public NCharacterInfo Info;
 
-        public Common.Data.CharacterDefine Define;
+        public CharacterDefine Define;
+        public Attributes Attributes;
 
         public int Id
         {
@@ -45,7 +48,7 @@ namespace Entities
             get
             {
                 if (!IsPlayer) return false;
-                return this.Info.Id == Models.User.Instance.CurrentCharacter.Id;
+                return this.Info.Id == Models.User.Instance.CurrentCharacterInfo.Id;
             }
         }
 
@@ -53,6 +56,9 @@ namespace Entities
         {
             this.Info = info;
             this.Define = DataManager.Instance.Characters[info.ConfigId];
+            this.Attributes = new Attributes();
+            var equips = EquipManager.Instance.GetEquipedDefine();
+            this.Attributes.Init(this.Define, this.Info.Level, equips, this.Info.attrDynamic);
         }
 
         public void MoveForward()

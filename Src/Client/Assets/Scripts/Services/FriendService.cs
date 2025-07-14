@@ -43,8 +43,8 @@ namespace Services
             message.Request = new NetMessageRequest();
             message.Request.friendAddReq = new FriendAddRequest
             {
-                FromId = User.Instance.CurrentCharacter.Id,
-                FromName = User.Instance.CurrentCharacter.Name,
+                FromId = User.Instance.CurrentCharacterInfo.Id,
+                FromName = User.Instance.CurrentCharacterInfo.Name,
                 ToId = friendId,
                 ToName = friendName
             };

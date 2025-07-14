@@ -38,7 +38,7 @@ public class UIFriends : UIWindow
         {
             friendName = input;
         }
-        if (friendId == User.Instance.CurrentCharacter.Id || friendName == User.Instance.CurrentCharacter.Name)
+        if (friendId == User.Instance.CurrentCharacterInfo.Id || friendName == User.Instance.CurrentCharacterInfo.Name)
         {
             tips = "无法将自己添加为好友";
             return false;

@@ -6,6 +6,7 @@ using System.Text;
 using UnityEngine;
 using SkillBridge.Message;
 using Services;
+using Entities;
 
 namespace Models
 {
@@ -23,7 +24,9 @@ namespace Models
             this.userInfo = info;
         }
 
-        public NCharacterInfo CurrentCharacter { get; set; }
+        public NCharacterInfo CurrentCharacterInfo { get; set; }
+
+        public Character CurrentCharacter { get; set; }
 
         public MapDefine CurrentMap { get; set; }
 
@@ -33,7 +36,7 @@ namespace Models
 
         public void AddGold(int gold)
         {
-            this.CurrentCharacter.Gold += gold;
+            this.CurrentCharacterInfo.Gold += gold;
         }
 
         public int CurrentRide = 0;

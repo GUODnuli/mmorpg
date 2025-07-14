@@ -9,6 +9,7 @@ using UnityEngine.Events;
 
 using SkillBridge.Message;
 using Entities;
+using Models;
 
 namespace Managers
 {
@@ -51,6 +52,10 @@ namespace Managers
             this.Characters[cha.EntityId] = character;
             EntityManager.Instance.AddEntity(character);
             OnCharacterEnter?.Invoke(character);
+            if (cha.EntityId == User.Instance.CurrentCharacterInfo.EntityId)
+            {
+                User.Instance.CurrentCharacter = character;
+            }
         }
 
         public void RemoveCharacter(int entityId)
