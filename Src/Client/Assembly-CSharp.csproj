@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\UI\Shop\UIShopItem.cs" />
     <Compile Include="Assets\Scripts\UI\Guild\UIGuild.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+    <Compile Include="Assets\Scripts\UI\SkillSystem\UISkillItem.cs" />
     <Compile Include="Assets\Scripts\GameObject\NPCController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Scripts\Managers\GuildManager.cs" />
@@ -189,6 +190,7 @@
     <Compile Include="Assets\Scripts\Managers\InputManager.cs" />
     <Compile Include="Assets\ThirdParty\Candlelight\Library\Utilities\Singleton.cs" />
     <Compile Include="Assets\ThirdParty\Candlelight\Library\GUI\GUIHelpers.cs" />
+    <Compile Include="Assets\Scripts\UI\SkillSystem\UISkill.cs" />
     <Compile Include="Assets\Scripts\UI\TabView\TabButton.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\Scripts\Services\UserService.cs" />
@@ -213,6 +215,7 @@
     <Compile Include="Assets\Scripts\UI\QuestSystem\UIQuestStatus.cs" />
     <Compile Include="Assets\Scripts\Managers\SoundDefine.cs" />
     <Compile Include="Assets\Scripts\Managers\FriendManager.cs" />
+    <Compile Include="Assets\Scripts\UI\SkillSystem\UISkillInfo.cs" />
     <Compile Include="Assets\Scripts\UI\SystemConfig\UISystemConfig.cs" />
     <Compile Include="Assets\Scripts\Services\TeamService.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />

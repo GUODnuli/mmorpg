@@ -40,7 +40,7 @@ public class UIQuestInfo : MonoBehaviour
             }
             else
             {
-                if (quest.Info.Status == SkillBridge.Message.QuestStatus.Completed)
+                if (quest.Info.Status == QuestStatus.Completed)
                 {
                     this.description.text = quest.Define.DialogFinish;
                 }
