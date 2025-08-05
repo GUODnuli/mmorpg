@@ -90,8 +90,9 @@ message NCharacterInfo {
 	bytes Equips = 15;
 	repeated NQuestInfo quests = 16;
 	repeated NFriendInfo friends = 17;
-	NGuildInfo guild = 18;
-	int32 ride = 19;
+	repeated NSkillInfo skills = 18;
+	NGuildInfo guild = 19;
+	int32 ride = 20;
 }
 
 message NAttributeDynamic
@@ -762,4 +763,49 @@ message ChatResponse
 	repeated ChatMessage privateMessages = 6;
 	repeated ChatMessage teamMessages = 7;
 	repeated ChatMessage guildMessages = 8;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////      Battle System     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////
+//
+//  Skill System
+//
+////////////////////////////////////////////////////////////////
+
+enum SKILL_TYPE
+{
+	NONE = 0;
+	SKILL = 1;
+}
+
+enum TARGET_TYPE
+{
+	NONE = 0;
+	MONSTER = 1;
+	PLAYER = 2;
+	BOTH = 3;
+}
+
+enum SKILL_STATUS
+{
+	UNLEARNED = 0;
+	LEARNED = 1;
+}
+
+message NSkillInfo
+{
+	int32 skill_id = 1;
+	SKILL_STATUS status = 2;
+}
+
+////////////////////////////////////////////////////////////////
+//
+//  Buff System
+//
+////////////////////////////////////////////////////////////////
+
+enum BUFF_EFFECT
+{
+	NONE = 0;
 }

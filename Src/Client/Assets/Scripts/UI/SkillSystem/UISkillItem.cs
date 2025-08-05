@@ -22,9 +22,10 @@ public class UISkillItem : ListView.ListViewItem
 
     public SkillDefine skillInfo;
 
-    public void SetSkillInfo(SkillDefine item)
+    public void SetSkillInfo(SkillDefine item, UISkill owner, bool equiped)
     {
         this.skillInfo = item;
+
         if (this.skillName != null)
         {
             this.skillName.text = this.skillInfo.Name;

@@ -8,12 +8,6 @@ using SkillBridge.Message;
 
 namespace Common.Data
 {
-    public enum SkillType
-    {
-        None,
-        Skill,
-    }
-
     public class SkillDefine
     {
         public int ID { get; set; }
@@ -22,6 +16,7 @@ namespace Common.Data
         public string Icon { get; set; }
         public SkillType Type { get; set; }
         public TargetType CastTarget { get; set; }
+        public SkillStatus Status { get; set; }
         public int UnlockLevel { get; set; }
         public float CastRange { get; set; }
         public float CastTime { get; set; }

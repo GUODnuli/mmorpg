@@ -95,10 +95,13 @@ namespace SkillBridge.Message
         [global::ProtoBuf.ProtoMember(17, Name = @"friends")]
         public global::System.Collections.Generic.List<NFriendInfo> Friends { get; } = new global::System.Collections.Generic.List<NFriendInfo>();
 
-        [global::ProtoBuf.ProtoMember(18, Name = @"guild")]
+        [global::ProtoBuf.ProtoMember(18, Name = @"skills")]
+        public global::System.Collections.Generic.List<NSkillInfo> Skills { get; } = new global::System.Collections.Generic.List<NSkillInfo>();
+
+        [global::ProtoBuf.ProtoMember(19, Name = @"guild")]
         public NGuildInfo Guild { get; set; }
 
-        [global::ProtoBuf.ProtoMember(19, Name = @"ride")]
+        [global::ProtoBuf.ProtoMember(20, Name = @"ride")]
         public int Ride { get; set; }
 
     }
@@ -1548,6 +1551,21 @@ namespace SkillBridge.Message
 
     }
 
+    [global::ProtoBuf.ProtoContract()]
+    public partial class NSkillInfo : global::ProtoBuf.IExtensible
+    {
+        private global::ProtoBuf.IExtension __pbn__extensionData;
+        global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+            => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+        [global::ProtoBuf.ProtoMember(1, Name = @"skill_id")]
+        public int SkillId { get; set; }
+
+        [global::ProtoBuf.ProtoMember(2, Name = @"status")]
+        public SkillStatus Status { get; set; }
+
+    }
+
     [global::ProtoBuf.ProtoContract(Name = @"RESULT")]
     public enum Result
     {
@@ -1756,6 +1774,44 @@ namespace SkillBridge.Message
         Team = 16,
         [global::ProtoBuf.ProtoEnum(Name = @"GUILD")]
         Guild = 32,
+    }
+
+    [global::ProtoBuf.ProtoContract(Name = @"SKILL_TYPE")]
+    public enum SkillType
+    {
+        [global::ProtoBuf.ProtoEnum(Name = @"NONE")]
+        None = 0,
+        [global::ProtoBuf.ProtoEnum(Name = @"SKILL")]
+        Skill = 1,
+    }
+
+    [global::ProtoBuf.ProtoContract(Name = @"TARGET_TYPE")]
+    public enum TargetType
+    {
+        [global::ProtoBuf.ProtoEnum(Name = @"NONE")]
+        None = 0,
+        [global::ProtoBuf.ProtoEnum(Name = @"MONSTER")]
+        Monster = 1,
+        [global::ProtoBuf.ProtoEnum(Name = @"PLAYER")]
+        Player = 2,
+        [global::ProtoBuf.ProtoEnum(Name = @"BOTH")]
+        Both = 3,
+    }
+
+    [global::ProtoBuf.ProtoContract(Name = @"SKILL_STATUS")]
+    public enum SkillStatus
+    {
+        [global::ProtoBuf.ProtoEnum(Name = @"UNLEARNED")]
+        Unlearned = 0,
+        [global::ProtoBuf.ProtoEnum(Name = @"LEARNED")]
+        Learned = 1,
+    }
+
+    [global::ProtoBuf.ProtoContract(Name = @"BUFF_EFFECT")]
+    public enum BuffEffect
+    {
+        [global::ProtoBuf.ProtoEnum(Name = @"NONE")]
+        None = 0,
     }
 
 }

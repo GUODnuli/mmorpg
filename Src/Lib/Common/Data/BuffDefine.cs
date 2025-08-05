@@ -8,16 +8,6 @@ using Common.Battle;
 
 namespace Common.Data
 {
-    public enum TargetType
-    {
-        None,
-    }
-
-    public enum BuffEffect
-    {
-        None,
-    }
-
     public class BuffDefine
     {
         public int ID { get; set; }

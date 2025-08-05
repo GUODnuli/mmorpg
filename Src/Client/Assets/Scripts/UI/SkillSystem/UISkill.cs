@@ -12,38 +12,37 @@ public class UISkill : UIWindow
     public Text title;
     public GameObject itemPrefab;
     public UISkillInfo skillInfo;
-    public Text skillName;
-    public Text skillDescription;
     public ListView skillList;
+    private UISkillItem selectedItem;
 
     private void Start()
     {
         this.skillList.onItemSelected += this.OnSkillSelected;
-        //RefreshUI();
-    }
-
-    public void SetSkillInfo(SkillDefine skill)
-    {
-        this.title.text = skill.Name;
-        if (skill.Description != null)
-        {
-            this.skillDescription.text = skill.Description;
-        }
-
-        foreach (var fitter in this.GetComponentsInChildren<ContentSizeFitter>())
-        {
-            fitter.SetLayoutVertical();
-        }
-    }
-
-    public void OnClickUpdate()
-    {
-
+        RefreshUI();
     }
 
     public void OnSkillSelected(ListView.ListViewItem item)
     {
-        UISkillItem skillItem = item as UISkillItem;
+        this.selectedItem = item as UISkillItem;
+        this.skillInfo = this.selectedItem.skillInfo;
+    }
 
+    private void RefreshUI()
+    {
+        CleanAllSkillList();
+        InitAllSkillItems();
+    }
+
+    private void CleanAllSkillList()
+    {
+        this.skillList.RemoveAll();
+    }
+
+    private void InitAllSkillItems()
+    {
+        foreach(var skill in SkillManager.Instance.allSkill)
+        {
+
+        }
     }
 }

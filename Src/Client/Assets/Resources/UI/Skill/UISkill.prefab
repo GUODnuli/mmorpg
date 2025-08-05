@@ -534,7 +534,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 102679044239060835}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.5666453
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1113,7 +1113,7 @@ GameObject:
   - component: {fileID: 268334726773460611}
   - component: {fileID: 4841392833826780082}
   - component: {fileID: 7432520702455061378}
-  - component: {fileID: 8394844686077765221}
+  - component: {fileID: 1094627632218604112}
   m_Layer: 5
   m_Name: SkillInfo
   m_TagString: Untagged
@@ -1180,7 +1180,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8394844686077765221
+--- !u!114 &1094627632218604112
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1189,20 +1189,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4712050903995164171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726ee9324d524d8498e769884ae2898e, type: 3}
+  m_Script: {fileID: 11500000, guid: 57a704f4d8287284bb33643e06cb055d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: {fileID: 6587118762747953824}
-  target:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  description: {fileID: 944035964214488811}
-  rewardItems: {fileID: 0}
-  experience: {fileID: 0}
-  gold: {fileID: 0}
-  overview: {fileID: 0}
-  navButton: {fileID: 0}
+  title: {fileID: 0}
+  description: {fileID: 0}
+  descriptionNextLevel: {fileID: 0}
+  updateCost: {fileID: 0}
+  updateButton: {fileID: 0}
+  listMain: {fileID: 0}
 --- !u!1 &4944591425905402845
 GameObject:
   m_ObjectHideFlags: 0
@@ -1287,6 +1282,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2820049350344145681}
+  - component: {fileID: 1545824837928075634}
   m_Layer: 5
   m_Name: UISkill
   m_TagString: Untagged
@@ -1314,6 +1310,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1545824837928075634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6316423250807474379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9594661d73ad4bb489ec2303fe66f76b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Root: {fileID: 0}
+  title: {fileID: 0}
+  itemPrefab: {fileID: 0}
+  skillInfo: {fileID: 1094627632218604112}
+  skillName: {fileID: 0}
+  skillDescription: {fileID: 0}
+  skillList: {fileID: 0}
 --- !u!1 &6396230291270839039
 GameObject:
   m_ObjectHideFlags: 0
@@ -2040,7 +2055,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 147.30772}
+  m_AnchoredPosition: {x: 0, y: 0.00042815902}
   m_SizeDelta: {x: -2.5595, y: 516.52}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &3243151468647456987
