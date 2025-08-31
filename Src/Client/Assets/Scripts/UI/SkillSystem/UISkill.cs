@@ -13,7 +13,6 @@ public class UISkill : UIWindow
     public GameObject itemPrefab;
     public UISkillInfo skillInfo;
     public ListView skillList;
-    private UISkillItem selectedItem;
 
     private void Start()
     {
@@ -23,8 +22,8 @@ public class UISkill : UIWindow
 
     public void OnSkillSelected(ListView.ListViewItem item)
     {
-        this.selectedItem = item as UISkillItem;
-        this.skillInfo = this.selectedItem.skillInfo;
+        UISkillItem skillItem = item as UISkillItem;
+        this.skillInfo.SetSkillInfo(skillItem.skill);
     }
 
     private void RefreshUI()
@@ -42,7 +41,9 @@ public class UISkill : UIWindow
     {
         foreach(var skill in SkillManager.Instance.allSkill)
         {
-
+            GameObject go = Instantiate(this.itemPrefab, this.skillList.transform);
+            UISkillItem ui = go.GetComponent<UISkillItem>();
+            ui.SetSkillInfo(skill.Value);
         }
     }
 }

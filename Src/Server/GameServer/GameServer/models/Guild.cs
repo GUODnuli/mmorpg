@@ -112,7 +112,7 @@ namespace GameServer.Models
             this.Data.Members.Remove(dbMember);
 
             TCharacter dbCharacter = DBService.Instance.Entities.Characters.SingleOrDefault(c => c.ID == member.Id);
-            dbCharacter.GuildId = null;
+            dbCharacter.GuildId = 0;
 
             Members.Remove(member);
             member.Guild = null;

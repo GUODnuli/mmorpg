@@ -15,7 +15,7 @@ namespace GameServer.Managers
 {
     class QuestManager
     {
-        Character Owner;
+        readonly Character Owner;
 
         public QuestManager(Character Owner)
         {

@@ -68,7 +68,7 @@ public class UIMain : MonoSingleton<UIMain>
 
     public void OnClickSkill()
     {
-
+        UIManager.Instance.Show<UISkill>();
     }
 
     public void ShowTeamUI(bool show)

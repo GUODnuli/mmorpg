@@ -22,6 +22,7 @@ namespace GameServer.Entities
         public StatusManager StatusManager;
         public QuestManager QuestManager;
         public FriendManager FriendManager;
+        public SkillManager SkillManager;
 
         public Team Team;
         public double TeamUpdateTS;
@@ -30,6 +31,8 @@ namespace GameServer.Entities
         public double GuildUpdateTS;
 
         public Chat Chat;
+
+        
 
         public Character(CharacterType type,TCharacter cha):
             base(new Core.Vector3Int(cha.MapPosX, cha.MapPosY, cha.MapPosZ),new Core.Vector3Int(100,0,0))
@@ -56,12 +59,15 @@ namespace GameServer.Entities
             this.Info.Bag.Unlocked = this.Data.Bag.Unlocked;
             this.Info.Bag.Items = this.Data.Bag.Items;
             this.Info.Equips = this.Data.Equips;
+            this.Info.EquipSkills = this.Data.EquipSkills;
+            this.SkillManager = new SkillManager(this);
+            this.SkillManager.GetSkillLists(this.Info.Skills);
             this.QuestManager = new QuestManager(this);
             this.QuestManager.GetQuestInfos(this.Info.Quests);
             this.StatusManager = new StatusManager(this);
             this.FriendManager = new FriendManager(this);
             this.FriendManager.GetFriendInfos(this.Info.Friends);
-            this.Guild = GuildManager.Instance.GetGuild((int)this.Data.GuildId);
+            this.Guild = GuildManager.Instance.GetGuild(this.Data.GuildId);
             this.Chat = new Chat(this);
 
             this.Info.attrDynamic = new NAttributeDynamic();

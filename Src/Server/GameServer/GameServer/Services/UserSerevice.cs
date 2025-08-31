@@ -113,7 +113,8 @@ namespace GameServer.Services
                     MapPosY = 4000,
                     MapPosZ = 820,
                     Gold = 100000,
-                    Equips = new byte[28]
+                    Equips = new byte[28],
+                    GuildId = 0,
                 };
                 var bag = new TCharacterBag();
                 bag.Owner = addCharacter;

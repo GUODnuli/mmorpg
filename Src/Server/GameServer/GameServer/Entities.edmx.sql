@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 07/14/2025 23:17:55
+-- Date Created: 08/31/2025 22:00:00
 -- Generated from EDMX file: E:\UnityProject\myMmorpgclass5\Src\Server\GameServer\GameServer\Entities.edmx
 -- --------------------------------------------------
 
@@ -41,6 +41,9 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_TGuildTGuildApply]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[TGuildApplies] DROP CONSTRAINT [FK_TGuildTGuildApply];
 GO
+IF OBJECT_ID(N'[dbo].[FK_CharacterSkill]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[TCharacterSkills] DROP CONSTRAINT [FK_CharacterSkill];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
@@ -75,6 +78,9 @@ IF OBJECT_ID(N'[dbo].[TGuildMembers]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[TGuildApplies]', 'U') IS NOT NULL
     DROP TABLE [dbo].[TGuildApplies];
+GO
+IF OBJECT_ID(N'[dbo].[TCharacterSkills]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[TCharacterSkills];
 GO
 
 -- --------------------------------------------------
@@ -111,9 +117,10 @@ CREATE TABLE [dbo].[Characters] (
     [Equips] binary(28)  NOT NULL,
     [Level] int  NOT NULL,
     [Exp] bigint  NOT NULL,
-    [GuildId] int  NULL,
+    [GuildId] int  NOT NULL,
     [HP] int  NOT NULL,
     [MP] int  NOT NULL,
+    [EquipSkills] binary(28)  NOT NULL,
     [Player_ID] int  NOT NULL,
     [Bag_ID] int  NOT NULL
 );
@@ -197,6 +204,15 @@ CREATE TABLE [dbo].[TGuildApplies] (
 );
 GO
 
+-- Creating table 'TCharacterSkills'
+CREATE TABLE [dbo].[TCharacterSkills] (
+    [ID] int IDENTITY(1,1) NOT NULL,
+    [TCharacterID] int  NOT NULL,
+    [SkillDefID] int  NOT NULL,
+    [SkillLevel] int  NOT NULL
+);
+GO
+
 -- --------------------------------------------------
 -- Creating all PRIMARY KEY constraints
 -- --------------------------------------------------
@@ -259,6 +275,12 @@ GO
 ALTER TABLE [dbo].[TGuildApplies]
 ADD CONSTRAINT [PK_TGuildApplies]
     PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- Creating primary key on [ID] in table 'TCharacterSkills'
+ALTER TABLE [dbo].[TCharacterSkills]
+ADD CONSTRAINT [PK_TCharacterSkills]
+    PRIMARY KEY CLUSTERED ([ID] ASC);
 GO
 
 -- --------------------------------------------------
@@ -383,6 +405,21 @@ GO
 CREATE INDEX [IX_FK_TGuildTGuildApply]
 ON [dbo].[TGuildApplies]
     ([GuildId]);
+GO
+
+-- Creating foreign key on [TCharacterID] in table 'TCharacterSkills'
+ALTER TABLE [dbo].[TCharacterSkills]
+ADD CONSTRAINT [FK_CharacterSkill]
+    FOREIGN KEY ([TCharacterID])
+    REFERENCES [dbo].[Characters]
+        ([ID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_CharacterSkill'
+CREATE INDEX [IX_FK_CharacterSkill]
+ON [dbo].[TCharacterSkills]
+    ([TCharacterID]);
 GO
 
 -- --------------------------------------------------

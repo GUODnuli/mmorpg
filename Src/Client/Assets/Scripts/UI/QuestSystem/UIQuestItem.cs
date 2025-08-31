@@ -24,5 +24,5 @@ public class UIQuestItem : ListView.ListViewItem
     {
         this.quest = item;
         if (this.title != null) { this.title.text = this.quest.Define.Name; }
-    }
+    } 
 }

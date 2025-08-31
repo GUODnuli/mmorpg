@@ -93,6 +93,7 @@ message NCharacterInfo {
 	repeated NSkillInfo skills = 18;
 	NGuildInfo guild = 19;
 	int32 ride = 20;
+	bytes EquipSkills = 21;
 }
 
 message NAttributeDynamic
@@ -219,6 +220,10 @@ message NetMessageRequest {
 	GuildAdminRequest guildAdmin = 30;
 
 	ChatRequest chat = 31;
+	SkillLearnRequest skillLearn = 32;
+	
+	SkillCastRequest skillCast = 33;
+
 }
 
 message NetMessageResponse {
@@ -260,6 +265,9 @@ message NetMessageResponse {
 	GuildAdminResponse guildAdmin = 30;
 
 	ChatResponse chat = 31;
+
+	SkillLearnResponse skillLearn = 32;
+	SkillCastResponse skillCast = 33;
 
 	StatusNotify statusNotify = 100;
 }
@@ -776,27 +784,43 @@ message ChatResponse
 enum SKILL_TYPE
 {
 	NONE = 0;
-	SKILL = 1;
+	NORMAL = 1;
+	SKILL = 2;
 }
 
 enum TARGET_TYPE
 {
 	NONE = 0;
-	MONSTER = 1;
-	PLAYER = 2;
-	BOTH = 3;
-}
-
-enum SKILL_STATUS
-{
-	UNLEARNED = 0;
-	LEARNED = 1;
+	TARGET = 1;
+	POSITION = 2;
+	SELF = 3;
 }
 
 message NSkillInfo
 {
-	int32 skill_id = 1;
-	SKILL_STATUS status = 2;
+	int32 skill_def_id = 1;
+}
+
+message SkillLearnRequest
+{
+	int32 skill_def_id = 1;
+}
+
+message SkillLearnResponse
+{
+	RESULT result = 1;
+	string errormsg = 2;
+}
+
+message SkillCastRequest
+{
+	int32 skill_def_id = 1;
+}
+
+message SkillCastResponse
+{
+	RESULT result = 1;
+	string errormsg = 2;
 }
 
 ////////////////////////////////////////////////////////////////
@@ -808,4 +832,5 @@ message NSkillInfo
 enum BUFF_EFFECT
 {
 	NONE = 0;
+	STUN = 1;
 }

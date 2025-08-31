@@ -7,6 +7,7 @@ using System.IO;
 using SkillBridge.Message;
 using ProtoBuf;
 using Services;
+using Models;
 
 namespace Managers
 {
@@ -48,6 +49,7 @@ namespace Managers
             ChatService.Instance.Init();
             StatusService.Instance.Init();
             SoundManager.Instance.PlayMusic(SoundDefine.Music_Login);
+            SkillManager.Instance.Init();
 
             // Fake Loading Simulate
             for (float i = 50; i < 100;)

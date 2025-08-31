@@ -534,7 +534,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 102679044239060835}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.44423732
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1326,8 +1326,6 @@ MonoBehaviour:
   title: {fileID: 0}
   itemPrefab: {fileID: 0}
   skillInfo: {fileID: 1094627632218604112}
-  skillName: {fileID: 0}
-  skillDescription: {fileID: 0}
   skillList: {fileID: 0}
 --- !u!1 &6396230291270839039
 GameObject:
@@ -2055,7 +2053,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00042815902}
+  m_AnchoredPosition: {x: 0, y: 183.50609}
   m_SizeDelta: {x: -2.5595, y: 516.52}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &3243151468647456987

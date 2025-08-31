@@ -10,18 +10,18 @@ namespace GameServer.Managers
 {
     class StatusManager
     {
-        Character Owner;
+        readonly Character Owner;
+        public StatusManager(Character Owner)
+        {
+            this.Owner = Owner;
+            this.Status = new List<NStatus>();
+        }
 
         private List<NStatus> Status {  get; set; }
 
         public bool HasStatus
         {
             get { return this.Status.Count > 0; }
-        }
-        public StatusManager(Character Owner)
-        {
-            this.Owner = Owner;
-            this.Status = new List<NStatus>();
         }
 
         public void AddStatus(StatusType type, int id, int value, StatusAction action)
@@ -65,6 +65,11 @@ namespace GameServer.Managers
         public void AddLevelUp(int levelDelta)
         {
             this.AddStatus(StatusType.Level, 0, levelDelta, StatusAction.Add);
+        }
+
+        public void AddSkillLearn(int skillDefId)
+        {
+            this.AddStatus(StatusType.SkillPoint, skillDefId, 1, StatusAction.Add);
         }
 
         public void PostProcess(NetMessageResponse message)

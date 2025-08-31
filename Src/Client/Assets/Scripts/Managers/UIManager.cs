@@ -33,6 +33,7 @@ namespace Managers
             this.UIResources.Add(typeof(UIPopCharMenu), new UIElement() { Resource = "UI/UIPopCharMenu", Cache = false });
             this.UIResources.Add(typeof(UIRide), new UIElement() { Resource = "UI/Ride/UIRide", Cache = false });
             this.UIResources.Add(typeof(UISystemConfig), new UIElement() { Resource = "UI/UISystemConfig", Cache = false });
+            this.UIResources.Add(typeof(UISkill), new UIElement() { Resource = "UI/Skill/UISkill", Cache = false });
         }
 
         ~UIManager()
@@ -45,7 +46,7 @@ namespace Managers
         /// </summary>
         public T Show<T>()
         {
-             SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Win_Open);
+            SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Win_Open);
             Type type = typeof(T);
             if (!this.UIResources.ContainsKey(type))
             {

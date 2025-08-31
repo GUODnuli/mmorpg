@@ -16,7 +16,6 @@ namespace Managers
         public List<NSkillInfo> skillInfos;
         public List<Skill> skillList;
         public Dictionary<int, Skill> allSkill = new Dictionary<int, Skill>();
-        public Dictionary<Skill, SkillStatus> skillStatus = new Dictionary<Skill, SkillStatus>();
 
         public void Init(List<NSkillInfo> skills)
         {
@@ -29,14 +28,8 @@ namespace Managers
             {
                 Skill item = new Skill(skill);
                 skillList.Add(item);
-                allSkill.Add(item.Info.SkillId, item);
-                skillStatus.Add(item, item.Info.Status);
+                allSkill.Add(item.Info.SkillDefId, item);
             }
-        }
-
-        public Dictionary<Skill, SkillStatus> GetSkillStatus()
-        {
-            return skillStatus;
         }
 
         public List<Skill> GetCharacterSkill()

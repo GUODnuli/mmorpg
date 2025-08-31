@@ -104,6 +104,9 @@ namespace SkillBridge.Message
         [global::ProtoBuf.ProtoMember(20, Name = @"ride")]
         public int Ride { get; set; }
 
+        [global::ProtoBuf.ProtoMember(21)]
+        public byte[] EquipSkills { get; set; }
+
     }
 
     [global::ProtoBuf.ProtoContract()]
@@ -356,6 +359,12 @@ namespace SkillBridge.Message
         [global::ProtoBuf.ProtoMember(31, Name = @"chat")]
         public ChatRequest Chat { get; set; }
 
+        [global::ProtoBuf.ProtoMember(32)]
+        public SkillLearnRequest skillLearn { get; set; }
+
+        [global::ProtoBuf.ProtoMember(33)]
+        public SkillCastRequest skillCast { get; set; }
+
     }
 
     [global::ProtoBuf.ProtoContract()]
@@ -454,6 +463,12 @@ namespace SkillBridge.Message
 
         [global::ProtoBuf.ProtoMember(31, Name = @"chat")]
         public ChatResponse Chat { get; set; }
+
+        [global::ProtoBuf.ProtoMember(32)]
+        public SkillLearnResponse skillLearn { get; set; }
+
+        [global::ProtoBuf.ProtoMember(33)]
+        public SkillCastResponse skillCast { get; set; }
 
         [global::ProtoBuf.ProtoMember(100)]
         public StatusNotify statusNotify { get; set; }
@@ -1558,11 +1573,64 @@ namespace SkillBridge.Message
         global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
             => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
 
-        [global::ProtoBuf.ProtoMember(1, Name = @"skill_id")]
-        public int SkillId { get; set; }
+        [global::ProtoBuf.ProtoMember(1, Name = @"skill_def_id")]
+        public int SkillDefId { get; set; }
 
-        [global::ProtoBuf.ProtoMember(2, Name = @"status")]
-        public SkillStatus Status { get; set; }
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class SkillLearnRequest : global::ProtoBuf.IExtensible
+    {
+        private global::ProtoBuf.IExtension __pbn__extensionData;
+        global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+            => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+        [global::ProtoBuf.ProtoMember(1, Name = @"skill_def_id")]
+        public int SkillDefId { get; set; }
+
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class SkillLearnResponse : global::ProtoBuf.IExtensible
+    {
+        private global::ProtoBuf.IExtension __pbn__extensionData;
+        global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+            => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+        [global::ProtoBuf.ProtoMember(1, Name = @"result")]
+        public Result Result { get; set; }
+
+        [global::ProtoBuf.ProtoMember(2, Name = @"errormsg")]
+        [global::System.ComponentModel.DefaultValue("")]
+        public string Errormsg { get; set; } = "";
+
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class SkillCastRequest : global::ProtoBuf.IExtensible
+    {
+        private global::ProtoBuf.IExtension __pbn__extensionData;
+        global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+            => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+        [global::ProtoBuf.ProtoMember(1, Name = @"skill_def_id")]
+        public int SkillDefId { get; set; }
+
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class SkillCastResponse : global::ProtoBuf.IExtensible
+    {
+        private global::ProtoBuf.IExtension __pbn__extensionData;
+        global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+            => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+        [global::ProtoBuf.ProtoMember(1, Name = @"result")]
+        public Result Result { get; set; }
+
+        [global::ProtoBuf.ProtoMember(2, Name = @"errormsg")]
+        [global::System.ComponentModel.DefaultValue("")]
+        public string Errormsg { get; set; } = "";
 
     }
 
@@ -1781,8 +1849,10 @@ namespace SkillBridge.Message
     {
         [global::ProtoBuf.ProtoEnum(Name = @"NONE")]
         None = 0,
+        [global::ProtoBuf.ProtoEnum(Name = @"NORMAL")]
+        Normal = 1,
         [global::ProtoBuf.ProtoEnum(Name = @"SKILL")]
-        Skill = 1,
+        Skill = 2,
     }
 
     [global::ProtoBuf.ProtoContract(Name = @"TARGET_TYPE")]
@@ -1790,21 +1860,12 @@ namespace SkillBridge.Message
     {
         [global::ProtoBuf.ProtoEnum(Name = @"NONE")]
         None = 0,
-        [global::ProtoBuf.ProtoEnum(Name = @"MONSTER")]
-        Monster = 1,
-        [global::ProtoBuf.ProtoEnum(Name = @"PLAYER")]
-        Player = 2,
-        [global::ProtoBuf.ProtoEnum(Name = @"BOTH")]
-        Both = 3,
-    }
-
-    [global::ProtoBuf.ProtoContract(Name = @"SKILL_STATUS")]
-    public enum SkillStatus
-    {
-        [global::ProtoBuf.ProtoEnum(Name = @"UNLEARNED")]
-        Unlearned = 0,
-        [global::ProtoBuf.ProtoEnum(Name = @"LEARNED")]
-        Learned = 1,
+        [global::ProtoBuf.ProtoEnum(Name = @"TARGET")]
+        Target = 1,
+        [global::ProtoBuf.ProtoEnum(Name = @"POSITION")]
+        Position = 2,
+        [global::ProtoBuf.ProtoEnum(Name = @"SELF")]
+        Self = 3,
     }
 
     [global::ProtoBuf.ProtoContract(Name = @"BUFF_EFFECT")]
@@ -1812,6 +1873,8 @@ namespace SkillBridge.Message
     {
         [global::ProtoBuf.ProtoEnum(Name = @"NONE")]
         None = 0,
+        [global::ProtoBuf.ProtoEnum(Name = @"STUN")]
+        Stun = 1,
     }
 
 }

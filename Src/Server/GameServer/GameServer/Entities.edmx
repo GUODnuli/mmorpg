@@ -16,6 +16,7 @@
     <EntitySet Name="TGuilds" EntityType="ExtremeWorldModel.Store.TGuilds" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="TGuildMembers" EntityType="ExtremeWorldModel.Store.TGuildMembers" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="TGuildApplies" EntityType="ExtremeWorldModel.Store.TGuildApplies" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TCharacterSkills" EntityType="ExtremeWorldModel.Store.TCharacterSkills" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="UserPlayer" Association="ExtremeWorldModel.Store.UserPlayer">
       <End Role="User" EntitySet="Users" />
       <End Role="Player" EntitySet="Players" />
@@ -47,6 +48,10 @@
     <AssociationSet Name="TGuildTGuildApply" Association="ExtremeWorldModel.Store.TGuildTGuildApply">
       <End Role="TGuild" EntitySet="TGuilds" />
       <End Role="TGuildApply" EntitySet="TGuildApplies" />
+    </AssociationSet>
+    <AssociationSet Name="CharacterSkill" Association="ExtremeWorldModel.Store.CharacterSkill">
+      <End Role="TCharacter" EntitySet="Characters" />
+      <End Role="TCharacterSkill" EntitySet="TCharacterSkills" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="Users">
@@ -81,9 +86,10 @@
     <Property Name="Equips" Type="binary" Nullable="false" MaxLength="28" />
     <Property Name="Level" Type="int" Nullable="false" />
     <Property Name="Exp" Type="bigint" Nullable="false" />
-    <Property Name="GuildId" Type="int" Nullable="true" />
+    <Property Name="GuildId" Type="int" Nullable="false" />
     <Property Name="HP" Type="int" Nullable="false" />
     <Property Name="MP" Type="int" Nullable="false" />
+    <Property Name="EquipSkills" Type="binary" Nullable="false" MaxLength="28" />
     <Property Name="Player_ID" Type="int" Nullable="false" />
     <Property Name="Bag_ID" Type="int" Nullable="false" />
   </EntityType>
@@ -164,6 +170,15 @@
     <Property Name="Level" Type="int" Nullable="false" />
     <Property Name="Result" Type="int" Nullable="false" />
     <Property Name="ApplyTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TCharacterSkills">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TCharacterID" Type="int" Nullable="false" />
+    <Property Name="SkillDefID" Type="int" Nullable="false" />
+    <Property Name="SkillLevel" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="UserPlayer">
     <End Role="User" Type="ExtremeWorldModel.Store.Users" Multiplicity="*" />
@@ -261,6 +276,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="CharacterSkill">
+    <End Role="TCharacter" Type="ExtremeWorldModel.Store.Characters" Multiplicity="1" />
+    <End Role="TCharacterSkill" Type="ExtremeWorldModel.Store.TCharacterSkills" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TCharacter">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TCharacterSkill">
+        <PropertyRef Name="TCharacterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
@@ -318,6 +345,11 @@
             <End Role="TGuild" EntitySet="TGuilds" />
             <End Role="TGuildApply" EntitySet="TGuildApplies" />
           </AssociationSet>
+          <EntitySet Name="TCharacterSkills" EntityType="ExtremeWorldModel.TCharacterSkill" />
+          <AssociationSet Name="CharacterSkill" Association="ExtremeWorldModel.CharacterSkill">
+            <End Role="TCharacter" EntitySet="Characters" />
+            <End Role="TCharacterSkill" EntitySet="TCharacterSkills" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="TPlayer">
           <Key>
@@ -351,9 +383,11 @@
           <Property Name="Level" Type="Int32" Nullable="false" />
           <Property Name="Exp" Type="Int64" Nullable="false" />
           <NavigationProperty Name="Friends" Relationship="ExtremeWorldModel.TCharacterTCharacterFriend" FromRole="TCharacter" ToRole="TCharacterFriend" />
-          <Property Name="GuildId" Type="Int32" Nullable="true" />
+          <Property Name="GuildId" Type="Int32" Nullable="false" />
           <Property Name="HP" Type="Int32" Nullable="false" />
           <Property Name="MP" Type="Int32" Nullable="false" />
+          <Property Name="EquipSkills" Type="Binary" Nullable="false" FixedLength="true" MaxLength="28" />
+          <NavigationProperty Name="Skills" Relationship="ExtremeWorldModel.CharacterSkill" FromRole="TCharacter" ToRole="TCharacterSkill" />
         </EntityType>
         <Association Name="PlayerCharacter">
           <End Type="ExtremeWorldModel.TPlayer" Role="Player" Multiplicity="1" />
@@ -509,6 +543,28 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="TCharacterSkill">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Owner" Relationship="ExtremeWorldModel.CharacterSkill" FromRole="TCharacterSkill" ToRole="TCharacter" />
+          <Property Name="TCharacterID" Type="Int32" Nullable="false" />
+          <Property Name="SkillDefID" Type="Int32" Nullable="false" />
+          <Property Name="SkillLevel" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="CharacterSkill">
+          <End Type="ExtremeWorldModel.TCharacter" Role="TCharacter" Multiplicity="1" />
+          <End Type="ExtremeWorldModel.TCharacterSkill" Role="TCharacterSkill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TCharacter">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TCharacterSkill">
+              <PropertyRef Name="TCharacterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -550,6 +606,7 @@
           <ScalarProperty Name="GuildId" ColumnName="GuildId" />
           <ScalarProperty Name="HP" ColumnName="HP" />
           <ScalarProperty Name="MP" ColumnName="MP" />
+          <ScalarProperty Name="EquipSkills" ColumnName="EquipSkills" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -635,6 +692,16 @@
           <ScalarProperty Name="Level" ColumnName="Level" />
           <ScalarProperty Name="Result" ColumnName="Result" />
           <ScalarProperty Name="ApplyTime" ColumnName="ApplyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TCharacterSkills">
+      <EntityTypeMapping TypeName="IsTypeOf(ExtremeWorldModel.TCharacterSkill)">
+        <MappingFragment StoreEntitySet="TCharacterSkills">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TCharacterID" ColumnName="TCharacterID" />
+          <ScalarProperty Name="SkillDefID" ColumnName="SkillDefID" />
+          <ScalarProperty Name="SkillLevel" ColumnName="SkillLevel" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

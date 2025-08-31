@@ -157,7 +157,7 @@ namespace Services
 
             if (response.Result == Result.Success)
             {
-                Models.User.Instance.SetupUserInfo(response.Userinfo);
+                User.Instance.SetupUserInfo(response.Userinfo);
             }
 
             this.OnLogin?.Invoke(response.Result, response.Errormsg);
@@ -225,6 +225,7 @@ namespace Services
                     QuestManager.Instance.Init(response.Character.Quests);
                     FriendManager.Instance.Init(response.Character.Friends);
                     GuildManager.Instance.Init(response.Character.Guild);
+                    SkillManager.Instance.Init(response.Character.Skills);
                 }
             }
         }

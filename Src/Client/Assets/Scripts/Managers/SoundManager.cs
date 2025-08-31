@@ -14,7 +14,7 @@ namespace Managers
         const string MusicPath = "Music/";
         const string SoundPath = "Sound/";
 
-        private void Start()
+        protected override void OnStart()
         {
             this.musicVolume = Config.MusicVolume;
             this.soundVolume = Config.SoundVolume;

@@ -120,6 +120,7 @@
     <Compile Include="Managers\QuestManager.cs" />
     <Compile Include="Managers\SessionManager.cs" />
     <Compile Include="Managers\ShopManager.cs" />
+    <Compile Include="Managers\SkillManager.cs" />
     <Compile Include="Managers\Spawner.cs" />
     <Compile Include="Managers\SpawnManager.cs" />
     <Compile Include="Managers\StatusManager.cs" />
@@ -128,6 +129,7 @@
     <Compile Include="Models\Guild.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\Map.cs" />
+    <Compile Include="Models\Skill.cs" />
     <Compile Include="Models\Team.cs" />
     <Compile Include="Network\ExtensionMethods.cs" />
     <Compile Include="Network\INetSession.cs" />
@@ -154,6 +156,7 @@
     <Compile Include="Services\ItemService.cs" />
     <Compile Include="Services\MapService.cs" />
     <Compile Include="Services\QuestService.cs" />
+    <Compile Include="Services\SkillService.cs" />
     <Compile Include="Services\TeamService.cs" />
     <Compile Include="Services\UserSerevice.cs" />
     <Compile Include="Settings.cs" />
@@ -171,6 +174,9 @@
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="TCharacterQuest.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TCharacterSkill.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="TGuild.cs">

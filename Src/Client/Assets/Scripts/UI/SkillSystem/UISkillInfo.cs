@@ -15,12 +15,12 @@ public class UISkillInfo : MonoBehaviour
     public Button updateButton;
     public ListView listMain;
 
-    public void SetSkillInfo(SkillDefine skill)
+    public void SetSkillInfo(Skill skill)
     {
-        this.title.text = skill.Name;
-        if (skill.Description != null)
+        this.title.text = skill.Define.Name;
+        if (skill.Define.Description != null)
         {
-            this.description.text = skill.Description;
+            this.description.text = skill.Define.Description;
         }
 
         foreach (var fitter in this.GetComponentsInChildren<ContentSizeFitter>())
