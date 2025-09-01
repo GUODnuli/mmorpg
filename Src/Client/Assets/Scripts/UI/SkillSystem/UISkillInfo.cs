@@ -14,9 +14,11 @@ public class UISkillInfo : MonoBehaviour
     public Text updateCost;
     public Button updateButton;
     public ListView listMain;
+    public Skill skill;
 
     public void SetSkillInfo(Skill skill)
     {
+        this.skill = skill;
         this.title.text = skill.Define.Name;
         if (skill.Define.Description != null)
         {
@@ -29,8 +31,8 @@ public class UISkillInfo : MonoBehaviour
         }
     }
 
-    public void OnClickUpdate()
+    public void OnClickLearn()
     {
-
+        SkillManager.Instance.SkillLearn(skill.Info.SkillDefId);
     }
 }

@@ -15,6 +15,11 @@ namespace Services
         Item pendingEquip = null;
         bool isEquip;
 
+        public void Init()
+        {
+
+        }
+
         public ItemService()
         {
             MessageDistributer.Instance.Subscribe<ItemBuyResponse>(this.OnItemBuy);

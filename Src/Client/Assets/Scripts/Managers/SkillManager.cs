@@ -1,5 +1,6 @@
 using Common.Data;
 using Models;
+using Services;
 using SkillBridge.Message;
 using System;
 using System.Collections.Generic;
@@ -28,13 +29,33 @@ namespace Managers
             {
                 Skill item = new Skill(skill);
                 skillList.Add(item);
-                allSkill.Add(item.Info.SkillDefId, item);
+            }
+
+            foreach(var kv in DataManager.Instance.Skills[(int)User.Instance.CurrentCharacter.Info.Class])
+            {
+                Skill skill = new Skill(kv.Value);
+                allSkill.Add(skill.Define.ID, skill);
             }
         }
 
         public List<Skill> GetCharacterSkill()
         {
             return skillList;
+        }
+
+        public void SkillCast(int skillDefId)
+        {
+            //if ()
+            //{
+            //    MessageBox.Show("技能冷却中", "技能释放失败", MessageBoxType.Error);
+            //    return;
+            //}
+            SkillService.Instance.SendSkillCast(skillDefId);
+        }
+
+        public void SkillLearn(int skillDefId)
+        {
+            SkillService.Instance.SendSkillLearn(skillDefId);
         }
     }
 }

@@ -373,7 +373,7 @@ MonoBehaviour:
   normalBg: {fileID: 21300000, guid: f52967551137a69408f55fe50b7ed1bc, type: 3}
   selectedBg: {fileID: 21300000, guid: 32d06b910bc040b489a72d91ac3c6876, type: 3}
   skillIcon: {fileID: 2248737369343222950}
-  Level: {fileID: 7026576240442503}
+  level: {fileID: 7026576240442503}
 --- !u!1 &8427154666618177304
 GameObject:
   m_ObjectHideFlags: 0

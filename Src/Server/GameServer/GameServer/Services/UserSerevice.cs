@@ -115,6 +115,7 @@ namespace GameServer.Services
                     Gold = 100000,
                     Equips = new byte[28],
                     GuildId = 0,
+                    EquipSkills = new byte[28],
                 };
                 var bag = new TCharacterBag();
                 bag.Owner = addCharacter;

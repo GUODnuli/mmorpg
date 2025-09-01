@@ -42,6 +42,7 @@ namespace Managers
             //Init basic services
             MapService.Instance.Init();
             UserService.Instance.Init();
+            ItemService.Instance.Init();
             ShopManager.Instance.Init();
             FriendService.Instance.Init();
             TeamService.Instance.Init();
@@ -49,7 +50,7 @@ namespace Managers
             ChatService.Instance.Init();
             StatusService.Instance.Init();
             SoundManager.Instance.PlayMusic(SoundDefine.Music_Login);
-            SkillManager.Instance.Init();
+            SkillService.Instance.Init();
 
             // Fake Loading Simulate
             for (float i = 50; i < 100;)

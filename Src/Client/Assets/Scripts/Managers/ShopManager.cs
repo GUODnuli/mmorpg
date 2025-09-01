@@ -22,8 +22,7 @@ namespace Managers
 
         public void ShowShop(int shopId)
         {
-            ShopDefine shop;
-            if (DataManager.Instance.Shops.TryGetValue(shopId, out shop))
+            if (DataManager.Instance.Shops.TryGetValue(shopId, out ShopDefine shop))
             {
                 UIShop uiShop = UIManager.Instance.Show<UIShop>();
                 if(uiShop != null)

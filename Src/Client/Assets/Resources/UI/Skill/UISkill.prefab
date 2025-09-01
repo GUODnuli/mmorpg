@@ -534,7 +534,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 102679044239060835}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.44423732
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1322,11 +1322,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9594661d73ad4bb489ec2303fe66f76b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Root: {fileID: 0}
-  title: {fileID: 0}
-  itemPrefab: {fileID: 0}
+  Root: {fileID: 6316423250807474379}
+  title: {fileID: 1597167357935986858}
+  itemPrefab: {fileID: 7319370627172360450, guid: bedd6bf1a6ef5474897104380c2bc529,
+    type: 3}
   skillInfo: {fileID: 1094627632218604112}
-  skillList: {fileID: 0}
+  skillList: {fileID: 4784989287524627799}
+  skillItem: {fileID: 0}
 --- !u!1 &6396230291270839039
 GameObject:
   m_ObjectHideFlags: 0
@@ -2053,7 +2055,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 183.50609}
+  m_AnchoredPosition: {x: 0, y: 0.00008610318}
   m_SizeDelta: {x: -2.5595, y: 516.52}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &3243151468647456987

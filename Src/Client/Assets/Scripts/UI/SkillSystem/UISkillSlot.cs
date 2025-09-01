@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Models;
+using Managers;
 
 public class UISkillSlot : MonoBehaviour, IDropHandler
 {
@@ -21,7 +22,6 @@ public class UISkillSlot : MonoBehaviour, IDropHandler
                 iconImage.enabled = true;
             }
         }
-
     }
 
     // Çå¿Õ²ÛÎ»
@@ -32,5 +32,10 @@ public class UISkillSlot : MonoBehaviour, IDropHandler
             iconImage.sprite = null;
             iconImage.enabled = false;
         }
+    }
+
+    public void OnClickSkillCast()
+    {
+        SkillManager.Instance.SkillCast(skill.Info.SkillDefId);
     }
 }

@@ -14,7 +14,7 @@ namespace Models
         public Skill(NSkillInfo skillInfo)
         {
             this.Info = skillInfo;
-            this.Define = DataManager.Instance.Skills[(int)User.Instance.CurrentCharacterInfo.Class][skillInfo.SkillId];
+            this.Define = DataManager.Instance.Skills[(int)User.Instance.CurrentCharacterInfo.Class][skillInfo.SkillDefId];
         }
 
         public Skill(SkillDefine define)

@@ -13,6 +13,7 @@ public class UISkill : UIWindow
     public GameObject itemPrefab;
     public UISkillInfo skillInfo;
     public ListView skillList;
+    public UISkillItem skillItem;
 
     private void Start()
     {
@@ -22,7 +23,7 @@ public class UISkill : UIWindow
 
     public void OnSkillSelected(ListView.ListViewItem item)
     {
-        UISkillItem skillItem = item as UISkillItem;
+        skillItem = item as UISkillItem;
         this.skillInfo.SetSkillInfo(skillItem.skill);
     }
 

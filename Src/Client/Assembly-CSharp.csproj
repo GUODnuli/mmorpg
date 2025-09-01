@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\Managers\DataManager.cs" />
     <Compile Include="Assets\Scripts\UI\Guild\UIGuildPopCreate.cs" />
     <Compile Include="Assets\ThirdParty\Candlelight\Library\Property Attributes\StatusPropertyAttribute.cs" />
+    <Compile Include="Assets\Scripts\Services\SkillService.cs" />
     <Compile Include="Assets\Scripts\UI\UIWorldElementManager.cs" />
     <Compile Include="Assets\Scripts\UI\ChatSystem\UIPopCharMenu.cs" />
     <Compile Include="Assets\ThirdParty\Candlelight\Library\GUI\HyperTextProcessor.cs" />
